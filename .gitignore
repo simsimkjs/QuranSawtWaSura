@@ -1,0 +1,29 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+target/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# Maven/Gradle
+build/
+.gradle/
+.mvn/
+gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# JavaFX specific
+*.fxml~
+*.css~
