@@ -1,0 +1,160 @@
+.root {
+    -fx-font-family: "Cairo", "Segoe UI", sans-serif;
+    -fx-background-color: #f4f6f9;
+}
+
+/* ===== القائمة العلوية وشريط البحث ===== */
+.search-bar {
+    -fx-background-color: #1a3d5c;
+}
+.search-bar .label {
+    -fx-text-fill: #ffffff;
+}
+
+.gold-button {
+    -fx-background-color: #9a6f00;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* ===== قائمة السور ===== */
+.side-panel {
+    -fx-background-color: #ffffff;
+}
+.side-panel > .label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a3d5c;
+}
+.list-view {
+    -fx-font-size: 14px;
+}
+
+/* ===== عنوان السورة داخل لوحة القراءة ===== */
+.surah-title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a3d5c;
+    -fx-alignment: center;
+    -fx-max-width: infinity;
+    -fx-padding: 4 0 4 0;
+}
+
+/* ===== إطار الصفحة المزخرف (يحاكي صفحة المصحف بدون أي صورة) ===== */
+.mushaf-scroll {
+    -fx-background-color: transparent;
+}
+.mushaf-scroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.mushaf-frame {
+    -fx-background-color: linear-gradient(to bottom, #fdf8ec, #f7edd2);
+    -fx-border-color: #9a6f00, #d9b45c;
+    -fx-border-width: 3, 1;
+    -fx-border-insets: 0, 6;
+    -fx-border-radius: 4, 2;
+    -fx-background-radius: 4;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 12, 0.15, 0, 3);
+    -fx-padding: 10;
+}
+
+/* ===== نص الآيات ===== */
+.ayah-text {
+    -fx-font-family: "KFGQPC Uthmanic Script HAFS", "Amiri", "Sakkal Majalla", serif;
+    -fx-font-size: 27px;
+    -fx-fill: #241a08;
+}
+.ayah-text-current {
+    -fx-fill: #8b1a1a;
+    -fx-font-weight: bold;
+    -fx-underline: true;
+}
+
+/* ===== دائرة رقم الآية الزخرفية (تحاكي علامة نهاية الآية بالمصحف) ===== */
+.ayah-badge-circle {
+    -fx-fill: #fdf3da;
+    -fx-stroke: #9a6f00;
+    -fx-stroke-width: 1.5;
+}
+.ayah-badge-number {
+    -fx-font-family: "Amiri", serif;
+    -fx-font-size: 13px;
+    -fx-fill: #1a3d5c;
+    -fx-font-weight: bold;
+}
+
+/* ===== شريط التشغيل السفلي ===== */
+.player-bar {
+    -fx-background-color: #1a3d5c;
+}
+.player-bar .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* ===== شريط الحالة ===== */
+Label#statusLabel {
+    -fx-text-fill: #555555;
+}
+
+/* ===================== الثيمات ===================== */
+
+/* كلاسيكي = الافتراضي أعلاه (لا حاجة لأي تجاوز إضافي) */
+
+/* ----- فاتح ----- */
+.theme-light {
+    -fx-background-color: #ffffff;
+}
+.theme-light .mushaf-frame {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #c9c9c9, #e6e6e6;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0.1, 0, 2);
+}
+.theme-light .ayah-text {
+    -fx-fill: #1a1a1a;
+}
+.theme-light .ayah-text-current {
+    -fx-fill: #a3271f;
+}
+.theme-light .surah-title-label {
+    -fx-text-fill: #1a3d5c;
+}
+.theme-light .ayah-badge-circle {
+    -fx-fill: #f3f3f3;
+    -fx-stroke: #9a6f00;
+}
+
+/* ----- داكن ----- */
+.theme-dark {
+    -fx-background-color: #14202b;
+}
+.theme-dark .mushaf-frame {
+    -fx-background-color: linear-gradient(to bottom, #1c2b3a, #16222d);
+    -fx-border-color: #d9b45c, #8a6a24;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 14, 0.15, 0, 3);
+}
+.theme-dark .ayah-text {
+    -fx-fill: #f0e6c8;
+}
+.theme-dark .ayah-text-current {
+    -fx-fill: #ffcf6b;
+}
+.theme-dark .surah-title-label {
+    -fx-text-fill: #f0e6c8;
+}
+.theme-dark .ayah-badge-circle {
+    -fx-fill: #223140;
+    -fx-stroke: #d9b45c;
+}
+.theme-dark .ayah-badge-number {
+    -fx-fill: #f0e6c8;
+}
+.theme-dark .label {
+    -fx-text-fill: #f0e6c8;
+}
+.theme-dark .titled-pane > .title {
+    -fx-background-color: #1c2b3a;
+}
+.theme-dark .titled-pane > .content {
+    -fx-background-color: #16222d;
+}

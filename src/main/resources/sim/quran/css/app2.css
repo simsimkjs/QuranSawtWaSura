@@ -1,0 +1,125 @@
+.root {
+    -fx-font-family: "Segoe UI", "Tahoma", sans-serif;
+    -fx-background-color: #ffffff; /* خلفية بيضاء نقية */
+}
+
+/* ===== القائمة العلوية وشريط البحث ===== */
+.search-bar {
+    -fx-background-color: #1e3a5f; /* لون أزرق داكن مشابه */
+    -fx-padding: 8 12 8 12;
+}
+.search-bar .label {
+    -fx-text-fill: #ffffff;
+}
+.search-bar .text-field {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #333333;
+    -fx-prompt-text-fill: #888888;
+    -fx-font-size: 14px;
+    -fx-padding: 6 10;
+}
+.gold-button {
+    -fx-background-color: #c9a84c; /* لون ذهبي هادئ */
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4px;
+    -fx-padding: 6 16;
+}
+.gold-button:hover {
+    -fx-background-color: #b8973a;
+}
+
+/* ===== قائمة السور ===== */
+.side-panel {
+    -fx-background-color: #f8f9fa; /* خلفية رمادية فاتحة جداً */
+    -fx-border-color: #e9ecef;
+    -fx-border-width: 0 1 0 0;
+}
+.side-panel > .label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e3a5f;
+    -fx-padding: 12 0 8 12;
+}
+.list-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+}
+.list-view .list-cell {
+    -fx-text-fill: #333333;
+    -fx-padding: 6 12;
+}
+.list-view .list-cell:selected {
+    -fx-background-color: #e8edf5;
+    -fx-text-fill: #1e3a5f;
+    -fx-font-weight: bold;
+}
+
+/* ===== لوحة القراءة (المركز) ===== */
+.reader-pane {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20 30 20 30;
+}
+
+/* ===== عنوان السورة ===== */
+.surah-title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e3a5f;
+    -fx-alignment: center;
+    -fx-padding: 10 0 20 0;
+}
+
+/* ===== تنسيق الآيات (النص الأساسي) ===== */
+.ayah-text {
+    -fx-font-family: "Amiri", "Sakkal Majalla", "KFGQPC Uthman Taha Naskh", serif;
+    -fx-font-size: 28px; /* حجم مناسب للقراءة */
+    -fx-fill: #1a1a1a;
+    -fx-font-smoothing-type: gray;
+}
+
+/* تنسيق الآية الحالية (تظليل خفيف) */
+.ayah-text-current {
+    -fx-font-family: "Amiri", "Sakkal Majalla", "KFGQPC Uthman Taha Naskh", serif;
+    -fx-font-size: 28px;
+    -fx-fill: #1a1a1a;
+    -fx-background-color: #f0f4fb; /* تظليل أزرق فاتح جداً */
+    -fx-padding: 4 6;
+    -fx-background-radius: 4px;
+}
+
+/* رقم الآية */
+.ayah-number-badge {
+    -fx-font-family: "Amiri", serif;
+    -fx-font-size: 18px;
+    -fx-fill: #1e3a5f;
+    -fx-font-weight: bold;
+    -fx-padding: 0 6 0 0;
+}
+
+/* ===== شريط التشغيل السفلي ===== */
+.player-bar {
+    -fx-background-color: #1e3a5f;
+    -fx-padding: 8 12;
+}
+.player-bar .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+}
+.player-bar .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-padding: 4 12;
+}
+.player-bar .button:hover {
+    -fx-text-fill: #c9a84c;
+}
+
+/* ===== شريط الحالة ===== */
+Label#statusLabel {
+    -fx-text-fill: #6c757d;
+    -fx-font-size: 13px;
+    -fx-padding: 6 12;
+}

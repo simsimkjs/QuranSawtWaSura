@@ -1,0 +1,66 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 1,
+  "surah_name": "الفاتحة",
+  "audio_file_name": "001.mp3",
+  "saved_at": "2026-07-08T05:28:25.021Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 2853,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "﻿بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+      "start_ms": 6459,
+      "export": true
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
+      "start_ms": 11524,
+      "export": true
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
+      "start_ms": 15019,
+      "export": true
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "مَٰلِكِ يَوْمِ ٱلدِّينِ",
+      "start_ms": 18742,
+      "export": true
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
+      "start_ms": 24044,
+      "export": true
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
+      "start_ms": 28568,
+      "export": true
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ",
+      "start_ms": 42082,
+      "export": true
+    }
+  ]
+}

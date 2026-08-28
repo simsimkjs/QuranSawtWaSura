@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sim.quran.ui.MainController"
+            stylesheets="@../css/app.css">
+
+    <!-- ===================== القائمة العلوية + شريط البحث ===================== -->
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="ملف">
+                    <MenuItem text="الانتقال لآخر موضع" onAction="#onGoToLastPosition"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="خروج" onAction="#onExit"/>
+                </Menu>
+                <Menu text="أدوات">
+                    <MenuItem text="العلامات المرجعية" onAction="#onShowBookmarks"/>
+                    <MenuItem text="الإعدادات" onAction="#onSettings"/>
+                </Menu>
+                <Menu text="مساعدة">
+                    <MenuItem text="حول البرنامج" onAction="#onAbout"/>
+                </Menu>
+            </MenuBar>
+
+            <HBox alignment="CENTER_LEFT" spacing="8" styleClass="search-bar">
+                <padding><Insets top="8" right="12" bottom="8" left="12"/></padding>
+                <TextField fx:id="searchField" promptText="ابحث عن كلمة أو آية..." HBox.hgrow="ALWAYS"
+                           onAction="#onSearch"/>
+                <Button text="بحث" onAction="#onSearch" styleClass="gold-button"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- ===================== قائمة السور ===================== -->
+    <left>
+        <VBox prefWidth="260" styleClass="side-panel">
+            <Label text="السور">
+                <padding><Insets top="10" right="10" bottom="6" left="10"/></padding>
+            </Label>
+            <ListView fx:id="surahListView" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </left>
+
+    <!-- ===================== لوحة القراءة (تُملأ برمجياً بـ ReaderPane) ===================== -->
+    <center>
+        <StackPane fx:id="centerPane"/>
+    </center>
+
+    <!-- ===================== شريط الحالة ===================== -->
+    <bottom>
+        <Label fx:id="statusLabel" text="جاهز.">
+            <padding><Insets top="6" right="12" bottom="6" left="12"/></padding>
+        </Label>
+    </bottom>
+
+</BorderPane>
