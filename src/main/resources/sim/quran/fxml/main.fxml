@@ -20,6 +20,8 @@
                 </Menu>
                 <Menu text="أدوات">
                     <MenuItem text="العلامات المرجعية" onAction="#onShowBookmarks"/>
+                    <MenuItem text="مشواري مع القرآن" onAction="#onShowProgress"/>
+                    <MenuItem text="القرّاء" onAction="#onManageProfiles"/>
                     <MenuItem text="الإعدادات" onAction="#onSettings"/>
                 </Menu>
                 <Menu text="مساعدة">
@@ -39,10 +41,23 @@
     <!-- ===================== قائمة السور ===================== -->
     <left>
         <VBox prefWidth="260" styleClass="side-panel">
+            <HBox alignment="CENTER_LEFT" spacing="6" styleClass="profile-bar">
+                <padding><Insets top="8" right="10" bottom="8" left="10"/></padding>
+                <Label fx:id="activeProfileLabel" text="👤 —" HBox.hgrow="ALWAYS"/>
+                <Button text="تبديل" onAction="#onManageProfiles"/>
+            </HBox>
+            <Separator/>
             <Label text="السور">
                 <padding><Insets top="10" right="10" bottom="6" left="10"/></padding>
             </Label>
             <ListView fx:id="surahListView" VBox.vgrow="ALWAYS"/>
+            <Separator/>
+            <VBox fx:id="miniProgressBox" spacing="6" styleClass="mini-progress-box">
+                <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+                <Label fx:id="miniProgressLabel" text="تقدّمك: 0%" wrapText="true"/>
+                <ProgressBar fx:id="miniProgressBar" progress="0" maxWidth="Infinity"/>
+                <Button text="مشواري الكامل" onAction="#onShowProgress" maxWidth="Infinity"/>
+            </VBox>
         </VBox>
     </left>
 

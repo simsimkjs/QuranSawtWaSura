@@ -30,6 +30,31 @@
     -fx-font-size: 14px;
 }
 
+/* ===== صندوق التقدّم المصغّر (مشواري) ===== */
+.mini-progress-box {
+    -fx-background-color: #fdf3da;
+    -fx-border-color: #d9b45c transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+.mini-progress-box .label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6b4d00;
+}
+.mini-progress-box .progress-bar .bar {
+    -fx-background-color: #9a6f00;
+}
+.progress-stat-label {
+    -fx-font-size: 13px;
+}
+.profile-bar {
+    -fx-background-color: #1a3d5c;
+}
+.profile-bar .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
 /* ===== عنوان السورة داخل لوحة القراءة ===== */
 .surah-title-label {
     -fx-font-size: 24px;

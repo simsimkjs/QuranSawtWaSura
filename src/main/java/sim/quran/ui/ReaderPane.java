@@ -19,6 +19,7 @@ import javafx.scene.text.TextFlow;
 import javafx.util.Duration;
 import sim.quran.data.BookmarkStore;
 import sim.quran.data.DataPaths;
+import sim.quran.data.MemorizationStore;
 import sim.quran.data.SurahDataLoader;
 import sim.quran.data.TafsirLoader;
 import sim.quran.model.AppSettings;
@@ -31,6 +32,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 /**
@@ -69,13 +71,19 @@ public class ReaderPane extends BorderPane {
     private Integer repeatRangeStart = null; // لتكرار آية واحدة: نبدأ من start_ms، ننتهي عند نهايتها
     private AppSettings settings = AppSettings.defaults();
 
-    private final BookmarkStore bookmarkStore;
+    private BookmarkStore bookmarkStore;
+    private MemorizationStore memorizationStore;
     private final Consumer<String> statusReporter;
+    private final BiConsumer<Integer, Boolean> onJuzCompleted; // (رقم الجزء، هل هو ختمة كاملة = جزء 30 اكتمل ضمنه المصحف)
+    private List<Surah> allSurahsForProgress = List.of();
     private final AnimationTimer syncTimer;
 
-    public ReaderPane(BookmarkStore bookmarkStore, Consumer<String> statusReporter) {
+    public ReaderPane(BookmarkStore bookmarkStore, MemorizationStore memorizationStore,
+                       Consumer<String> statusReporter, BiConsumer<Integer, Boolean> onJuzCompleted) {
         this.bookmarkStore = bookmarkStore;
+        this.memorizationStore = memorizationStore;
         this.statusReporter = statusReporter;
+        this.onJuzCompleted = onJuzCompleted;
 
         setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
         getStyleClass().add(settings.getTheme().styleClass);
@@ -382,6 +390,19 @@ public class ReaderPane extends BorderPane {
             }
             applyAyahTextStyle(node, true);
             scrollToNode(node);
+
+            // تسجيل مكان التوقف الحالي (للاستئناف) + تحديث مشوار الحفظ (لو التتبّع مفعّل وفيه تقدّم فعلي جديد)
+            AyahTiming ayah = currentData.getAyahs().get(dataIndex);
+            if (ayah.hasText() && currentSurah != null) {
+                bookmarkStore.updateLastPosition(currentSurah.getNumber(), ayah.getAyahNumber());
+                if (settings.isTrackProgress() && !allSurahsForProgress.isEmpty()) {
+                    Integer completedJuz = memorizationStore.recordProgress(
+                            currentSurah.getNumber(), ayah.getAyahNumber(), allSurahsForProgress);
+                    if (completedJuz != null && onJuzCompleted != null) {
+                        onJuzCompleted.accept(completedJuz, completedJuz == 30);
+                    }
+                }
+            }
         }
     }
 
@@ -444,6 +465,17 @@ public class ReaderPane extends BorderPane {
         bookmarkStore.updateLastPosition(currentSurah.getNumber(), ayahNumber);
         bookmarkStore.save();
         report("تم حفظ العلامة المرجعية.");
+    }
+
+    /** يجب استدعاؤها مرة واحدة بعد تحميل فهرس السور، حتى يقدر يحسب الموضع التراكمي لتتبّع التقدّم. */
+    public void setAllSurahs(List<Surah> surahs) {
+        this.allSurahsForProgress = surahs;
+    }
+
+    /** يبدّل مخازن البيانات (عند تبديل القارئ النشط) بدون الحاجة لإعادة بناء لوحة القراءة كاملة. */
+    public void switchStores(BookmarkStore newBookmarkStore, MemorizationStore newMemorizationStore) {
+        this.bookmarkStore = newBookmarkStore;
+        this.memorizationStore = newMemorizationStore;
     }
 
     public Surah getCurrentSurah() {

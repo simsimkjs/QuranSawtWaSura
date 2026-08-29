@@ -3,6 +3,7 @@ package sim.quran.data;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -40,8 +41,8 @@ public class BookmarkStore {
     private int lastAyah = 0;
     private final List<Bookmark> bookmarks = new ArrayList<>();
 
-    private BookmarkStore() {
-        Path dir = Path.of(System.getProperty("user.home"), ".quran_sawt_sura");
+    private BookmarkStore(File dataDir) {
+        Path dir = dataDir.toPath();
         this.filePath = dir.resolve("bookmarks.json");
         try {
             Files.createDirectories(dir);
@@ -50,9 +51,9 @@ public class BookmarkStore {
         loadFromDisk();
     }
 
-    /** يحمّل (أو ينشئ) مخزن العلامات المرجعية. */
-    public static BookmarkStore load() {
-        return new BookmarkStore();
+    /** يحمّل (أو ينشئ) مخزن العلامات المرجعية الخاص بمجلد قارئ معيّن. */
+    public static BookmarkStore load(File profileDataDir) {
+        return new BookmarkStore(profileDataDir);
     }
 
     public int getLastSurah() { return lastSurah; }

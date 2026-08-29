@@ -101,6 +101,15 @@ public class SettingsDialog {
         themeGroup.selectedToggleProperty().addListener((o, a, b) -> applyPreview.run());
         applyPreview.run();
 
+        // ---- تفعيل/إيقاف مشوار حفظ القرآن ----
+        CheckBox trackProgressCheck = new CheckBox("تفعيل مشوار حفظ القرآن (تتبّع التقدّم، المعدّل اليومي، والتهنئة عند إكمال كل جزء)");
+        trackProgressCheck.setSelected(draft.isTrackProgress());
+        trackProgressCheck.setWrapText(true);
+        Label trackProgressNote = new Label(
+                "لو ألغيت التفعيل: يشتغل التطبيق بدون أي تتبّع أو تنبيهات متعلقة بالمشوار - قراءة واستماع حرّ بدون أي قيود.");
+        trackProgressNote.setWrapText(true);
+        trackProgressNote.setStyle("-fx-font-size:12px; -fx-text-fill:#666;");
+
         // ---- الأزرار ----
         Button saveBtn = new Button("💾 حفظ");
         saveBtn.getStyleClass().add("gold-button");
@@ -108,6 +117,7 @@ public class SettingsDialog {
             draft.setFontFamily(fontCombo.getValue());
             draft.setFontSize(sizeSlider.getValue());
             draft.setTheme((AppSettings.Theme) themeGroup.getSelectedToggle().getUserData());
+            draft.setTrackProgress(trackProgressCheck.isSelected());
             onSave.accept(draft);
             stage.close();
         });
@@ -125,13 +135,15 @@ public class SettingsDialog {
                 new Label("الثيم:"), themeBox,
                 new Separator(),
                 new Label("معاينة:"), previewWrapper,
+                new Separator(),
+                trackProgressCheck, trackProgressNote,
                 buttonsBar
         );
         root.setPadding(new Insets(16));
         root.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
         HBox.setHgrow(sizeSlider, javafx.scene.layout.Priority.ALWAYS);
 
-        Scene scene = new Scene(root, 480, 560);
+        Scene scene = new Scene(root, 480, 640);
         scene.getStylesheets().add(SettingsDialog.class.getResource("/sim/quran/css/app.css").toExternalForm());
         stage.setScene(scene);
         stage.show();
