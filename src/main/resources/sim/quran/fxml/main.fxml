@@ -47,6 +47,15 @@
                 <Button text="تبديل" onAction="#onManageProfiles"/>
             </HBox>
             <Separator/>
+            <Button text="▶ متابعة الحفظ من آخر موضع" onAction="#onGoToLastPosition"
+                    maxWidth="Infinity" styleClass="continue-button">
+                <VBox.margin><Insets top="8" right="10" bottom="4" left="10"/></VBox.margin>
+            </Button>
+            <Button fx:id="toggleTrackingButton" text="⏸ إيقاف المتابعة (تجميد الموضع)" onAction="#onToggleTracking"
+                    maxWidth="Infinity">
+                <VBox.margin><Insets top="0" right="10" bottom="8" left="10"/></VBox.margin>
+            </Button>
+            <Separator/>
             <Label text="السور">
                 <padding><Insets top="10" right="10" bottom="6" left="10"/></padding>
             </Label>

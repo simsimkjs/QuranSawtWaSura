@@ -31,6 +31,7 @@ public class MainController {
     @FXML private ProgressBar miniProgressBar;
     @FXML private javafx.scene.layout.VBox miniProgressBox;
     @FXML private Label activeProfileLabel;
+    @FXML private Button toggleTrackingButton;
 
     private ReaderPane readerPane;
     private BookmarkStore bookmarkStore;
@@ -38,6 +39,7 @@ public class MainController {
     private SearchIndex searchIndex;
     private List<Surah> allSurahs;
     private Integer pendingJumpAyah;
+    private boolean silentRestore = false; // true أثناء الاستعادة الصامتة عند الإقلاع (بدون تشغيل صوت تلقائي)
     private AppSettings appSettings;
 
     private List<UserProfile> profiles;
@@ -70,8 +72,9 @@ public class MainController {
         });
         surahListView.getSelectionModel().selectedItemProperty().addListener((obs, old, selected) -> {
             if (selected != null) {
-                readerPane.loadSurah(selected, pendingJumpAyah);
+                readerPane.loadSurah(selected, pendingJumpAyah, !silentRestore);
                 pendingJumpAyah = null;
+                silentRestore = false;
                 refreshMiniProgress();
             }
         });
@@ -86,6 +89,7 @@ public class MainController {
         setStatus("جاهز — تم تحميل " + allSurahs.size() + " سورة من الفهرس.");
         refreshProfileLabel();
         refreshMiniProgress();
+        updateTrackingButtonLabel();
 
         // تحديث دوري خفيف لشريط التقدّم الجانبي أثناء الاستماع المتواصل
         javafx.animation.Timeline progressTicker = new javafx.animation.Timeline(
@@ -98,21 +102,11 @@ public class MainController {
 
     private void loadActiveProfileData() {
         profiles = new ArrayList<>(ProfileStore.loadProfiles());
-        String lastActiveId = ProfileStore.getLastActiveProfileId();
 
-        if (profiles.isEmpty()) {
-            // أول تشغيل: ننشئ قارئًا افتراضيًا تلقائيًا بدون إزعاج المستخدم بأي نافذة إجبارية
-            UserProfile defaultProfile = new UserProfile(
-                    ProfileStore.newProfileId("القارئ الأول", profiles), "القارئ الأول");
-            profiles.add(defaultProfile);
-            ProfileStore.saveProfiles(profiles, defaultProfile.getId());
-            activeProfile = defaultProfile;
-        } else {
-            activeProfile = profiles.stream()
-                    .filter(p -> p.getId().equals(lastActiveId))
-                    .findFirst()
-                    .orElse(profiles.get(0));
-        }
+        // خصوصية: البرنامج يبدأ دائمًا بوضع "ضيف" بلا أي بيانات شخصية، بغض النظر عن آخر
+        // قارئ كان نشطًا - الدخول لأي قارئ حقيقي له بيانات يتطلب اختياره صراحةً (وكلمة
+        // مروره لو حدّدها) من نافذة "القرّاء"، وليس تلقائيًا عند فتح البرنامج
+        activeProfile = UserProfile.GUEST;
 
         var dataDir = ProfileStore.profileDataDir(activeProfile.getId());
         bookmarkStore = BookmarkStore.load(dataDir);
@@ -122,10 +116,30 @@ public class MainController {
 
     @FXML
     private void onManageProfiles() {
-        ProfileDialog.show(profiles, activeProfile.getId(),
+        ProfileDialog.show(profiles, activeProfile.getId(), allSurahs,
                 this::switchToProfile,
                 this::addNewProfile,
-                this::deleteProfile);
+                this::deleteProfile,
+                this::setProfilePassword,
+                this::describePosition);
+    }
+
+    /** نص "مكان التوقف" لقارئ معيّن: جزء X - سورة Y - آية Z (أو "لم يبدأ بعد"). */
+    private String describePosition(UserProfile profile) {
+        var dataDir = ProfileStore.profileDataDir(profile.getId());
+        BookmarkStore store = profile.getId().equals(activeProfile.getId())
+                ? bookmarkStore : BookmarkStore.load(dataDir);
+
+        int surahNumber = store.getLastSurah();
+        int ayahNumber = store.getLastAyah();
+        if (surahNumber <= 0 || ayahNumber <= 0) return "لم يبدأ بعد";
+
+        return allSurahs.stream()
+                .filter(s -> s.getNumber() == surahNumber)
+                .findFirst()
+                .map(surah -> "جزء " + sim.quran.model.JuzBoundaries.juzOf(surahNumber, ayahNumber)
+                        + " - سورة " + surah.getName() + " - آية " + ayahNumber)
+                .orElse("لم يبدأ بعد");
     }
 
     private void switchToProfile(UserProfile target) {
@@ -133,7 +147,9 @@ public class MainController {
         bookmarkStore.save();
 
         activeProfile = target;
-        ProfileStore.saveProfiles(profiles, activeProfile.getId());
+        if (!activeProfile.isGuest()) {
+            ProfileStore.saveProfiles(profiles, activeProfile.getId());
+        }
 
         var dataDir = ProfileStore.profileDataDir(activeProfile.getId());
         bookmarkStore = BookmarkStore.load(dataDir);
@@ -142,6 +158,8 @@ public class MainController {
 
         readerPane.switchStores(bookmarkStore, memorizationStore);
         readerPane.applySettings(appSettings);
+        readerPane.resetTrackingPaused(true); // كل قارئ يبدأ جلسته بوضع "إيقاف المتابعة" لحد ما يضغط "استئناف" صراحةً
+        updateTrackingButtonLabel();
 
         refreshProfileLabel();
         refreshMiniProgress();
@@ -149,11 +167,25 @@ public class MainController {
         goToLastPositionDeferred();
     }
 
-    private void addNewProfile(String name) {
+    private void addNewProfile(String name, String password) {
         UserProfile newProfile = new UserProfile(ProfileStore.newProfileId(name, profiles), name);
+        if (password != null && !password.isBlank()) {
+            ProfileStore.setPassword(newProfile, password);
+        }
         profiles.add(newProfile);
-        ProfileStore.saveProfiles(profiles, activeProfile.getId());
+        ProfileStore.saveProfiles(profiles, newProfile.getId());
         switchToProfile(newProfile);
+    }
+
+    private void setProfilePassword(UserProfile target, String newPasswordOrNull) {
+        if (newPasswordOrNull == null) {
+            target.clearPassword();
+            setStatus("تمت إزالة كلمة مرور " + target.getDisplayName() + ".");
+        } else {
+            ProfileStore.setPassword(target, newPasswordOrNull);
+            setStatus("تم تحديث كلمة مرور " + target.getDisplayName() + ".");
+        }
+        ProfileStore.saveProfiles(profiles, activeProfile.isGuest() ? target.getId() : activeProfile.getId());
     }
 
     private void deleteProfile(UserProfile target) {
@@ -162,8 +194,9 @@ public class MainController {
         // نحذف مجلد بياناته بالكامل
         deleteDirectoryRecursively(ProfileStore.profileDataDir(target.getId()));
 
-        if (wasActive && !profiles.isEmpty()) {
-            switchToProfile(profiles.get(0));
+        if (wasActive) {
+            // نرجع للضيف دائمًا (لا نفتح تلقائيًا قارئًا حقيقيًا آخر قد يكون محميًا بكلمة مرور)
+            switchToProfile(UserProfile.GUEST);
         } else {
             ProfileStore.saveProfiles(profiles, activeProfile.getId());
         }
@@ -195,8 +228,9 @@ public class MainController {
                     .findFirst()
                     .orElse(allSurahs.get(0));
             if (target.equals(surahListView.getSelectionModel().getSelectedItem())) {
-                readerPane.loadSurah(target, bookmarkStore.getLastAyah());
+                readerPane.loadSurah(target, bookmarkStore.getLastAyah(), false);
             } else {
+                silentRestore = true;
                 pendingJumpAyah = bookmarkStore.getLastAyah() > 0 ? bookmarkStore.getLastAyah() : null;
                 surahListView.getSelectionModel().select(target);
             }
@@ -373,11 +407,33 @@ public class MainController {
 
     @FXML
     private void onGoToLastPosition() {
+        readerPane.resumeTracking(); // استئناف تلقائي - رجوعك لموضعك يعني إنك عدت للتتبّع الحي
+        updateTrackingButtonLabel();
         int lastSurahNumber = bookmarkStore.getLastSurah();
+        int lastAyah = bookmarkStore.getLastAyah();
         allSurahs.stream()
                 .filter(s -> s.getNumber() == lastSurahNumber)
                 .findFirst()
-                .ifPresent(surah -> surahListView.getSelectionModel().select(surah));
+                .ifPresent(surah -> goToAyah(surah, lastAyah > 0 ? lastAyah : 1));
+    }
+
+    @FXML
+    private void onToggleTracking() {
+        if (readerPane.isTrackingPaused()) {
+            readerPane.resumeTracking();
+            setStatus("تم استئناف تتبّع الموضع.");
+        } else {
+            readerPane.pauseTracking();
+            setStatus("تم تجميد موضعك الحالي - تقدر تتجول بحرية بدون ما تفقده. اضغط \"متابعة الحفظ\" للرجوع له.");
+        }
+        updateTrackingButtonLabel();
+    }
+
+    private void updateTrackingButtonLabel() {
+        if (toggleTrackingButton == null) return;
+        boolean paused = readerPane.isTrackingPaused();
+        toggleTrackingButton.setText(paused ? "▶ استئناف التتبّع" : "⏸ إيقاف المتابعة (تجميد الموضع)");
+        toggleTrackingButton.setStyle(paused ? "-fx-background-color:#9a6f00; -fx-text-fill:white;" : "");
     }
 
     @FXML

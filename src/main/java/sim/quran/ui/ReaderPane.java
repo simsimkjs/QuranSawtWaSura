@@ -69,6 +69,7 @@ public class ReaderPane extends BorderPane {
 
     private boolean userIsDraggingSlider = false;
     private Integer repeatRangeStart = null; // لتكرار آية واحدة: نبدأ من start_ms، ننتهي عند نهايتها
+    private boolean trackingPaused = true; // البرنامج يبدأ دائمًا بوضع "إيقاف المتابعة" حتى يضغط المستخدم "استئناف" صراحةً
     private AppSettings settings = AppSettings.defaults();
 
     private BookmarkStore bookmarkStore;
@@ -156,10 +157,10 @@ public class ReaderPane extends BorderPane {
         stopBtn.setOnAction(e -> stopPlayback());
 
         Button prevBtn = new Button("◀ الآية السابقة");
-        prevBtn.setOnAction(e -> jumpToAyah(currentAyahIndex - 1));
+        prevBtn.setOnAction(e -> jumpToAyah(currentAyahIndex - 1, true));
 
         Button nextBtn = new Button("الآية التالية ▶");
-        nextBtn.setOnAction(e -> jumpToAyah(currentAyahIndex + 1));
+        nextBtn.setOnAction(e -> jumpToAyah(currentAyahIndex + 1, true));
 
         repeatAyahBtn.setOnAction(e -> {
             if (repeatAyahBtn.isSelected() && currentAyahIndex >= 0) {
@@ -211,6 +212,11 @@ public class ReaderPane extends BorderPane {
 
     /** يحمّل السورة، وإن أُعطي رقم آية، يقفز إليها ويشغّل الصوت بمجرد جاهزيته. */
     public void loadSurah(Surah surah, Integer jumpToAyahNumber) {
+        loadSurah(surah, jumpToAyahNumber, true);
+    }
+
+    /** @param autoPlay مرّر false للاستعادة الصامتة عند إقلاع البرنامج (ينقل ويظلل بدون تشغيل الصوت تلقائيًا). */
+    public void loadSurah(Surah surah, Integer jumpToAyahNumber, boolean autoPlay) {
         stopPlayback();
         this.currentSurah = surah;
         currentAyahIndex = -1;
@@ -258,7 +264,9 @@ public class ReaderPane extends BorderPane {
                 progressSlider.setMax(player.getTotalDuration().toMillis());
                 updateTimeLabel(0, player.getTotalDuration().toMillis());
                 if (jumpToAyahNumber != null) {
-                    jumpToAyahNumber(jumpToAyahNumber);
+                    // نعيد القفز هنا كمان لضبط موضع الصوت نفسه بمجرد جاهزيته فعليًا
+                    // (القفزة الأولى تحت ضمنت التظليل والتمرير فورًا بغض النظر عن الصوت)
+                    jumpToAyahNumber(jumpToAyahNumber, autoPlay);
                 }
             });
             player.setOnEndOfMedia(this::stopPlayback);
@@ -267,7 +275,15 @@ public class ReaderPane extends BorderPane {
             report("تنبيه: ملف الصوت غير موجود لهذه السورة (" + currentData.getAudioFileName() + ")");
         }
 
-        bookmarkStore.updateLastPosition(surah.getNumber(), jumpToAyahNumber != null ? jumpToAyahNumber : 1);
+        // القفز للآية المطلوبة فورًا - يشتغل بغض النظر عن جاهزية الصوت أو توفره أصلاً
+        if (jumpToAyahNumber != null) {
+            jumpToAyahNumber(jumpToAyahNumber, autoPlay);
+        }
+
+        // لو التتبّع مجمَّد، ما نغيّر "آخر موضع" لمجرد فتح سورة للتصفح (بحث/تجول حرّ)
+        if (!trackingPaused) {
+            bookmarkStore.updateLastPosition(surah.getNumber(), jumpToAyahNumber != null ? jumpToAyahNumber : 1);
+        }
         report("تم تحميل سورة " + currentData.getSurahName());
     }
 
@@ -391,15 +407,19 @@ public class ReaderPane extends BorderPane {
             applyAyahTextStyle(node, true);
             scrollToNode(node);
 
-            // تسجيل مكان التوقف الحالي (للاستئناف) + تحديث مشوار الحفظ (لو التتبّع مفعّل وفيه تقدّم فعلي جديد)
-            AyahTiming ayah = currentData.getAyahs().get(dataIndex);
-            if (ayah.hasText() && currentSurah != null) {
-                bookmarkStore.updateLastPosition(currentSurah.getNumber(), ayah.getAyahNumber());
-                if (settings.isTrackProgress() && !allSurahsForProgress.isEmpty()) {
-                    Integer completedJuz = memorizationStore.recordProgress(
-                            currentSurah.getNumber(), ayah.getAyahNumber(), allSurahsForProgress);
-                    if (completedJuz != null && onJuzCompleted != null) {
-                        onJuzCompleted.accept(completedJuz, completedJuz == 30);
+            // تسجيل مكان التوقف الحالي (للاستئناف) + تحديث مشوار الحفظ - فقط لو التتبّع
+            // غير مجمَّد (لو المستخدم ضغط "إيقاف المتابعة" نتجاهل هذا التحديث بالكامل، حتى
+            // يقدر يتجول بحرية بالبرنامج بدون ما يفقد مكان توقفه الحقيقي)
+            if (!trackingPaused) {
+                AyahTiming ayah = currentData.getAyahs().get(dataIndex);
+                if (ayah.hasText() && currentSurah != null) {
+                    bookmarkStore.updateLastPosition(currentSurah.getNumber(), ayah.getAyahNumber());
+                    if (settings.isTrackProgress() && !allSurahsForProgress.isEmpty()) {
+                        Integer completedJuz = memorizationStore.recordProgress(
+                                currentSurah.getNumber(), ayah.getAyahNumber(), allSurahsForProgress);
+                        if (completedJuz != null && onJuzCompleted != null) {
+                            onJuzCompleted.accept(completedJuz, completedJuz == 30);
+                        }
                     }
                 }
             }
@@ -431,23 +451,35 @@ public class ReaderPane extends BorderPane {
         textScroll.setVvalue(Math.max(0, Math.min(1, fraction)));
     }
 
-    private void jumpToAyah(int dataIndex) {
-        if (currentData == null || player == null) return;
+    private void jumpToAyah(int dataIndex, boolean autoPlay) {
+        if (currentData == null) return;
         List<AyahTiming> ayahs = currentData.getAyahs();
         if (dataIndex < 0 || dataIndex >= ayahs.size()) return;
-        player.seek(Duration.millis(ayahs.get(dataIndex).getStartMs()));
-        if (player.getStatus() != MediaPlayer.Status.PLAYING) {
-            player.play();
-            playPauseBtn.setText("⏸ إيقاف مؤقت");
+
+        // ننقل العرض ونظلّل الآية فورًا، بغض النظر عن حالة مشغّل الصوت (جاهز/غير موجود أصلاً) -
+        // هذا يضمن إن القفزة تشتغل حتى لو الصوت ما توفر بعد لهذه السورة
+        highlightAyah(dataIndex);
+
+        if (player != null) {
+            player.seek(Duration.millis(ayahs.get(dataIndex).getStartMs()));
+            if (autoPlay && player.getStatus() != MediaPlayer.Status.PLAYING) {
+                player.play();
+                playPauseBtn.setText("⏸ إيقاف مؤقت");
+            }
         }
     }
 
     public void jumpToAyahNumber(int ayahNumber) {
+        jumpToAyahNumber(ayahNumber, true);
+    }
+
+    /** @param autoPlay مرّر false للانتقال الصامت (تظليل + مزامنة الصوت بدون بدء التشغيل تلقائيًا). */
+    public void jumpToAyahNumber(int ayahNumber, boolean autoPlay) {
         if (currentData == null) return;
         List<AyahTiming> ayahs = currentData.getAyahs();
         for (int i = 0; i < ayahs.size(); i++) {
             if (ayahs.get(i).getAyahNumber() == ayahNumber) {
-                jumpToAyah(i);
+                jumpToAyah(i, autoPlay);
                 return;
             }
         }
@@ -476,6 +508,34 @@ public class ReaderPane extends BorderPane {
     public void switchStores(BookmarkStore newBookmarkStore, MemorizationStore newMemorizationStore) {
         this.bookmarkStore = newBookmarkStore;
         this.memorizationStore = newMemorizationStore;
+    }
+
+    /**
+     * يجمّد "آخر موضع" عند نقطة التوقف الحالية بالضبط، ويوقف أي تحديث تلقائي له لحد الاستئناف.
+     * بعدها يقدر المستخدم يتجول بحرية بالبرنامج (يفتح أي سورة، يبحث...) بدون ما يفقد مكانه الحقيقي.
+     */
+    public void pauseTracking() {
+        if (currentSurah != null && currentAyahIndex >= 0 && currentAyahIndex < currentData.getAyahs().size()) {
+            AyahTiming ayah = currentData.getAyahs().get(currentAyahIndex);
+            if (ayah.hasText()) {
+                bookmarkStore.updateLastPosition(currentSurah.getNumber(), ayah.getAyahNumber());
+                bookmarkStore.save(); // نحفظه فورًا على القرص، مو بس بالذاكرة، احتياطًا
+            }
+        }
+        trackingPaused = true;
+    }
+
+    public void resumeTracking() {
+        trackingPaused = false;
+    }
+
+    /** يضبط حالة التجميد مباشرة بدون أي أثر جانبي (بلا حفظ موضع) - يُستخدم عند بدء جلسة قارئ جديد. */
+    public void resetTrackingPaused(boolean paused) {
+        this.trackingPaused = paused;
+    }
+
+    public boolean isTrackingPaused() {
+        return trackingPaused;
     }
 
     public Surah getCurrentSurah() {

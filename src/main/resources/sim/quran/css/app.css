@@ -17,6 +17,18 @@
     -fx-font-weight: bold;
 }
 
+.continue-button {
+    -fx-background-color: #1a3d5c;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 10 8 10 8;
+    -fx-background-radius: 4;
+}
+.continue-button:hover {
+    -fx-background-color: #244f78;
+}
+
 /* ===== قائمة السور ===== */
 .side-panel {
     -fx-background-color: #ffffff;
