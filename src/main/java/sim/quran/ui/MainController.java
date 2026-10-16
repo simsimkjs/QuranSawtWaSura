@@ -53,6 +53,11 @@ public class MainController {
         readerPane.applySettings(appSettings);
         centerPane.getChildren().add(readerPane);
 
+        // تحميل شريحة CSS المناسبة (كلاسيكي/معاصر) بمجرد ما تصير النافذة الرئيسية مربوطة بمشهد (Scene) فعلي
+        centerPane.sceneProperty().addListener((obs, oldScene, newScene) -> {
+            if (newScene != null) applyDesignStylesheet();
+        });
+
         try {
             allSurahs = SurahIndexLoader.load();
         } catch (Exception e) {
@@ -124,6 +129,11 @@ public class MainController {
                 this::describePosition);
     }
 
+    @FXML
+    private void onShowNavigation() {
+        NavigationDialog.show(allSurahs, this::goToAyah);
+    }
+
     /** نص "مكان التوقف" لقارئ معيّن: جزء X - سورة Y - آية Z (أو "لم يبدأ بعد"). */
     private String describePosition(UserProfile profile) {
         var dataDir = ProfileStore.profileDataDir(profile.getId());
@@ -143,8 +153,9 @@ public class MainController {
     }
 
     private void switchToProfile(UserProfile target) {
-        // نحفظ بيانات القارئ الحالي قبل ما نطلع منه
+        // نحفظ بيانات القارئ الحالي قبل ما نطلع منه (المشوار يُكتب لا تزامنيًا، فنفرغه هنا)
         bookmarkStore.save();
+        memorizationStore.flush();
 
         activeProfile = target;
         if (!activeProfile.isGuest()) {
@@ -158,6 +169,7 @@ public class MainController {
 
         readerPane.switchStores(bookmarkStore, memorizationStore);
         readerPane.applySettings(appSettings);
+        applyDesignStylesheet();
         readerPane.resetTrackingPaused(true); // كل قارئ يبدأ جلسته بوضع "إيقاف المتابعة" لحد ما يضغط "استئناف" صراحةً
         updateTrackingButtonLabel();
 
@@ -185,21 +197,25 @@ public class MainController {
             ProfileStore.setPassword(target, newPasswordOrNull);
             setStatus("تم تحديث كلمة مرور " + target.getDisplayName() + ".");
         }
-        ProfileStore.saveProfiles(profiles, activeProfile.isGuest() ? target.getId() : activeProfile.getId());
+        // نحافظ على آخر قارئ نشط كما هو: لو كنا بالوضع "ضيف" ما نسجّل القارئ الذي
+        // عدّلنا له كلمة المرور كآخر قارئ نشط (الضيف ليس قارئًا حقيقيًا سجّلناه)
+        ProfileStore.saveProfiles(profiles, activeProfile.isGuest() ? null : activeProfile.getId());
     }
 
     private void deleteProfile(UserProfile target) {
         boolean wasActive = target.getId().equals(activeProfile.getId());
         profiles.removeIf(p -> p.getId().equals(target.getId()));
-        // نحذف مجلد بياناته بالكامل
-        deleteDirectoryRecursively(ProfileStore.profileDataDir(target.getId()));
 
         if (wasActive) {
-            // نرجع للضيف دائمًا (لا نفتح تلقائيًا قارئًا حقيقيًا آخر قد يكون محميًا بكلمة مرور)
+            // نرجع للضيف دائمًا (لا نفتح تلقائيًا قارئًا حقيقيًا آخر قد يكون محميًا بكلمة مرور).
+            // نستدعيه قبل حذف المجلد حتى لا تحاول switchToProfile حفظ مجلد منتهٍ بالفعل.
             switchToProfile(UserProfile.GUEST);
-        } else {
-            ProfileStore.saveProfiles(profiles, activeProfile.getId());
         }
+        // نحفظ فهرس القرّاء دائمًا بعد الحذف - بدون هذا السطر يظل القارئ المحذوف
+        // مسجّلًا في profiles.json ويعود ظاهرًا بعد إعادة تشغيل البرنامج
+        ProfileStore.saveProfiles(profiles, activeProfile.isGuest() ? null : activeProfile.getId());
+
+        deleteDirectoryRecursively(ProfileStore.profileDataDir(target.getId()));
     }
 
     private static void deleteDirectoryRecursively(java.io.File dir) {
@@ -211,6 +227,22 @@ public class MainController {
             }
         }
         dir.delete();
+    }
+
+    /** يطبّق شريحة CSS المطابقة لـ appSettings.getDesignStyle() على مشهد النافذة الرئيسية ويوثّق النمط الحالي للنوافذ المنبثقة. */
+    private void applyDesignStylesheet() {
+        if (appSettings == null) return;
+        DesignStyles.setCurrent(appSettings.getDesignStyle());
+        DesignStyles.applyTo(centerPane.getScene());
+    }
+
+    /**
+     * يحفظ أي تغييرات معلّقة (آخر موضع القراءة + العلامات المرجعية) قبل إغلاق النافذة.
+     * يُستدعى من QuranApp عند طلب الإغلاق (زر ✕)، لأن onExit (قائمة ملف→خروج) لا يغطي هذه الحالة.
+     */
+    public void persistOnClose() {
+        if (bookmarkStore != null) bookmarkStore.save();
+        if (memorizationStore != null) memorizationStore.flush();
     }
 
     private void refreshProfileLabel() {
@@ -366,6 +398,7 @@ public class MainController {
             appSettings = newSettings;
             SettingsStore.save(ProfileStore.profileDataDir(activeProfile.getId()), appSettings);
             readerPane.applySettings(appSettings);
+            applyDesignStylesheet();
             refreshMiniProgress();
         });
     }
@@ -450,6 +483,7 @@ public class MainController {
     @FXML
     private void onExit() {
         bookmarkStore.save();
+        memorizationStore.flush();
         Platform.exit();
     }
 

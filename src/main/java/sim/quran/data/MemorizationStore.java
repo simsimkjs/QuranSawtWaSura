@@ -14,6 +14,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.TreeMap;
 import java.util.TreeSet;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * "مشوار حفظ القرآن": يتتبّع أبعد نقطة وصلها المستخدم فعليًا أثناء الاستماع/القراءة
@@ -28,6 +32,17 @@ public class MemorizationStore {
     private static final int DAILY_AVERAGE_WINDOW_DAYS = 14; // نحسب المعدل من آخر أسبوعين، مو من أول يوم
 
     private final File filePath;
+
+    // كتابة progress.json تجري في خيط خلفي منفصل (single-thread daemon) بدل حجب خيط الواجهة
+    // مع كل آية جديدة، مع دمج الطلبات المتلاحقة: أحدث نسخة فقط تُكتب، وما فيه أكثر من كاتب واحد.
+    // المنفّذ مشترك بين كل المخازن حتى لا يتراكم خيط لكل قارئ عند تبديل القرّاء.
+    private static final ExecutorService IO_EXECUTOR = Executors.newSingleThreadExecutor(r -> {
+        Thread t = new Thread(r, "memorization-saver");
+        t.setDaemon(true);
+        return t;
+    });
+    private final AtomicReference<String> pendingJson = new AtomicReference<>();
+    private final AtomicBoolean writerActive = new AtomicBoolean(false);
 
     private int furthestSurah = 0;
     private int furthestAyah = 0;
@@ -64,20 +79,20 @@ public class MemorizationStore {
         furthestSurah = surahNumber;
         furthestAyah = ayahNumber;
         dailyLog.put(LocalDate.now(), newCumulative);
-        save();
+        saveAsync();
 
         int newJuz = JuzBoundaries.juzOf(surahNumber, ayahNumber);
         // هل اكتمل جزء جديد بالكامل؟ يعني وصلنا لبداية الجزء التالي (أو تجاوزناه)
         int completedJuz = newJuz - 1;
         if (completedJuz >= 1 && !congratulatedJuz.contains(completedJuz)) {
             congratulatedJuz.add(completedJuz);
-            save();
+            saveAsync();
             return completedJuz;
         }
         // حالة خاصة: اكتمال آخر جزء (30) يعني الانتهاء من كامل المصحف
         if (newCumulative >= JuzBoundaries.totalAyahCount(allSurahs) && !congratulatedJuz.contains(30)) {
             congratulatedJuz.add(30);
-            save();
+            saveAsync();
             return 30;
         }
         return null;
@@ -148,7 +163,19 @@ public class MemorizationStore {
         }
     }
 
-    private void save() {
+    /**
+     * يبني نسخة JSON من الحالة الحالية (يُستدعى تحت قفل this) ثم يجدول كتابتها على القرص
+     * في خيط خلفي، مع دمج الطلبات المتلاحقة: أحدث نسخة فقط تُكتب، فلا نحجب خيط الواجهة.
+     */
+    private void saveAsync() {
+        pendingJson.set(toJson().toString(2));
+        if (writerActive.compareAndSet(false, true)) {
+            IO_EXECUTOR.submit(this::drainPendingWrites);
+        }
+    }
+
+    /** لقطة متّسقة من الحالة الحالية كـ JSON (synchronized حتى لا تتزامن مع تعديل أثناء البناء). */
+    private synchronized JSONObject toJson() {
         JSONObject root = new JSONObject();
         root.put("furthest_surah", furthestSurah);
         root.put("furthest_ayah", furthestAyah);
@@ -159,11 +186,47 @@ public class MemorizationStore {
         }
         root.put("daily_log", log);
         root.put("congratulated_juz", congratulatedJuz);
+        return root;
+    }
 
+    private void drainPendingWrites() {
         try {
-            Files.writeString(filePath.toPath(), root.toString(2), StandardCharsets.UTF_8);
+            String json;
+            while ((json = pendingJson.getAndSet(null)) != null) {
+                writeFile(json);
+            }
+        } finally {
+            writerActive.set(false);
+            // سدّ ثغرة سباق: لو وصل طلب جديد بعد ما فرغنا الحلقة وقبل تصفير العلم، جدوله من جديد
+            if (pendingJson.get() != null && writerActive.compareAndSet(false, true)) {
+                IO_EXECUTOR.submit(this::drainPendingWrites);
+            }
+        }
+    }
+
+    private void writeFile(String json) {
+        try {
+            Files.writeString(filePath.toPath(), json, StandardCharsets.UTF_8);
         } catch (IOException e) {
             System.err.println("تعذر حفظ تقدّم المشوار: " + e.getMessage());
+        }
+    }
+
+    /**
+     * يكتب أحدث حالة على القرص بشكل متزامن مضمون. يُنفَّذ عبر نفس الخيط الخلفي (الطابور
+     * أحادي الخيط) حتى لا تطغى كتابة قديمة كانت أثناء التنفيذ على هذه الكتابة الأحدث،
+     * ثم ينتظر انتهاءها. يُستدعى عند إغلاق البرنامج أو تبديل القارئ.
+     */
+    public void flush() {
+        final String json = toJson().toString(2);
+        pendingJson.set(null); // إلغِ أي لقطة أقدم كانت في الانتظار
+        try {
+            IO_EXECUTOR.submit(() -> writeFile(json)).get();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            writeFile(json);
+        } catch (Exception e) {
+            writeFile(json);
         }
     }
 }

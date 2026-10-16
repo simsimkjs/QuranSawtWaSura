@@ -12,7 +12,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.scene.text.TextFlow;
@@ -304,27 +303,28 @@ public class ReaderPane extends BorderPane {
             applyAyahTextStyle(ayahText, false);
             ayahText.setOnMouseClicked(e -> onAyahClicked(ayahNumber));
 
-            Node badge = createAyahBadge(ayahNumber);
+            Text numberText = createAyahNumberText(ayahNumber);
+            numberText.setOnMouseClicked(e -> onAyahClicked(ayahNumber));
 
-            textFlow.getChildren().addAll(ayahText, badge, new Text("  "));
+            // فاصل سطر بعد كل آية - كل آية بسطرها الخاص بدل تدفّق متصل
+            Text lineBreak = new Text("\n");
+
+            textFlow.getChildren().addAll(ayahText, numberText, lineBreak);
             dataIndexToVisibleIndex.put(i, ayahTextNodes.size());
             ayahTextNodes.add(ayahText);
         }
     }
 
-    /** دائرة زخرفية صغيرة برقم الآية (تحاكي علامة نهاية الآية في المصحف)، تُدرَج داخل سطر النص مباشرة. */
-    private Node createAyahBadge(int ayahNumber) {
-        Circle circle = new Circle(14);
-        circle.getStyleClass().add("ayah-badge-circle");
-        circle.setStyle("-fx-fill:#fdf3da; -fx-stroke:#9a6f00; -fx-stroke-width:1.5;");
-
-        Text num = new Text(toArabicNumber(ayahNumber));
-        num.getStyleClass().add("ayah-badge-number");
-        num.setStyle("-fx-font-family:'Amiri',serif; -fx-font-size:13px; -fx-fill:#1a3d5c; -fx-font-weight:bold;");
-
-        StackPane badge = new StackPane(circle, num);
-        badge.setOnMouseClicked(e -> onAyahClicked(ayahNumber));
-        return badge;
+    /** رقم الآية بصيغة "(١)" بسيطة (عنصر نصي واحد بدل دائرة+رقم+إطار - أخف بكثير على السور الطويلة). */
+    private Text createAyahNumberText(int ayahNumber) {
+        Text numberText = new Text("(" + toArabicNumber(ayahNumber) + ") ");
+        numberText.getStyleClass().add("ayah-badge-number");
+        boolean modern = settings.getDesignStyle() == AppSettings.DesignStyle.MODERN;
+        if (!modern) {
+            numberText.setStyle("-fx-font-family:'" + settings.getFontFamily() + "'; -fx-font-size:"
+                    + (int) settings.getFontSize() + "px; -fx-fill:#1a1a1a; -fx-font-weight:bold;");
+        }
+        return numberText;
     }
 
     private void onAyahClicked(int ayahNumber) {
@@ -426,12 +426,19 @@ public class ReaderPane extends BorderPane {
         }
     }
 
-    /** يعيد بناء الـ inline style الكامل للآية (خط + حجم + لون)، مضمون الظهور بغض النظر عن CSS. */
+    /** يعيد بناء الـ inline style الكامل للآية (خط + حجم + لون)، مضمون الظهور بغض النظر عن CSS
+     *  في النمط الكلاسيكي - بالنمط "معاصر" نترك اللون لملف style.css نفسه (صنف ayah-text). */
     private void applyAyahTextStyle(Text node, boolean current) {
-        String color = current ? currentAyahColor() : ayahTextColor();
-        String extra = current ? "-fx-font-weight:bold;-fx-underline:true;" : "";
-        node.setStyle("-fx-font-family:'" + settings.getFontFamily() + "'; -fx-font-size:"
-                + (int) settings.getFontSize() + "px; -fx-fill:" + color + ";" + extra);
+        boolean modern = settings.getDesignStyle() == AppSettings.DesignStyle.MODERN;
+        String fontPart = "-fx-font-family:'" + settings.getFontFamily() + "'; -fx-font-size:"
+                + (int) settings.getFontSize() + "px;";
+        if (modern) {
+            node.setStyle(fontPart + (current ? "-fx-font-weight:bold;-fx-underline:true;" : ""));
+        } else {
+            String color = current ? currentAyahColor() : ayahTextColor();
+            String extra = current ? "-fx-font-weight:bold;-fx-underline:true;" : "";
+            node.setStyle(fontPart + " -fx-fill:" + color + ";" + extra);
+        }
     }
 
     private String currentAyahColor() {
@@ -561,10 +568,16 @@ public class ReaderPane extends BorderPane {
     }
 
     /**
-     * تنسيق الثيم مباشرة كـ inline style على العناصر الأساسية (خلفية الجذر + إطار الصفحة المزخرف).
-     * هذا احتياطي مضمون الظهور دائمًا، حتى لو تأخر تحميل app.css أو حصل أي تعارض بترتيب الأنماط.
+     * تنسيق الثيم مباشرة كـ inline style على العناصر الأساسية (خلفية الجذر + إطار الصفحة المزخرف) -
+     * فقط بالنمط الكلاسيكي. بالنمط "معاصر" نمسح أي inline سابق ونترك التلوين بالكامل لملف style.css.
      */
     private void applyThemeInlineStyles() {
+        if (settings.getDesignStyle() == AppSettings.DesignStyle.MODERN) {
+            setStyle("");
+            pageFrame.setStyle("");
+            return;
+        }
+
         String rootBg;
         String frameStyle;
         switch (settings.getTheme()) {
@@ -595,9 +608,9 @@ public class ReaderPane extends BorderPane {
 
     private String ayahTextColor() {
         switch (settings.getTheme()) {
-            case LIGHT: return "#1a1a1a";
-            case DARK: return "#f0e6c8";
-            default: return "#241a08";
+            case LIGHT: return "#0F6A5E";
+            case DARK: return "#5EEAD4";
+            default: return "#0F6A5E";
         }
     }
 

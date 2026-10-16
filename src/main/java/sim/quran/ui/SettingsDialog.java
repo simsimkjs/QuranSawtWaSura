@@ -73,6 +73,26 @@ public class SettingsDialog {
             themeBox.getChildren().add(rb);
         }
 
+        ToggleGroup designGroup = new ToggleGroup();
+        HBox designBox = new HBox(14);
+        for (AppSettings.DesignStyle d : AppSettings.DesignStyle.values()) {
+            RadioButton rb = new RadioButton(d.displayName);
+            rb.setUserData(d);
+            rb.setToggleGroup(designGroup);
+            if (d == draft.getDesignStyle()) rb.setSelected(true);
+            designBox.getChildren().add(rb);
+        }
+        Label designNote = new Label(
+                "\"معاصر\" يستبدل التصميم بالكامل (شريحة CSS مختلفة). خيارات \"الثيم\" أسفل (فاتح/داكن) خاصة "
+                        + "بالتصميم الكلاسيكي فقط وتصير معطَّلة لو اخترت معاصر.");
+        designNote.setWrapText(true);
+        designNote.setStyle("-fx-font-size:12px; -fx-text-fill:#666;");
+        designGroup.selectedToggleProperty().addListener((o, a, b) -> {
+            boolean modern = designGroup.getSelectedToggle().getUserData() == AppSettings.DesignStyle.MODERN;
+            themeBox.setDisable(modern);
+        });
+        themeBox.setDisable(draft.getDesignStyle() == AppSettings.DesignStyle.MODERN);
+
         // ---- المعاينة الحية ----
         Text previewText = new Text(SAMPLE_TEXT);
         previewText.setTextAlignment(TextAlignment.RIGHT);
@@ -118,6 +138,7 @@ public class SettingsDialog {
             draft.setFontSize(sizeSlider.getValue());
             draft.setTheme((AppSettings.Theme) themeGroup.getSelectedToggle().getUserData());
             draft.setTrackProgress(trackProgressCheck.isSelected());
+            draft.setDesignStyle((AppSettings.DesignStyle) designGroup.getSelectedToggle().getUserData());
             onSave.accept(draft);
             stage.close();
         });
@@ -132,7 +153,8 @@ public class SettingsDialog {
         VBox root = new VBox(16,
                 new Label("الخط:"), fontCombo,
                 new Label("حجم الخط:"), new HBox(10, sizeSlider, sizeValueLabel),
-                new Label("الثيم:"), themeBox,
+                new Label("نمط التصميم:"), designBox, designNote,
+                new Label("الثيم (كلاسيكي فقط):"), themeBox,
                 new Separator(),
                 new Label("معاينة:"), previewWrapper,
                 new Separator(),
@@ -143,8 +165,8 @@ public class SettingsDialog {
         root.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
         HBox.setHgrow(sizeSlider, javafx.scene.layout.Priority.ALWAYS);
 
-        Scene scene = new Scene(root, 480, 640);
-        scene.getStylesheets().add(SettingsDialog.class.getResource("/sim/quran/css/app.css").toExternalForm());
+        Scene scene = new Scene(root, 480, 720);
+        DesignStyles.applyTo(scene);
         stage.setScene(scene);
         stage.show();
     }

@@ -1,39 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="sim.quran.ui.MainController"
-            stylesheets="@../css/app.css">
+<BorderPane prefHeight="790.0" prefWidth="612.0" xmlns="http://javafx.com/javafx/21.0.3" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sim.quran.ui.MainController">
 
     <!-- ===================== القائمة العلوية + شريط البحث ===================== -->
     <top>
         <VBox>
             <MenuBar>
                 <Menu text="ملف">
-                    <MenuItem text="الانتقال لآخر موضع" onAction="#onGoToLastPosition"/>
-                    <SeparatorMenuItem/>
-                    <MenuItem text="خروج" onAction="#onExit"/>
+                    <MenuItem onAction="#onGoToLastPosition" text="الانتقال لآخر موضع" />
+                    <SeparatorMenuItem />
+                    <MenuItem onAction="#onExit" text="خروج" />
                 </Menu>
                 <Menu text="أدوات">
-                    <MenuItem text="العلامات المرجعية" onAction="#onShowBookmarks"/>
-                    <MenuItem text="مشواري مع القرآن" onAction="#onShowProgress"/>
-                    <MenuItem text="القرّاء" onAction="#onManageProfiles"/>
-                    <MenuItem text="الإعدادات" onAction="#onSettings"/>
+                    <MenuItem onAction="#onShowNavigation" text="تصفّح الأجزاء والأحزاب والأرباع" />
+                    <MenuItem onAction="#onShowBookmarks" text="العلامات المرجعية" />
+                    <MenuItem onAction="#onShowProgress" text="مشواري مع القرآن" />
+                    <MenuItem onAction="#onManageProfiles" text="القرّاء" />
+                    <MenuItem onAction="#onSettings" text="الإعدادات" />
                 </Menu>
                 <Menu text="مساعدة">
-                    <MenuItem text="حول البرنامج" onAction="#onAbout"/>
+                    <MenuItem onAction="#onAbout" text="حول البرنامج" />
                 </Menu>
             </MenuBar>
 
             <HBox alignment="CENTER_LEFT" spacing="8" styleClass="search-bar">
-                <padding><Insets top="8" right="12" bottom="8" left="12"/></padding>
-                <TextField fx:id="searchField" promptText="ابحث عن كلمة أو آية..." HBox.hgrow="ALWAYS"
-                           onAction="#onSearch"/>
-                <Button text="بحث" onAction="#onSearch" styleClass="gold-button"/>
+                <padding><Insets bottom="8" left="12" right="12" top="8" /></padding>
+                <TextField fx:id="searchField" onAction="#onSearch" promptText="ابحث عن كلمة أو آية..." HBox.hgrow="ALWAYS" />
+                <Button onAction="#onSearch" styleClass="gold-button" text="بحث" />
             </HBox>
         </VBox>
     </top>
@@ -42,43 +51,44 @@
     <left>
         <VBox prefWidth="260" styleClass="side-panel">
             <HBox alignment="CENTER_LEFT" spacing="6" styleClass="profile-bar">
-                <padding><Insets top="8" right="10" bottom="8" left="10"/></padding>
-                <Label fx:id="activeProfileLabel" text="👤 —" HBox.hgrow="ALWAYS"/>
-                <Button text="تبديل" onAction="#onManageProfiles"/>
+                <padding><Insets bottom="8" left="10" right="10" top="8" /></padding>
+                <Label fx:id="activeProfileLabel" text="👤 —" HBox.hgrow="ALWAYS" />
+                <Button onAction="#onManageProfiles" text="تبديل" />
             </HBox>
-            <Separator/>
-            <Button text="▶ متابعة الحفظ من آخر موضع" onAction="#onGoToLastPosition"
-                    maxWidth="Infinity" styleClass="continue-button">
-                <VBox.margin><Insets top="8" right="10" bottom="4" left="10"/></VBox.margin>
+            <Separator />
+            <Button maxWidth="Infinity" onAction="#onGoToLastPosition" styleClass="continue-button" text="▶ متابعة الحفظ من آخر موضع">
+                <VBox.margin><Insets bottom="4" left="10" right="10" top="8" /></VBox.margin>
             </Button>
-            <Button fx:id="toggleTrackingButton" text="⏸ إيقاف المتابعة (تجميد الموضع)" onAction="#onToggleTracking"
-                    maxWidth="Infinity">
-                <VBox.margin><Insets top="0" right="10" bottom="8" left="10"/></VBox.margin>
+            <Button fx:id="toggleTrackingButton" maxWidth="Infinity" onAction="#onToggleTracking" text="⏸ إيقاف المتابعة (تجميد الموضع)">
+                <VBox.margin><Insets bottom="8" left="10" right="10" top="0" /></VBox.margin>
             </Button>
-            <Separator/>
+            <Separator />
             <Label text="السور">
-                <padding><Insets top="10" right="10" bottom="6" left="10"/></padding>
+                <padding><Insets bottom="6" left="10" right="10" top="10" /></padding>
             </Label>
-            <ListView fx:id="surahListView" VBox.vgrow="ALWAYS"/>
-            <Separator/>
+            <Button maxWidth="Infinity" onAction="#onShowNavigation" text="📖 تصفّح بالأجزاء / الأحزاب / الأرباع">
+                <VBox.margin><Insets bottom="8" left="10" right="10" top="0" /></VBox.margin>
+            </Button>
+            <ListView fx:id="surahListView" VBox.vgrow="ALWAYS" />
+            <Separator />
             <VBox fx:id="miniProgressBox" spacing="6" styleClass="mini-progress-box">
-                <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
-                <Label fx:id="miniProgressLabel" text="تقدّمك: 0%" wrapText="true"/>
-                <ProgressBar fx:id="miniProgressBar" progress="0" maxWidth="Infinity"/>
-                <Button text="مشواري الكامل" onAction="#onShowProgress" maxWidth="Infinity"/>
+                <padding><Insets bottom="10" left="10" right="10" top="10" /></padding>
+                <Label fx:id="miniProgressLabel" text="تقدّمك: 0%" wrapText="true" />
+                <ProgressBar fx:id="miniProgressBar" maxWidth="Infinity" progress="0" />
+                <Button maxWidth="Infinity" onAction="#onShowProgress" text="مشواري الكامل" />
             </VBox>
         </VBox>
     </left>
 
     <!-- ===================== لوحة القراءة (تُملأ برمجياً بـ ReaderPane) ===================== -->
     <center>
-        <StackPane fx:id="centerPane"/>
+        <StackPane fx:id="centerPane" />
     </center>
 
     <!-- ===================== شريط الحالة ===================== -->
     <bottom>
         <Label fx:id="statusLabel" text="جاهز.">
-            <padding><Insets top="6" right="12" bottom="6" left="12"/></padding>
+            <padding><Insets bottom="6" left="12" right="12" top="6" /></padding>
         </Label>
     </bottom>
 

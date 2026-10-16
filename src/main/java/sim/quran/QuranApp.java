@@ -22,8 +22,15 @@ public class QuranApp extends Application {
 
         Scene scene = new Scene(root, 1200, 800);
         scene.getStylesheets().add(
-                Objects.requireNonNull(getClass().getResource("/sim/quran/css/app.css")).toExternalForm());
+                Objects.requireNonNull(getClass().getResource("/sim/quran/css/style.css")).toExternalForm());
         root.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
+
+        // حفظ "آخر موضع" عند إغلاق النافذة بأي طريقة (زر ✕ في الأعلى، وليس فقط قائمة ملف→خروج)،
+        // وإلا خسر المستخدم آخر تحديثات bookmarks.json منذ آخر حفظ صريح
+        sim.quran.ui.MainController controller = loader.getController();
+        if (controller != null) {
+            stage.setOnCloseRequest(e -> controller.persistOnClose());
+        }
 
         stage.setTitle("القرآن الكريم صوت وصورة");
         stage.setScene(scene);

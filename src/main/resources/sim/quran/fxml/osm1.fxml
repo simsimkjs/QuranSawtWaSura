@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane nodeOrientation="LEFT_TO_RIGHT" stylesheets="@../css/app.css" xmlns="http://javafx.com/javafx/21.0.3" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sim.quran.ui.MainController">
+
+    <!-- ===================== القائمة العلوية + شريط البحث ===================== -->
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="ملف">
+                    <MenuItem onAction="#onGoToLastPosition" text="الانتقال لآخر موضع" />
+                    <SeparatorMenuItem />
+                    <MenuItem onAction="#onExit" text="خروج" />
+                </Menu>
+                <Menu text="أدوات">
+                    <MenuItem onAction="#onShowBookmarks" text="العلامات المرجعية" />
+                    <MenuItem onAction="#onShowProgress" text="مشواري مع القرآن" />
+                    <MenuItem onAction="#onManageProfiles" text="القرّاء" />
+                    <MenuItem onAction="#onSettings" text="الإعدادات" />
+                </Menu>
+                <Menu text="مساعدة">
+                    <MenuItem onAction="#onAbout" text="حول البرنامج" />
+                </Menu>
+            </MenuBar>
+
+            <!-- شريط البحث -->
+            <HBox alignment="CENTER_LEFT" spacing="8" styleClass="search-bar">
+                <padding>
+                    <Insets bottom="8" left="12" right="12" top="8" />
+                </padding>
+                <TextField fx:id="searchField" onAction="#onSearch" promptText="ابحث عن كلمة أو آية..." HBox.hgrow="ALWAYS" />
+                <Button onAction="#onSearch" styleClass="gold-button" text="🔍 بحث" />
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- ===================== قائمة السور ===================== -->
+    <left>
+        <VBox prefWidth="260" styleClass="side-panel">
+            <!-- شريط الملف الشخصي -->
+            <HBox alignment="CENTER_LEFT" spacing="6" styleClass="profile-bar">
+                <padding>
+                    <Insets bottom="8" left="10" right="10" top="8" />
+                </padding>
+                <Label fx:id="activeProfileLabel" text="👤 القرّاء" HBox.hgrow="ALWAYS" />
+                <Button onAction="#onManageProfiles" styleClass="button-secondary" text="تبديل" />
+            </HBox>
+
+            <Separator />
+
+            <!-- عنوان القائمة -->
+            <Label text="📖 السور">
+                <padding>
+                    <Insets bottom="6" left="10" right="10" top="10" />
+                </padding>
+            </Label>
+
+            <!-- قائمة السور -->
+            <ListView fx:id="surahListView" nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS" />
+
+            <Separator />
+
+            <!-- مصغر التقدم -->
+            <VBox fx:id="miniProgressBox" spacing="6" styleClass="mini-progress-box">
+                <padding>
+                    <Insets bottom="10" left="10" right="10" top="10" />
+                </padding>
+                <Label fx:id="miniProgressLabel" text="📊 تقدّمك: 0%" wrapText="true" />
+                <ProgressBar fx:id="miniProgressBar" maxWidth="Infinity" progress="0" />
+                <Button maxWidth="Infinity" onAction="#onShowProgress" styleClass="button-primary" text="📈 مشواري الكامل" />
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- ===================== لوحة القراءة ===================== -->
+    <center>
+        <StackPane fx:id="centerPane" styleClass="reader-pane">
+            <VBox alignment="TOP_CENTER" spacing="10">
+                <padding>
+                    <Insets top="20" right="30" bottom="20" left="30" />
+                </padding>
+
+                <!-- عنوان السورة -->
+                <Label fx:id="surahTitleLabel" styleClass="surah-title-label" text="سورة الفاتحة" />
+
+                <!-- منطقة عرض الآيات -->
+                <VBox fx:id="ayahContainer" spacing="4" VBox.vgrow="ALWAYS">
+                    <!-- سيتم ملؤها برمجياً -->
+                </VBox>
+
+
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- ===================== شريط الحالة السفلي ===================== -->
+    <bottom>
+        <Label fx:id="statusLabel" text="🌙 جاهز للقراءة">
+            <padding>
+                <Insets bottom="8" left="12" right="12" top="8" />
+            </padding>
+        </Label>
+    </bottom>
+
+</BorderPane>

@@ -27,3 +27,11 @@ Thumbs.db
 # JavaFX specific
 *.fxml~
 *.css~
+
+# Archives / large backups (لا تُدرَج في git)
+*.rar
+*.zip
+*.7z
+
+# ملفات الصوت الكبيرة (تُوزَّع خارج git؛ GitHub يرفض الملفات >100MB)
+quran-data/audio/

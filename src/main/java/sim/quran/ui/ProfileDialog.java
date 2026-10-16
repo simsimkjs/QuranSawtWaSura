@@ -22,6 +22,8 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Function;
 
+import static javafx.scene.control.TableView.*;
+
 /**
  * نافذة إدارة القراء: جدول يعرض لكل قارئ اسمه ومكان توقفه بالضبط (جزء/سورة/آية)،
  * مع زر "متابعة" بكل صف يبدّل له القارئ وينقل مباشرة لموضعه (بكلمة مرور لو محدَّدة).
@@ -168,7 +170,7 @@ public class ProfileDialog {
         root.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
 
         Scene scene = new Scene(root, 640, 440);
-        scene.getStylesheets().add(ProfileDialog.class.getResource("/sim/quran/css/app.css").toExternalForm());
+        DesignStyles.applyTo(scene);
         stage.setScene(scene);
         stage.show();
     }
@@ -244,7 +246,7 @@ public class ProfileDialog {
         root.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
 
         Scene scene = new Scene(root, 380, 220);
-        scene.getStylesheets().add(ProfileDialog.class.getResource("/sim/quran/css/app.css").toExternalForm());
+        DesignStyles.applyTo(scene);
         stage.setScene(scene);
         stage.showAndWait();
     }
@@ -307,7 +309,7 @@ public class ProfileDialog {
         root.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
 
         Scene scene = new Scene(root, 360, 220);
-        scene.getStylesheets().add(ProfileDialog.class.getResource("/sim/quran/css/app.css").toExternalForm());
+        DesignStyles.applyTo(scene);
         stage.setScene(scene);
         stage.show();
     }

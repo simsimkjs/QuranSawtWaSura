@@ -71,7 +71,7 @@ public class ProgressDialog {
         root.setStyle("-fx-alignment:center; -fx-background-color:#fdf8ec;");
 
         Scene scene = new Scene(root, 420, 460);
-        scene.getStylesheets().add(ProgressDialog.class.getResource("/sim/quran/css/app.css").toExternalForm());
+        DesignStyles.applyTo(scene);
         stage.setScene(scene);
         stage.show();
     }

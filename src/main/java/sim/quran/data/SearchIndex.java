@@ -22,6 +22,8 @@ public class SearchIndex {
 
     private final List<Surah> surahs;
     private final List<Hit> allAyahs = new ArrayList<>();
+    /** نص كل آية مطبَّع (بلا تشكيل) مسبقًا عند البناء - حتى لا نعيد regex على 6236 آية مع كل بحث. */
+    private final List<String> allNormalizedTexts = new ArrayList<>();
     private volatile boolean built = false;
     private volatile boolean building = false;
 
@@ -54,6 +56,7 @@ public class SearchIndex {
                     for (AyahTiming a : data.getAyahs()) {
                         if (a.hasText()) {
                             allAyahs.add(new Hit(s, a));
+                            allNormalizedTexts.add(normalize(a.getText()));
                         }
                     }
                 } catch (Exception ignored) {
@@ -76,9 +79,10 @@ public class SearchIndex {
         String q = normalize(query);
         List<Hit> results = new ArrayList<>();
         if (q.isBlank()) return results;
-        for (Hit h : allAyahs) {
-            if (normalize(h.ayah.getText()).contains(q)) {
-                results.add(h);
+        // نقارن بالنص المطبَّع المحفوظ مسبقًا بدل إعادة تطبيع كل آية عند كل استعلام
+        for (int i = 0; i < allAyahs.size(); i++) {
+            if (allNormalizedTexts.get(i).contains(q)) {
+                results.add(allAyahs.get(i));
             }
         }
         return results;

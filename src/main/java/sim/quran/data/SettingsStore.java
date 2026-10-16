@@ -21,10 +21,11 @@ public class SettingsStore {
             String content = Files.readString(file.toPath(), StandardCharsets.UTF_8);
             JSONObject root = new JSONObject(content);
             AppSettings settings = new AppSettings(
-                    root.optString("font_family", "KFGQPC Uthmanic Script HAFS"),
+                    root.optString("font_family", defaultFontFamily()),
                     root.optDouble("font_size", 27),
                     AppSettings.Theme.fromName(root.optString("theme", "CLASSIC")));
             settings.setTrackProgress(root.optBoolean("track_progress", true));
+            settings.setDesignStyle(AppSettings.DesignStyle.fromName(root.optString("design_style", "CLASSIC_MUSHAF")));
             return settings;
         } catch (Exception e) {
             return AppSettings.defaults();
@@ -39,11 +40,18 @@ public class SettingsStore {
         root.put("font_size", settings.getFontSize());
         root.put("theme", settings.getTheme().name());
         root.put("track_progress", settings.isTrackProgress());
+        root.put("design_style", settings.getDesignStyle().name());
         try {
             Files.writeString(file.toPath(), root.toString(2), StandardCharsets.UTF_8);
         } catch (IOException e) {
             System.err.println("تعذر حفظ الإعدادات: " + e.getMessage());
         }
+    }
+
+    /** الخط الافتراضي لو مفتاح font_family غايب: الخط العثماني المضمَّن داخل التطبيق (لو تحمّل) وإلا الاسم الثابت. */
+    private static String defaultFontFamily() {
+        String embedded = EmbeddedFonts.uthmanicHafsFamily;
+        return (embedded == null || embedded.isBlank()) ? "KFGQPC Uthmanic Script HAFS" : embedded;
     }
 
     private static File filePath(File profileDataDir) {
