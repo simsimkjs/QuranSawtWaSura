@@ -98,6 +98,39 @@
     -fx-padding: 0 6 0 0;
 }
 
+/* ===== قائمة آيات المصحف (عرض افتراضي: تُرسم الآيات الظاهرة فقط) ===== */
+.mushaf-list {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-border-color: transparent;
+    -fx-padding: 14 18;
+}
+.mushaf-list .list-cell,
+.mushaf-list .list-cell:filled,
+.mushaf-list .list-cell:filled:hover,
+.mushaf-list .list-cell:filled:selected,
+.mushaf-list .list-cell:selected {
+    -fx-background-color: transparent;
+    -fx-padding: 7 4;
+}
+.mushaf-list > .virtual-flow > .corner,
+.mushaf-list > .virtual-flow > .clipped-container > .sheet {
+    -fx-background-color: transparent;
+}
+.mushaf-list .scroll-bar:vertical,
+.mushaf-list .scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+.mushaf-list .scroll-bar .thumb {
+    -fx-background-color: #9a6f00;
+    -fx-background-radius: 6;
+}
+.mushaf-list .scroll-bar .increment-button,
+.mushaf-list .scroll-bar .decrement-button {
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
 /* ===== شريط التشغيل السفلي ===== */
 .player-bar {
     -fx-background-color: #1e3a5f;

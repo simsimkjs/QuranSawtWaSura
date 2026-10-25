@@ -1,8 +1,9 @@
 package sim.quran.ui;
 
 import javafx.animation.AnimationTimer;
-import javafx.application.Platform;
-import javafx.concurrent.Task;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.geometry.Bounds;
 import javafx.geometry.Insets;
 import javafx.geometry.NodeOrientation;
 import javafx.geometry.Orientation;
@@ -36,17 +37,24 @@ import java.util.function.Consumer;
 
 /**
  * لوحة القراءة الرئيسية لسورة واحدة:
- *  - عنوان السورة، ثم نص الآيات كاملاً داخل إطار مزخرف يحاكي شكل صفحة المصحف
+ *  - عنوان السورة، ثم نص الآيات داخل إطار مزخرف يحاكي شكل صفحة المصحف
  *    (بدون أي صورة فعلية - النص فقط، مع تظليل الآية الحالية أثناء التلاوة وفق start_ms).
  *  - أسفل الكل: شريط تحكم بالصوت (تشغيل/إيقاف/تكرار الآية الحالية/السرعة).
  *  - جانبي (اختياري): لوحة التفسير تظهر عند النقر على أي آية.
+ *
+ * الأداء: نص السورة يُعرض عبر ListView افتراضية (virtualized)، فلا تُرسم إلا الآيات
+ * الظاهرة على الشاشة فعليًا. سابقًا كان النص كله يُبنى كـ TextFlow واحد (مئات عناصر Text)،
+ * وتشكيل الخط العربي لكل الآيات دفعة واحدة كان يسبب تأخيرًا ملحوظًا عند تبديل السور
+ * أو الانتقال لآية معينة في سورة طويلة.
  */
 public class ReaderPane extends BorderPane {
 
-    private final TextFlow textFlow = new TextFlow();
-    private final StackPane pageFrame = new StackPane(textFlow);
+    /** الآيات المعروضة فعليًا (التي لها نص) - هي عناصر القائمة الافتراضية. */
+    private final ObservableList<AyahTiming> visibleAyahs = FXCollections.observableArrayList();
+    private final ListView<AyahTiming> ayahList = new ListView<>(visibleAyahs);
+
+    private final StackPane pageFrame = new StackPane();
     private final StackPane pageFrameWrapper = new StackPane(pageFrame);
-    private final ScrollPane textScroll = new ScrollPane(pageFrameWrapper);
     private final Label surahTitleLabel = new Label();
 
     private final Slider progressSlider = new Slider();
@@ -62,9 +70,13 @@ public class ReaderPane extends BorderPane {
     private MediaPlayer player;
     private SurahData currentData;
     private Surah currentSurah;
-    private final List<Text> ayahTextNodes = new ArrayList<>();
+
+    /** فهرس داخل currentData.getAyahs() (يشمل العناصر بلا نص) -> فهرس داخل visibleAyahs. */
     private final Map<Integer, Integer> dataIndexToVisibleIndex = new HashMap<>();
-    private int currentAyahIndex = -1;
+    /** تخزين مؤقت لبيانات السور المحمّلة سابقًا، لتفادي إعادة قراءة/تحليل JSON عند الرجوع لنفس السورة. */
+    private final Map<Integer, SurahData> dataCache = new HashMap<>();
+    private int currentAyahIndex = -1;      // فهرس بيانات الآية الحالية (currentData.getAyahs())
+    private int currentVisibleIndex = -1;   // فهرس الآية الحالية داخل visibleAyahs
 
     private boolean userIsDraggingSlider = false;
     private Integer repeatRangeStart = null; // لتكرار آية واحدة: نبدأ من start_ms، ننتهي عند نهايتها
@@ -101,17 +113,18 @@ public class ReaderPane extends BorderPane {
 
         applyThemeInlineStyles(); // تنسيق مباشر مضمون الظهور، لا يعتمد فقط على تحميل CSS
 
-        textFlow.setLineSpacing(14);
-        textFlow.setPadding(new Insets(28));
-        textFlow.setTextAlignment(TextAlignment.RIGHT);
-        textFlow.getStyleClass().add("mushaf-text-flow");
-        textFlow.setMaxWidth(Double.MAX_VALUE);
-        // نربط عرض النص بعرض إطار الصفحة صراحة، وإلا TextFlow ياخذ عرض محتواه فقط
-        // فيصير الإطار المزخرف أوسع منه ويظهر النص كأنه بالنص بدل ملاصق لليمين
-        textFlow.prefWidthProperty().bind(textScroll.widthProperty().subtract(80));
-
-        textScroll.setFitToWidth(true);
-        textScroll.getStyleClass().add("mushaf-scroll");
+        // ---- قائمة الآيات الافتراضية ----
+        ayahList.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
+        ayahList.getStyleClass().add("mushaf-list");
+        ayahList.setCellFactory(this::buildAyahCell);
+        ayahList.setOnMouseClicked(e -> {
+            AyahTiming selected = ayahList.getSelectionModel().getSelectedItem();
+            if (selected != null && selected.hasText()) {
+                ayahList.getSelectionModel().clearSelection();
+                onAyahClicked(selected.getAyahNumber());
+            }
+        });
+        pageFrame.getChildren().setAll(ayahList);
 
         // ---- لوحة التفسير ----
         tafsirContent.setWrapText(true);
@@ -122,9 +135,9 @@ public class ReaderPane extends BorderPane {
         tafsirPane = new TitledPane("التفسير", tafsirContent);
         tafsirPane.setExpanded(false);
 
-        VBox centerBox = new VBox(10, surahTitleLabel, textScroll, tafsirPane);
+        VBox centerBox = new VBox(10, surahTitleLabel, pageFrameWrapper, tafsirPane);
         centerBox.setPadding(new Insets(10));
-        VBox.setVgrow(textScroll, Priority.ALWAYS);
+        VBox.setVgrow(pageFrameWrapper, Priority.ALWAYS);
 
         setCenter(centerBox);
         setBottom(buildPlayerBar());
@@ -139,6 +152,49 @@ public class ReaderPane extends BorderPane {
         // لو ما فيه تشغيل حالي، فلا داعي لإيقافه/تشغيله مع كل تبديل سورة (كان هذا يسبب
         // تسجيل الحلقة أكثر من مرة مع كل تبديل ويصير البرنامج أبطأ تدريجيًا)
         syncTimer.start();
+    }
+
+    // ==================== خلية الآية (عنصر القائمة الافتراضية) ====================
+
+    /**
+     * خلية واحدة = سطر آية واحد (النص + رقم الآية). لأن القائمة افتراضية، تُبنى هذه
+     * الخلايا للآيات الظاهرة فقط ويُعاد استخدامها عند التمرير، فتبقى التكلفة ثابتة
+     * مهما طال السورة.
+     */
+    private ListCell<AyahTiming> buildAyahCell(ListView<AyahTiming> lv) {
+        return new ListCell<>() {
+            private final TextFlow flow = new TextFlow();
+            private final Text ayahText = new Text();
+            private final Text numberText = new Text();
+
+            {
+                flow.setTextAlignment(TextAlignment.RIGHT);
+                flow.setLineSpacing(6);
+                flow.setNodeOrientation(NodeOrientation.RIGHT_TO_LEFT);
+                ayahText.getStyleClass().add("ayah-text");
+                numberText.getStyleClass().add("ayah-badge-number");
+                flow.getChildren().addAll(ayahText, numberText);
+                // نقيّد عرض النص بعرض القائمة حتى يتلفّط السطر الطويل داخل الخلية،
+                // ونتيح للخلية حساب ارتفاعها (متغيّر) حسب طول الآية تلقائيًا.
+                flow.prefWidthProperty().bind(lv.widthProperty().subtract(52));
+                getStyleClass().add("ayah-cell");
+                setGraphic(flow);
+            }
+
+            @Override
+            protected void updateItem(AyahTiming item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty || item == null || !item.hasText()) {
+                    setGraphic(null);
+                    return;
+                }
+                setGraphic(flow);
+                ayahText.setText(item.getText() + " ");
+                numberText.setText("(" + toArabicNumber(item.getAyahNumber()) + ") ");
+                applyAyahTextStyle(ayahText, getIndex() == currentVisibleIndex);
+                applyNumberStyle(numberText);
+            }
+        };
     }
 
     // ==================== شريط التشغيل ====================
@@ -219,6 +275,7 @@ public class ReaderPane extends BorderPane {
         stopPlayback();
         this.currentSurah = surah;
         currentAyahIndex = -1;
+        currentVisibleIndex = -1;
         repeatRangeStart = null;
         repeatAyahBtn.setSelected(false);
 
@@ -231,7 +288,7 @@ public class ReaderPane extends BorderPane {
         }
 
         try {
-            currentData = SurahDataLoader.load(surah);
+            currentData = loadDataCached(surah);
         } catch (Exception ex) {
             ex.printStackTrace();
             report("خطأ أثناء تحميل بيانات السورة: " + ex.getMessage());
@@ -246,8 +303,8 @@ public class ReaderPane extends BorderPane {
 
         surahTitleLabel.setText("سورة " + currentData.getSurahName());
 
-        // النص (داخل الإطار المزخرف)
-        buildAyahText();
+        // النص (داخل الإطار المزخرف) - ضمن قائمة افتراضية
+        buildAyahList();
 
         // التفسير (إن وُجد)
         boolean tafsirOk = tafsirLoader.loadFor(surah.getNumber());
@@ -286,45 +343,40 @@ public class ReaderPane extends BorderPane {
         report("تم تحميل سورة " + currentData.getSurahName());
     }
 
-    private void buildAyahText() {
-        textFlow.getChildren().clear();
-        ayahTextNodes.clear();
-        dataIndexToVisibleIndex.clear();
+    private SurahData loadDataCached(Surah surah) throws Exception {
+        SurahData cached = dataCache.get(surah.getNumber());
+        if (cached != null) return cached;
+        SurahData data = SurahDataLoader.load(surah);
+        dataCache.put(surah.getNumber(), data);
+        return data;
+    }
 
+    /** يبني قائمة الآيات المعروضة (التي لها نص) وخريطة الربط بفهارس البيانات الأصلية. */
+    private void buildAyahList() {
+        dataIndexToVisibleIndex.clear();
+        List<AyahTiming> visible = new ArrayList<>();
         List<AyahTiming> ayahs = currentData.getAyahs();
+
         for (int i = 0; i < ayahs.size(); i++) {
             AyahTiming a = ayahs.get(i);
             if (!a.hasText()) continue;
-
-            final int ayahNumber = a.getAyahNumber();
-
-            Text ayahText = new Text(a.getText() + " ");
-            ayahText.getStyleClass().add("ayah-text");
-            applyAyahTextStyle(ayahText, false);
-            ayahText.setOnMouseClicked(e -> onAyahClicked(ayahNumber));
-
-            Text numberText = createAyahNumberText(ayahNumber);
-            numberText.setOnMouseClicked(e -> onAyahClicked(ayahNumber));
-
-            // فاصل سطر بعد كل آية - كل آية بسطرها الخاص بدل تدفّق متصل
-            Text lineBreak = new Text("\n");
-
-            textFlow.getChildren().addAll(ayahText, numberText, lineBreak);
-            dataIndexToVisibleIndex.put(i, ayahTextNodes.size());
-            ayahTextNodes.add(ayahText);
+            dataIndexToVisibleIndex.put(i, visible.size());
+            visible.add(a);
         }
+
+        // setAll يطلق تحديثًا واحدًا للقائمة بدل حدث لكل آية (أسرع عند تبديل السور الطويلة)
+        visibleAyahs.setAll(visible);
     }
 
-    /** رقم الآية بصيغة "(١)" بسيطة (عنصر نصي واحد بدل دائرة+رقم+إطار - أخف بكثير على السور الطويلة). */
-    private Text createAyahNumberText(int ayahNumber) {
-        Text numberText = new Text("(" + toArabicNumber(ayahNumber) + ") ");
-        numberText.getStyleClass().add("ayah-badge-number");
+    /** يطبّق تنسيق رقم الآية: في النمط الحديث يُترك لـ CSS (ayah-badge-number)، وفي الكلاسيكي inline. */
+    private void applyNumberStyle(Text numberText) {
         boolean modern = settings.getDesignStyle() == AppSettings.DesignStyle.MODERN;
         if (!modern) {
             numberText.setStyle("-fx-font-family:'" + settings.getFontFamily() + "'; -fx-font-size:"
                     + (int) settings.getFontSize() + "px; -fx-fill:#1a1a1a; -fx-font-weight:bold;");
+        } else {
+            numberText.setStyle("");
         }
-        return numberText;
     }
 
     private void onAyahClicked(int ayahNumber) {
@@ -387,25 +439,21 @@ public class ReaderPane extends BorderPane {
     }
 
     private void highlightAyah(int dataIndex) {
-        // dataIndex هو فهرس داخل currentData.getAyahs() (يشمل عناصر بلا نص)
-        // نحوّله لفهرس داخل ayahTextNodes (التي تستثني العناصر بلا نص) عبر الخريطة المبنية مسبقًا
-        if (currentAyahIndex >= 0) {
-            Integer prevVisible = dataIndexToVisibleIndex.get(currentAyahIndex);
-            if (prevVisible != null) {
-                Text prevNode = ayahTextNodes.get(prevVisible);
-                prevNode.getStyleClass().remove("ayah-text-current");
-                applyAyahTextStyle(prevNode, false);
-            }
-        }
+        if (dataIndex < 0) return;
+
         currentAyahIndex = dataIndex;
         Integer visible = dataIndexToVisibleIndex.get(dataIndex);
-        if (visible != null) {
-            Text node = ayahTextNodes.get(visible);
-            if (!node.getStyleClass().contains("ayah-text-current")) {
-                node.getStyleClass().add("ayah-text-current");
+        currentVisibleIndex = visible != null ? visible : -1;
+
+        // نحدّث الآيات الظاهرة فقط (بدل إعادة بناء كامل النص كما كان سابقًا)
+        ayahList.refresh();
+
+        if (currentVisibleIndex >= 0) {
+            // نُمرّر فقط عندما تخرج الآية الحالية من مجال الرؤية، وبمقدار سطر واحد من السياق
+            // فوقها - حتى لا تقفز الصفحة مع كل آية أثناء التلاوة المستمرة.
+            if (!isVisible(currentVisibleIndex)) {
+                ayahList.scrollTo(Math.max(0, currentVisibleIndex - 1));
             }
-            applyAyahTextStyle(node, true);
-            scrollToNode(node);
 
             // تسجيل مكان التوقف الحالي (للاستئناف) + تحديث مشوار الحفظ - فقط لو التتبّع
             // غير مجمَّد (لو المستخدم ضغط "إيقاف المتابعة" نتجاهل هذا التحديث بالكامل، حتى
@@ -426,6 +474,17 @@ public class ReaderPane extends BorderPane {
         }
     }
 
+    /** هل خلية الفهرس المعطى ظاهرة حاليًا داخل مجال رؤية القائمة؟ */
+    private boolean isVisible(int index) {
+        for (Node node : ayahList.lookupAll(".list-cell")) {
+            if (!(node instanceof ListCell<?> cell) || cell.getIndex() != index || cell.isEmpty()) continue;
+            Bounds cellBounds = cell.localToScene(cell.getBoundsInLocal());
+            Bounds listBounds = ayahList.localToScene(ayahList.getBoundsInLocal());
+            return cellBounds.getMaxY() > listBounds.getMinY() && cellBounds.getMinY() < listBounds.getMaxY();
+        }
+        return false;
+    }
+
     /** يعيد بناء الـ inline style الكامل للآية (خط + حجم + لون)، مضمون الظهور بغض النظر عن CSS
      *  في النمط الكلاسيكي - بالنمط "معاصر" نترك اللون لملف style.css نفسه (صنف ayah-text). */
     private void applyAyahTextStyle(Text node, boolean current) {
@@ -439,6 +498,9 @@ public class ReaderPane extends BorderPane {
             String extra = current ? "-fx-font-weight:bold;-fx-underline:true;" : "";
             node.setStyle(fontPart + " -fx-fill:" + color + ";" + extra);
         }
+        // صنف التظليل (يفيد النمط الحديث المعتمد على CSS) - نضيفه/نزيله حسب الحالة
+        node.getStyleClass().remove("ayah-text-current");
+        if (current) node.getStyleClass().add("ayah-text-current");
     }
 
     private String currentAyahColor() {
@@ -447,15 +509,6 @@ public class ReaderPane extends BorderPane {
             case DARK: return "#ffcf6b";
             default: return "#8b1a1a";
         }
-    }
-
-    private void scrollToNode(Text node) {
-        // تمرير تقريبي يبقي الآية المُظلَّلة ضمن مجال الرؤية
-        double totalHeight = textFlow.getHeight();
-        if (totalHeight <= 0) return;
-        double nodeY = node.getBoundsInParent().getMinY();
-        double fraction = nodeY / totalHeight;
-        textScroll.setVvalue(Math.max(0, Math.min(1, fraction)));
     }
 
     private void jumpToAyah(int dataIndex, boolean autoPlay) {
@@ -549,7 +602,7 @@ public class ReaderPane extends BorderPane {
         return currentSurah;
     }
 
-    /** يطبّق الخط/الحجم/الثيم فورًا. يعاد بناء نص السورة الحالية (إن وُجدت) لتطبيق الخط الجديد. */
+    /** يطبّق الخط/الحجم/الثيم فورًا. يعيد رسم الآيات الظاهرة بتنسيق الخط الجديد. */
     public void applySettings(AppSettings newSettings) {
         this.settings = newSettings.copy();
 
@@ -559,9 +612,10 @@ public class ReaderPane extends BorderPane {
 
         if (currentData != null) {
             int previousAyahIndex = currentAyahIndex;
-            buildAyahText();
+            currentVisibleIndex = -1;
+            // إعادة رسم الخلايا الظاهرة فقط (بدل إعادة بناء النص كاملًا كما كان سابقًا)
+            ayahList.refresh();
             if (previousAyahIndex >= 0) {
-                currentAyahIndex = -1; // نجبر highlightAyah على إعادة التطبيق حتى لو نفس الفهرس
                 highlightAyah(previousAyahIndex);
             }
         }
