@@ -24,6 +24,10 @@ gradle/
 .DS_Store
 Thumbs.db
 
+# Python (خادم الويب المحلي)
+__pycache__/
+*.pyc
+
 # JavaFX specific
 *.fxml~
 *.css~

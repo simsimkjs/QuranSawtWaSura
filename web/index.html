@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f3a4a">
+<title>القرآن الكريم — صوت وسورة</title>
+<link rel="icon" href="../src/main/resources/sim/quran/images/icon.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body class="theme-classic design-mushaf">
+
+<div class="app">
+
+  <!-- ===================== الشريط العلوي ===================== -->
+  <header class="topbar">
+    <button id="menuBtn" class="icon-btn only-mobile" aria-label="فتح قائمة السور">☰</button>
+
+    <div class="brand" aria-label="القرآن الكريم">
+      <span class="brand-mark">۞</span>
+      <span class="brand-text">القرآن الكريم</span>
+    </div>
+
+    <form id="searchForm" class="searchbar" role="search">
+      <input id="searchInput" type="search" placeholder="ابحث عن كلمة أو آية..." autocomplete="off" aria-label="بحث في القرآن">
+      <button type="submit" class="gold">بحث</button>
+    </form>
+
+    <nav class="toolbar" aria-label="أدوات">
+      <button type="button" data-open="navDialog">تصفّح</button>
+      <button type="button" data-open="bookmarksDialog">العلامات</button>
+      <button type="button" data-open="progressDialog">مشواري</button>
+      <button type="button" data-open="settingsDialog">الإعدادات</button>
+    </nav>
+  </header>
+
+  <!-- ===================== التخطيط الرئيسي ===================== -->
+  <main class="layout">
+
+    <!-- قائمة السور -->
+    <aside id="sidebar" class="sidebar" aria-label="السور">
+      <button id="continueBtn" class="continue">▶ متابعة من آخر موضع</button>
+      <button id="trackingBtn" class="tracking paused" aria-pressed="false">▶ استئناف المتابعة</button>
+      <button id="navOpenBtn" class="wide">📖 تصفّح بالأجزاء / الأحزاب / الأرباع</button>
+      <button id="bookmarksOpenBtn" class="wide" data-open="bookmarksDialog">🔖 العلامات المرجعية</button>
+
+      <div class="surah-head">
+        <span>السور</span>
+        <span id="surahCount" class="muted"></span>
+      </div>
+      <input id="surahFilter" class="surah-filter" type="search" placeholder="تصفية السور..." autocomplete="off" aria-label="تصفية قائمة السور">
+      <ul id="surahList" class="surah-list"></ul>
+
+      <div class="mini-progress">
+        <div id="miniProgressLabel">تقدّمك: ٠٪</div>
+        <div class="bar"><div id="miniProgressBar" style="width:0%"></div></div>
+        <button id="progressOpenBtn" class="wide">مشواري الكامل</button>
+      </div>
+    </aside>
+
+    <!-- لوحة القراءة -->
+    <section class="reader" aria-label="المصحف">
+      <div class="reader-head">
+        <h1 id="surahTitle">اختر سورة للبدء</h1>
+        <div id="surahMeta" class="reader-meta"></div>
+      </div>
+
+      <div class="mushaf-frame">
+        <div id="ayahList" class="ayah-list"></div>
+        <div id="emptyState" class="empty-state" hidden></div>
+      </div>
+
+      <details id="tafsirPanel" class="tafsir-panel">
+        <summary>التفسير</summary>
+        <div id="tafsirContent" class="tafsir-content">اختر آية لعرض تفسيرها.</div>
+      </details>
+    </section>
+  </main>
+
+  <!-- ===================== شريط التشغيل ===================== -->
+  <footer class="player" aria-label="مشغّل الصوت">
+    <div class="player-controls">
+      <button id="playBtn" class="gold" disabled>▶ تشغيل</button>
+      <button id="stopBtn" title="إيقاف" disabled>■</button>
+      <button id="prevBtn" title="الآية السابقة" disabled>الآية السابقة</button>
+      <button id="nextBtn" title="الآية التالية" disabled>الآية التالية</button>
+    </div>
+
+    <input id="progressSlider" class="slider" type="range" min="0" max="1000" value="0" step="1"
+           aria-label="موضع التشغيل" disabled>
+
+    <span id="timeLabel" class="time">٠٠:٠٠ / ٠٠:٠٠</span>
+
+    <label class="speed">السرعة
+      <select id="speedSelect">
+        <option value="0.75">٠٫٧٥×</option>
+        <option value="1" selected>١×</option>
+        <option value="1.25">١٫٢٥×</option>
+        <option value="1.5">١٫٥×</option>
+        <option value="2">٢×</option>
+      </select>
+    </label>
+
+    <button id="repeatBtn" class="toggle" aria-pressed="false" disabled>تكرار الآية</button>
+    <button id="bookmarkBtn" disabled>📌 حفظ علامة</button>
+  </footer>
+
+  <div id="status" class="status" role="status" aria-live="polite">جاهز.</div>
+</div>
+
+<audio id="audio" preload="metadata"></audio>
+
+<!-- ===================== الإعدادات ===================== -->
+<dialog id="settingsDialog" class="modal">
+  <form method="dialog" class="modal-inner">
+    <header class="modal-head">
+      <h2>الإعدادات</h2>
+      <button class="icon-btn" value="close" aria-label="إغلاق">✕</button>
+    </header>
+
+    <div class="field">
+      <label for="fontSizeRange">حجم الخط: <span id="fontSizeValue">٢٧</span>px</label>
+      <input id="fontSizeRange" type="range" min="18" max="48" step="1" value="27">
+    </div>
+
+    <div class="field">
+      <label for="themeSelect">الثيم اللوني</label>
+      <select id="themeSelect">
+        <option value="classic">كلاسيكي (رَقّي)</option>
+        <option value="light">فاتح</option>
+        <option value="dark">داكن</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="designSelect">نمط التصميم</label>
+      <select id="designSelect">
+        <option value="mushaf">كلاسيكي (المصحف المزخرف)</option>
+        <option value="modern">معاصر</option>
+      </select>
+    </div>
+
+    <label class="check"><input id="autoScrollCheck" type="checkbox" checked> تمرير تلقائي مع التلاوة</label>
+    <label class="check"><input id="trackProgressCheck" type="checkbox" checked> تفعيل «مشوار الحفظ» (تتبّع التقدّم)</label>
+
+    <div class="modal-actions">
+      <button type="button" data-open="aboutDialog">حول</button>
+      <button value="close" class="gold">تم</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- ===================== التصفّح حسب الأجزاء ===================== -->
+<dialog id="navDialog" class="modal">
+  <div class="modal-inner">
+    <header class="modal-head">
+      <h2>تصفّح حسب الأجزاء والأحزاب والأرباع</h2>
+      <button class="icon-btn" data-close aria-label="إغلاق">✕</button>
+    </header>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="juz" role="tab">الأجزاء (٣٠)</button>
+      <button class="tab" data-tab="hizb" role="tab">الأحزاب (٦٠)</button>
+      <button class="tab" data-tab="quarter" role="tab">الأرباع (٢٤٠)</button>
+    </div>
+    <ul id="divisionList" class="result-list"></ul>
+  </div>
+</dialog>
+
+<!-- ===================== العلامات المرجعية ===================== -->
+<dialog id="bookmarksDialog" class="modal">
+  <div class="modal-inner">
+    <header class="modal-head">
+      <h2>العلامات المرجعية</h2>
+      <button class="icon-btn" data-close aria-label="إغلاق">✕</button>
+    </header>
+    <p class="hint">أضف علامة من زر «📌 حفظ علامة» أثناء القراءة.</p>
+    <ul id="bookmarksList" class="result-list"></ul>
+  </div>
+</dialog>
+
+<!-- ===================== مشواري ===================== -->
+<dialog id="progressDialog" class="modal">
+  <div class="modal-inner">
+    <header class="modal-head">
+      <h2>مشواري مع القرآن</h2>
+      <button class="icon-btn" data-close aria-label="إغلاق">✕</button>
+    </header>
+    <div id="progressBody" class="progress-body"></div>
+  </div>
+</dialog>
+
+<!-- ===================== نتائج البحث ===================== -->
+<dialog id="searchDialog" class="modal">
+  <div class="modal-inner">
+    <header class="modal-head">
+      <h2 id="searchTitle">نتائج البحث</h2>
+      <button class="icon-btn" data-close aria-label="إغلاق">✕</button>
+    </header>
+    <div id="searchProgress" class="hint" hidden></div>
+    <ul id="searchResults" class="result-list"></ul>
+  </div>
+</dialog>
+
+<!-- ===================== حول ===================== -->
+<dialog id="aboutDialog" class="modal">
+  <div class="modal-inner">
+    <header class="modal-head">
+      <h2>حول البرنامج</h2>
+      <button class="icon-btn" data-close aria-label="إغلاق">✕</button>
+    </header>
+    <p>نسخة ويب من تطبيق «القرآن الكريم — صوت وسورة».</p>
+    <p class="muted">تعمل بالكامل داخل المتصفح، وتقرأ بيانات السور والتلاوات من مجلد <code>quran-data</code>. تُحفظ العلامات والتقدّم والإعدادات محليًا على جهازك.</p>
+  </div>
+</dialog>
+
+<noscript>
+  <p class="noscript">هذه النسخة تحتاج إلى تفعيل JavaScript.</p>
+</noscript>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
