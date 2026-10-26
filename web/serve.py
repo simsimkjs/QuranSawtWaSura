@@ -94,19 +94,34 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
     def copyfile(self, source, outputfile):
         remaining = getattr(self, "_range_remaining", None)
         if remaining is None:
-            return super().copyfile(source, outputfile)
+            try:
+                return super().copyfile(source, outputfile)
+            except (ConnectionResetError, BrokenPipeError):
+                return  # المتصفح أغلق الاتصال (إلغاء تحميل/قفز) - ليس خطأً
 
-        while remaining > 0:
-            chunk = source.read(min(CHUNK_SIZE, remaining))
-            if not chunk:
-                break
-            outputfile.write(chunk)
-            remaining -= len(chunk)
+        try:
+            while remaining > 0:
+                chunk = source.read(min(CHUNK_SIZE, remaining))
+                if not chunk:
+                    break
+                outputfile.write(chunk)
+                remaining -= len(chunk)
+        except (ConnectionResetError, BrokenPipeError):
+            pass  # المتصفح أغلق الاتصال أثناء البث - طبيعي عند القفز في الصوت
 
     def log_message(self, fmt, *args):
         # أقل ضجيجًا: لا نطبع كل طلب ملف
         if args and str(args[1]).startswith(("4", "5")):
             super().log_message(fmt, *args)
+
+    def end_headers(self):
+        # أثناء التطوير: HTML/CSS/JS دائمًا حديثة (تمنع بقاء واجهة قديمة في الذاكرة)
+        path = self.path.split("?", 1)[0].lower()
+        if path.endswith((".html", ".css", ".js")) or path.endswith("/"):
+            self.send_header("Cache-Control", "no-cache")
+        else:
+            self.send_header("Cache-Control", "public, max-age=3600")
+        super().end_headers()
 
 
 def main() -> None:
