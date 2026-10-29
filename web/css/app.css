@@ -253,12 +253,39 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px c
   color: var(--accent-2);
 }
 
-.surah-filter {
-  width: 100%;
+.surah-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin-bottom: 4px;
+}
+
+.surah-filter {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
   font-size: 13.5px;
   padding: 7px 10px;
   background: var(--panel-2);
+}
+
+.surah-tools .check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0 2px;
+  color: var(--muted);
+  font-size: 12.5px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.surah-tools .check input {
+  width: 15px;
+  height: 15px;
+  accent-color: var(--accent);
 }
 
 .surah-list {
@@ -302,6 +329,19 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px c
 }
 .surah-list .name { flex: 1 1 auto; font-weight: 600; }
 .surah-list .count { color: var(--muted); font-size: 11.5px; white-space: nowrap; }
+
+.surah-list .avail {
+  flex: 0 0 auto;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--muted);
+  opacity: 0.6;
+}
+.surah-list .avail.ok { background: #15803d; border-color: #15803d; opacity: 1; }
+.surah-list .avail.warn { background: #b45309; border-color: #b45309; opacity: 1; }
+.surah-list button.unavailable .name { color: var(--muted); }
 
 .mini-progress {
   border-top: 1px solid var(--line);

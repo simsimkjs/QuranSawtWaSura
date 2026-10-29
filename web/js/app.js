@@ -4,6 +4,7 @@
 
 import {
   buildSearchIndex,
+  loadManifest,
   loadSurahData,
   loadSurahIndex,
   normalizeArabic,
@@ -31,6 +32,8 @@ const $ = (id) => document.getElementById(id);
 
 const state = {
   surahs: [],
+  manifest: null,
+  manifestMap: new Map(),
   settings: loadSettings(),
   bookmarks: loadBookmarks(),
   progress: loadProgress(),
@@ -124,11 +127,15 @@ function renderSurahList(filter = "") {
   const raw = filter.trim();
   const query = normalizeArabic(raw);
   const numeric = toWesternDigits(raw).replace(/\D/g, "");
+  const onlyAvailable = Boolean($("onlyAvailable")?.checked);
 
   const fragment = document.createDocumentFragment();
   let shown = 0;
 
   for (const surah of state.surahs) {
+    const info = state.manifestMap.get(surah.number) || null;
+    if (onlyAvailable && info && info.text === false) continue;
+
     const nameMatches = !query || normalizeArabic(surah.name).includes(query);
     const numberMatches = numeric && String(surah.number).includes(numeric);
     if (!nameMatches && !numberMatches) continue;
@@ -138,6 +145,15 @@ function renderSurahList(filter = "") {
     button.type = "button";
     button.dataset.surah = String(surah.number);
     if (state.currentSurah?.number === surah.number) button.classList.add("active");
+
+    if (info) {
+      button.title = !info.text
+        ? "ملف نص هذه السورة غير متوفر بعد"
+        : info.audio
+          ? "النص والصوت متوفران"
+          : "النص متوفر، الصوت غير متوفر";
+      if (!info.text) button.classList.add("unavailable");
+    }
 
     const number = document.createElement("span");
     number.className = "num";
@@ -152,6 +168,14 @@ function renderSurahList(filter = "") {
     count.textContent = `${toArabicDigits(surah.ayahs)} آية`;
 
     button.append(number, name, count);
+
+    if (info) {
+      const availability = document.createElement("span");
+      availability.className = `avail ${!info.text ? "off" : info.audio ? "ok" : "warn"}`;
+      availability.setAttribute("aria-hidden", "true");
+      button.appendChild(availability);
+    }
+
     button.addEventListener("click", () => openSurah(surah.number));
     item.appendChild(button);
     fragment.appendChild(item);
@@ -161,12 +185,22 @@ function renderSurahList(filter = "") {
   if (shown === 0) {
     const item = document.createElement("li");
     item.className = "empty";
-    item.textContent = "لا توجد سورة مطابقة.";
+    item.textContent = onlyAvailable && !query
+      ? "لا توجد سور متوفرة بعد."
+      : "لا توجد سورة مطابقة.";
     fragment.appendChild(item);
   }
 
   listEl.replaceChildren(fragment);
-  $("surahCount").textContent = `${toArabicDigits(shown)} سورة`;
+
+  const countLabel = `${toArabicDigits(shown)} سورة`;
+  const availableCount = state.manifest
+    ? state.surahs.filter((surah) => state.manifestMap.get(surah.number)?.text).length
+    : null;
+  const showAvailableCount = state.manifest && availableCount !== null && !raw && !onlyAvailable;
+  $("surahCount").textContent = showAvailableCount
+    ? `${countLabel} — ${toArabicDigits(availableCount)} متوفرة`
+    : countLabel;
 }
 
 function markActiveSurah(number) {
@@ -179,12 +213,37 @@ function markActiveSurah(number) {
 
 let openToken = 0;
 
+const MISSING_SURAH_MESSAGE =
+  "ملف هذه السورة غير موجود بعد في quran-data/quran. أضف الملف (بنفس صيغة بقية السور) ثم شغّل python tools/build_quran_data.py وأعد تحميل الصفحة.";
+
+function showUnavailableSurah(surah, message) {
+  state.currentSurah = surah;
+  state.data = null;
+
+  reader.clear();
+  reader.titleEl.textContent = `سورة ${surah.name}`;
+  reader.metaEl.textContent = "البيانات غير متوفرة";
+  reader.showEmpty(`سورة ${surah.name}`, message);
+
+  $("bookmarkBtn").disabled = true;
+  markActiveSurah(surah.number);
+  document.title = `سورة ${surah.name} — القرآن الكريم`;
+  setStatus("تعذّر تحميل السورة المطلوبة.", "error");
+}
+
 async function openSurah(number, options = {}) {
   const surah = state.surahs.find((s) => s.number === number);
   if (!surah) return;
 
   const token = ++openToken;
   closeSidebar();
+
+  const info = state.manifestMap.get(number) || null;
+  if (info && info.text === false) {
+    showUnavailableSurah(surah, MISSING_SURAH_MESSAGE);
+    return;
+  }
+
   setStatus(`جارٍ تحميل سورة ${surah.name}...`);
 
   try {
@@ -195,33 +254,30 @@ async function openSurah(number, options = {}) {
     state.data = data;
 
     const jumpAyah = Number.isInteger(options.ayah) && options.ayah > 0 ? options.ayah : null;
-    reader.load(surah, data, { ayah: jumpAyah, autoplay: Boolean(options.autoplay) });
+    const hasAudio = info ? info.audio !== false : undefined;
+    reader.load(surah, data, {
+      ayah: jumpAyah,
+      autoplay: Boolean(options.autoplay),
+      hasAudio,
+    });
     if (!jumpAyah) reader.setCurrent(0, { scroll: false, notify: false });
 
     $("bookmarkBtn").disabled = false;
     markActiveSurah(number);
     document.title = `سورة ${surah.name} — القرآن الكريم`;
-    setStatus(`سورة ${surah.name} — ${toArabicDigits(reader.ayahs.length)} آية`, "ok");
+    setStatus(
+      `سورة ${surah.name} — ${toArabicDigits(reader.ayahs.length)} آية${hasAudio === false ? " — الصوت غير متوفر" : ""}`,
+      hasAudio === false ? "" : "ok"
+    );
   } catch (error) {
     if (token !== openToken) return;
 
-    state.currentSurah = surah;
-    state.data = null;
-
-    reader.clear();
-    reader.titleEl.textContent = `سورة ${surah.name}`;
-    reader.metaEl.textContent = "البيانات غير متوفرة";
-    reader.showEmpty(
-      `سورة ${surah.name}`,
+    showUnavailableSurah(
+      surah,
       error?.status === 404
-        ? "ملف هذه السورة غير موجود بعد في quran-data/quran. أضف الملف (بنفس صيغة بقية السور) ثم أعد تحميل الصفحة."
+        ? MISSING_SURAH_MESSAGE
         : "تعذّر تحميل بيانات السورة. تأكد من تقديم الموقع عبر خادم محلي (وليس فتح الملف مباشرة) ومن وجود مجلد quran-data."
     );
-
-    $("bookmarkBtn").disabled = true;
-    markActiveSurah(number);
-    document.title = `سورة ${surah.name} — القرآن الكريم`;
-    setStatus("تعذّر تحميل السورة المطلوبة.", "error");
   }
 }
 
@@ -346,15 +402,20 @@ function handleAyahChange(ayahNumber, _index) {
 
 function continueReading() {
   const last = loadLastPosition();
+  const lastAvailable = Boolean(last && state.manifestMap.get(last.surah)?.text !== false);
 
   state.trackingPaused = false;
   setTrackingPaused(false);
   updateTrackingUI();
 
-  if (last) openSurah(last.surah, { ayah: last.ayah, autoplay: true });
+  if (lastAvailable) openSurah(last.surah, { ayah: last.ayah, autoplay: true });
   else openSurah(1, { autoplay: true });
 
-  toast(last ? "تم استئناف المتابعة من آخر موضع." : "بدأنا من سورة الفاتحة.");
+  toast(lastAvailable
+    ? "تم استئناف المتابعة من آخر موضع."
+    : last
+      ? "آخر موضع لم يعد متوفرًا؛ بدأنا من سورة الفاتحة."
+      : "بدأنا من سورة الفاتحة.");
 }
 
 /* ============================ العلامات ============================ */
@@ -595,8 +656,13 @@ const reader = new Reader({
 function bindEvents() {
   // قائمة السور
   $("surahFilter").addEventListener("input", (event) => renderSurahList(event.target.value));
+  $("onlyAvailable")?.addEventListener("change", () => renderSurahList($("surahFilter").value));
 
-  // البحث
+  // البحث: ابدأ تجهيز الفهرس عند أول تركيز على الحقل (في الخلفية)
+  $("searchInput").addEventListener("focus", () => {
+    buildSearchIndex().catch(() => {});
+  }, { once: true });
+
   $("searchForm").addEventListener("submit", (event) => {
     event.preventDefault();
     runSearch($("searchInput").value);
@@ -720,7 +786,12 @@ async function init() {
   );
 
   try {
-    state.surahs = await loadSurahIndex();
+    const [surahs, manifest] = await Promise.all([loadSurahIndex(), loadManifest()]);
+    state.surahs = surahs;
+    state.manifest = manifest;
+    state.manifestMap = new Map(
+      (manifest?.surahs || []).map((item) => [item.number, item])
+    );
   } catch {
     reader.showEmpty(
       "تعذّر تحميل البيانات",
@@ -734,7 +805,7 @@ async function init() {
   updateProgressUI();
 
   const last = loadLastPosition();
-  if (last) {
+  if (last && state.manifestMap.get(last.surah)?.text !== false) {
     await openSurah(last.surah, { ayah: last.ayah });
   } else {
     await openSurah(1);

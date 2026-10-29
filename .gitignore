@@ -28,6 +28,12 @@ Thumbs.db
 __pycache__/
 *.pyc
 
+# Web tests (Playwright)
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+
 # JavaFX specific
 *.fxml~
 *.css~

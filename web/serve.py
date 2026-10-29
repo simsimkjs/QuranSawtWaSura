@@ -91,12 +91,19 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
             file_handle.close()
             raise
 
+    def handle_one_request(self):
+        try:
+            super().handle_one_request()
+        except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):
+            # المتصفح أغلق الاتصال قبل إرسال الطلب (شائع عند إعادة التحميل/الإغلاق)
+            self.close_connection = True
+
     def copyfile(self, source, outputfile):
         remaining = getattr(self, "_range_remaining", None)
         if remaining is None:
             try:
                 return super().copyfile(source, outputfile)
-            except (ConnectionResetError, BrokenPipeError):
+            except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):
                 return  # المتصفح أغلق الاتصال (إلغاء تحميل/قفز) - ليس خطأً
 
         try:
@@ -106,7 +113,7 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
                     break
                 outputfile.write(chunk)
                 remaining -= len(chunk)
-        except (ConnectionResetError, BrokenPipeError):
+        except (ConnectionResetError, ConnectionAbortedError, BrokenPipeError):
             pass  # المتصفح أغلق الاتصال أثناء البث - طبيعي عند القفز في الصوت
 
     def log_message(self, fmt, *args):
@@ -115,9 +122,9 @@ class RangeRequestHandler(SimpleHTTPRequestHandler):
             super().log_message(fmt, *args)
 
     def end_headers(self):
-        # أثناء التطوير: HTML/CSS/JS دائمًا حديثة (تمنع بقاء واجهة قديمة في الذاكرة)
+        # أثناء التطوير: HTML/CSS/JS/JSON دائمًا حديثة (تمنع بقاء واجهة أو فهرس قديم في الذاكرة)
         path = self.path.split("?", 1)[0].lower()
-        if path.endswith((".html", ".css", ".js")) or path.endswith("/"):
+        if path.endswith((".html", ".css", ".js", ".json")) or path.endswith("/"):
             self.send_header("Cache-Control", "no-cache")
         else:
             self.send_header("Cache-Control", "public, max-age=3600")

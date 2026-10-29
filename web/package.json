@@ -1,0 +1,14 @@
+{
+  "name": "quran-sawt-wa-sura-web-tests",
+  "version": "1.0.0",
+  "private": true,
+  "description": "اختبارات دخان لنسخة الويب (Playwright) — ليست جزءًا من التطبيق نفسه",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1"
+  }
+}

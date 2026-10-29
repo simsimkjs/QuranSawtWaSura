@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0f3a4a">
 <title>القرآن الكريم — صوت وسورة</title>
 <link rel="icon" href="../src/main/resources/sim/quran/images/icon.png">
-<link rel="stylesheet" href="css/app.css?v=2">
+<link rel="stylesheet" href="css/app.css?v=3">
 </head>
 <body class="theme-classic design-mushaf">
 
@@ -48,7 +48,12 @@
         <span>السور</span>
         <span id="surahCount" class="muted"></span>
       </div>
-      <input id="surahFilter" class="surah-filter" type="search" placeholder="تصفية السور..." autocomplete="off" aria-label="تصفية قائمة السور">
+      <div class="surah-tools">
+        <input id="surahFilter" class="surah-filter" type="search" placeholder="تصفية السور..." autocomplete="off" aria-label="تصفية قائمة السور">
+        <label class="check" for="onlyAvailable" title="اعرض السور التي يتوفر نصها فقط">
+          <input id="onlyAvailable" type="checkbox"> المتوفرة
+        </label>
+      </div>
       <ul id="surahList" class="surah-list"></ul>
 
       <div class="mini-progress">

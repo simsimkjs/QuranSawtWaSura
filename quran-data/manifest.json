@@ -1,0 +1,1074 @@
+{
+  "format": "qss-manifest",
+  "version": 1,
+  "fingerprint": "3693b73a4499d803fa231753ccbdbf18b6fd45d769431a924c947e324b7038b4",
+  "search_index": "search-index.json",
+  "counts": {
+    "surahs": 114,
+    "text": 11,
+    "audio": 11,
+    "tafsir": 0,
+    "ayahs": 1297
+  },
+  "surahs": [
+    {
+      "number": 1,
+      "name": "الفاتحة",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 7,
+      "text_ayahs": 7,
+      "text_sha256": "90fa92a069cb92ba4aa926419dd4576144479873a97c9aa8b6f4425763680998",
+      "audio_file": "001.mp3",
+      "audio_bytes": 542517
+    },
+    {
+      "number": 2,
+      "name": "البقرة",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 286,
+      "text_ayahs": 286,
+      "text_sha256": "a7130c77bad253cf02cde18b27117c85dcc00c42ae13567cc077b242c35c7ff1",
+      "audio_file": "002.mp3",
+      "audio_bytes": 167310764
+    },
+    {
+      "number": 3,
+      "name": "آل عمران",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 200,
+      "text_ayahs": 200,
+      "text_sha256": "511313e0cb9ce7ff1988b4acb26e87de65ca0f5026fa590652e75c8849084081",
+      "audio_file": "003.mp3",
+      "audio_bytes": 67005676
+    },
+    {
+      "number": 4,
+      "name": "النساء",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 176,
+      "text_ayahs": 176,
+      "text_sha256": "feb5598cac42cfca47be19cc640e5b4e7bce60c0ced90a5b419386a4746704da",
+      "audio_file": "004.mp3",
+      "audio_bytes": 62459408
+    },
+    {
+      "number": 5,
+      "name": "المائدة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 120,
+      "text_ayahs": 0
+    },
+    {
+      "number": 6,
+      "name": "الأنعام",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 165,
+      "text_ayahs": 0
+    },
+    {
+      "number": 7,
+      "name": "الأعراف",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 206,
+      "text_ayahs": 0
+    },
+    {
+      "number": 8,
+      "name": "الأنفال",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 75,
+      "text_ayahs": 0
+    },
+    {
+      "number": 9,
+      "name": "التوبة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 129,
+      "text_ayahs": 0
+    },
+    {
+      "number": 10,
+      "name": "يونس",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 109,
+      "text_ayahs": 0
+    },
+    {
+      "number": 11,
+      "name": "هود",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 123,
+      "text_ayahs": 0
+    },
+    {
+      "number": 12,
+      "name": "يوسف",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 111,
+      "text_ayahs": 0
+    },
+    {
+      "number": 13,
+      "name": "الرعد",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 43,
+      "text_ayahs": 43,
+      "text_sha256": "8a95695f3fe2195f251b37efd4749488456d9bba97e7fe7b5e2d46c0d5ae2636",
+      "audio_file": "013.mp3",
+      "audio_bytes": 25762610
+    },
+    {
+      "number": 14,
+      "name": "إبراهيم",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 52,
+      "text_ayahs": 52,
+      "text_sha256": "89b6f72a56bb161d10c803cbaddd77fad5827aed316988bb56f6072e13537383",
+      "audio_file": "014.mp3",
+      "audio_bytes": 31557638
+    },
+    {
+      "number": 15,
+      "name": "الحجر",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 99,
+      "text_ayahs": 99,
+      "text_sha256": "dfa7ab6f10acebd640e9e1b4e7e64ce56e2f6c61ba63ea2e1f65bb9eed033dd1",
+      "audio_file": "015.mp3",
+      "audio_bytes": 24829516
+    },
+    {
+      "number": 16,
+      "name": "النحل",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 128,
+      "text_ayahs": 128,
+      "text_sha256": "9040fe4ad8e22b43564996389f2e2c9cfdbdea907a3c871af477a305b7448de5",
+      "audio_file": "016.mp3",
+      "audio_bytes": 58121011
+    },
+    {
+      "number": 17,
+      "name": "الإسراء",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 111,
+      "text_ayahs": 111,
+      "text_sha256": "9eba3f01875b51a60eb7f770af37f7afcc3c22e592db2d27aa54090659049e12",
+      "audio_file": "017.mp3",
+      "audio_bytes": 56042723
+    },
+    {
+      "number": 18,
+      "name": "الكهف",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 110,
+      "text_ayahs": 110,
+      "text_sha256": "d0223e61e1de3bb4ef71271d0ad2596dd28146621129a0e58fc9d48fa985fa2f",
+      "audio_file": "018.mp3",
+      "audio_bytes": 52601870
+    },
+    {
+      "number": 19,
+      "name": "مريم",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 98,
+      "text_ayahs": 0
+    },
+    {
+      "number": 20,
+      "name": "طه",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 135,
+      "text_ayahs": 0
+    },
+    {
+      "number": 21,
+      "name": "الأنبياء",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 112,
+      "text_ayahs": 0
+    },
+    {
+      "number": 22,
+      "name": "الحج",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 78,
+      "text_ayahs": 0
+    },
+    {
+      "number": 23,
+      "name": "المؤمنون",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 118,
+      "text_ayahs": 0
+    },
+    {
+      "number": 24,
+      "name": "النور",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 64,
+      "text_ayahs": 0
+    },
+    {
+      "number": 25,
+      "name": "الفرقان",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 77,
+      "text_ayahs": 0
+    },
+    {
+      "number": 26,
+      "name": "الشعراء",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 227,
+      "text_ayahs": 0
+    },
+    {
+      "number": 27,
+      "name": "النمل",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 93,
+      "text_ayahs": 0
+    },
+    {
+      "number": 28,
+      "name": "القصص",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 88,
+      "text_ayahs": 0
+    },
+    {
+      "number": 29,
+      "name": "العنكبوت",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 69,
+      "text_ayahs": 0
+    },
+    {
+      "number": 30,
+      "name": "الروم",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 60,
+      "text_ayahs": 0
+    },
+    {
+      "number": 31,
+      "name": "لقمان",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 34,
+      "text_ayahs": 0
+    },
+    {
+      "number": 32,
+      "name": "السجدة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 30,
+      "text_ayahs": 0
+    },
+    {
+      "number": 33,
+      "name": "الأحزاب",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 73,
+      "text_ayahs": 0
+    },
+    {
+      "number": 34,
+      "name": "سبأ",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 54,
+      "text_ayahs": 0
+    },
+    {
+      "number": 35,
+      "name": "فاطر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 45,
+      "text_ayahs": 0
+    },
+    {
+      "number": 36,
+      "name": "يس",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 83,
+      "text_ayahs": 0
+    },
+    {
+      "number": 37,
+      "name": "الصافات",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 182,
+      "text_ayahs": 0
+    },
+    {
+      "number": 38,
+      "name": "ص",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 88,
+      "text_ayahs": 0
+    },
+    {
+      "number": 39,
+      "name": "الزمر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 75,
+      "text_ayahs": 0
+    },
+    {
+      "number": 40,
+      "name": "غافر",
+      "text": true,
+      "audio": true,
+      "tafsir": false,
+      "ayahs": 85,
+      "text_ayahs": 85,
+      "text_sha256": "26cc408d57d2db8e03540b7e1a489ebd404c564702bd19fae9540b077d1df2df",
+      "audio_file": "040.mp3",
+      "audio_bytes": 42349282
+    },
+    {
+      "number": 41,
+      "name": "فصلت",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 54,
+      "text_ayahs": 0
+    },
+    {
+      "number": 42,
+      "name": "الشورى",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 53,
+      "text_ayahs": 0
+    },
+    {
+      "number": 43,
+      "name": "الزخرف",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 89,
+      "text_ayahs": 0
+    },
+    {
+      "number": 44,
+      "name": "الدخان",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 59,
+      "text_ayahs": 0
+    },
+    {
+      "number": 45,
+      "name": "الجاثية",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 37,
+      "text_ayahs": 0
+    },
+    {
+      "number": 46,
+      "name": "الأحقاف",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 35,
+      "text_ayahs": 0
+    },
+    {
+      "number": 47,
+      "name": "محمد",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 38,
+      "text_ayahs": 0
+    },
+    {
+      "number": 48,
+      "name": "الفتح",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 29,
+      "text_ayahs": 0
+    },
+    {
+      "number": 49,
+      "name": "الحجرات",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 18,
+      "text_ayahs": 0
+    },
+    {
+      "number": 50,
+      "name": "ق",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 45,
+      "text_ayahs": 0
+    },
+    {
+      "number": 51,
+      "name": "الذاريات",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 60,
+      "text_ayahs": 0
+    },
+    {
+      "number": 52,
+      "name": "الطور",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 49,
+      "text_ayahs": 0
+    },
+    {
+      "number": 53,
+      "name": "النجم",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 62,
+      "text_ayahs": 0
+    },
+    {
+      "number": 54,
+      "name": "القمر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 55,
+      "text_ayahs": 0
+    },
+    {
+      "number": 55,
+      "name": "الرحمن",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 78,
+      "text_ayahs": 0
+    },
+    {
+      "number": 56,
+      "name": "الواقعة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 96,
+      "text_ayahs": 0
+    },
+    {
+      "number": 57,
+      "name": "الحديد",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 29,
+      "text_ayahs": 0
+    },
+    {
+      "number": 58,
+      "name": "المجادلة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 22,
+      "text_ayahs": 0
+    },
+    {
+      "number": 59,
+      "name": "الحشر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 24,
+      "text_ayahs": 0
+    },
+    {
+      "number": 60,
+      "name": "الممتحنة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 13,
+      "text_ayahs": 0
+    },
+    {
+      "number": 61,
+      "name": "الصف",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 14,
+      "text_ayahs": 0
+    },
+    {
+      "number": 62,
+      "name": "الجمعة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 11,
+      "text_ayahs": 0
+    },
+    {
+      "number": 63,
+      "name": "المنافقون",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 11,
+      "text_ayahs": 0
+    },
+    {
+      "number": 64,
+      "name": "التغابن",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 18,
+      "text_ayahs": 0
+    },
+    {
+      "number": 65,
+      "name": "الطلاق",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 12,
+      "text_ayahs": 0
+    },
+    {
+      "number": 66,
+      "name": "التحريم",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 12,
+      "text_ayahs": 0
+    },
+    {
+      "number": 67,
+      "name": "الملك",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 30,
+      "text_ayahs": 0
+    },
+    {
+      "number": 68,
+      "name": "القلم",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 52,
+      "text_ayahs": 0
+    },
+    {
+      "number": 69,
+      "name": "الحاقة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 52,
+      "text_ayahs": 0
+    },
+    {
+      "number": 70,
+      "name": "المعارج",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 44,
+      "text_ayahs": 0
+    },
+    {
+      "number": 71,
+      "name": "نوح",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 28,
+      "text_ayahs": 0
+    },
+    {
+      "number": 72,
+      "name": "الجن",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 28,
+      "text_ayahs": 0
+    },
+    {
+      "number": 73,
+      "name": "المزمل",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 20,
+      "text_ayahs": 0
+    },
+    {
+      "number": 74,
+      "name": "المدثر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 56,
+      "text_ayahs": 0
+    },
+    {
+      "number": 75,
+      "name": "القيامة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 40,
+      "text_ayahs": 0
+    },
+    {
+      "number": 76,
+      "name": "الإنسان",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 31,
+      "text_ayahs": 0
+    },
+    {
+      "number": 77,
+      "name": "المرسلات",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 50,
+      "text_ayahs": 0
+    },
+    {
+      "number": 78,
+      "name": "النبأ",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 40,
+      "text_ayahs": 0
+    },
+    {
+      "number": 79,
+      "name": "النازعات",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 46,
+      "text_ayahs": 0
+    },
+    {
+      "number": 80,
+      "name": "عبس",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 42,
+      "text_ayahs": 0
+    },
+    {
+      "number": 81,
+      "name": "التكوير",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 29,
+      "text_ayahs": 0
+    },
+    {
+      "number": 82,
+      "name": "الإنفطار",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 19,
+      "text_ayahs": 0
+    },
+    {
+      "number": 83,
+      "name": "المطففين",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 36,
+      "text_ayahs": 0
+    },
+    {
+      "number": 84,
+      "name": "الإنشقاق",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 25,
+      "text_ayahs": 0
+    },
+    {
+      "number": 85,
+      "name": "البروج",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 22,
+      "text_ayahs": 0
+    },
+    {
+      "number": 86,
+      "name": "الطارق",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 17,
+      "text_ayahs": 0
+    },
+    {
+      "number": 87,
+      "name": "الأعلى",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 19,
+      "text_ayahs": 0
+    },
+    {
+      "number": 88,
+      "name": "الغاشية",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 26,
+      "text_ayahs": 0
+    },
+    {
+      "number": 89,
+      "name": "الفجر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 30,
+      "text_ayahs": 0
+    },
+    {
+      "number": 90,
+      "name": "البلد",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 20,
+      "text_ayahs": 0
+    },
+    {
+      "number": 91,
+      "name": "الشمس",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 15,
+      "text_ayahs": 0
+    },
+    {
+      "number": 92,
+      "name": "الليل",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 21,
+      "text_ayahs": 0
+    },
+    {
+      "number": 93,
+      "name": "الضحى",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 11,
+      "text_ayahs": 0
+    },
+    {
+      "number": 94,
+      "name": "الشرح",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 8,
+      "text_ayahs": 0
+    },
+    {
+      "number": 95,
+      "name": "التين",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 8,
+      "text_ayahs": 0
+    },
+    {
+      "number": 96,
+      "name": "العلق",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 19,
+      "text_ayahs": 0
+    },
+    {
+      "number": 97,
+      "name": "القدر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 5,
+      "text_ayahs": 0
+    },
+    {
+      "number": 98,
+      "name": "البينة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 8,
+      "text_ayahs": 0
+    },
+    {
+      "number": 99,
+      "name": "الزلزلة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 8,
+      "text_ayahs": 0
+    },
+    {
+      "number": 100,
+      "name": "العاديات",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 11,
+      "text_ayahs": 0
+    },
+    {
+      "number": 101,
+      "name": "القارعة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 11,
+      "text_ayahs": 0
+    },
+    {
+      "number": 102,
+      "name": "التكاثر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 8,
+      "text_ayahs": 0
+    },
+    {
+      "number": 103,
+      "name": "العصر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 3,
+      "text_ayahs": 0
+    },
+    {
+      "number": 104,
+      "name": "الهمزة",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 9,
+      "text_ayahs": 0
+    },
+    {
+      "number": 105,
+      "name": "الفيل",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 5,
+      "text_ayahs": 0
+    },
+    {
+      "number": 106,
+      "name": "قريش",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 4,
+      "text_ayahs": 0
+    },
+    {
+      "number": 107,
+      "name": "الماعون",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 7,
+      "text_ayahs": 0
+    },
+    {
+      "number": 108,
+      "name": "الكوثر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 3,
+      "text_ayahs": 0
+    },
+    {
+      "number": 109,
+      "name": "الكافرون",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 6,
+      "text_ayahs": 0
+    },
+    {
+      "number": 110,
+      "name": "النصر",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 3,
+      "text_ayahs": 0
+    },
+    {
+      "number": 111,
+      "name": "المسد",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 5,
+      "text_ayahs": 0
+    },
+    {
+      "number": 112,
+      "name": "الإخلاص",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 4,
+      "text_ayahs": 0
+    },
+    {
+      "number": 113,
+      "name": "الفلق",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 5,
+      "text_ayahs": 0
+    },
+    {
+      "number": 114,
+      "name": "الناس",
+      "text": false,
+      "audio": false,
+      "tafsir": false,
+      "ayahs": 6,
+      "text_ayahs": 0
+    }
+  ]
+}

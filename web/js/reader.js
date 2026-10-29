@@ -141,7 +141,7 @@ export class Reader {
   /**
    * @param {object} surah عنصر من surahs.json
    * @param {object} data محتوى quran/NNN.json
-   * @param {{ayah?: number, autoplay?: boolean}} [opts]
+   * @param {{ayah?: number, autoplay?: boolean, hasAudio?: boolean}} [opts]
    */
   load(surah, data, opts = {}) {
     const token = ++this.loadToken;
@@ -172,10 +172,18 @@ export class Reader {
 
     this._render();
 
-    // ملف الصوت
-    const src = audioUrl(data.audio_file_name, surah.number);
-    this.audio.src = src;
-    this.audio.load();
+    // ملف الصوت (نتجنّب طلبه إن كان manifest يعرف أنه غير متوفر)
+    if (opts.hasAudio === false) {
+      this._suppressAudioError = true;
+      this.audio.removeAttribute("src");
+      this.audio.load();
+      setTimeout(() => { this._suppressAudioError = false; }, 0);
+      this.audioOk = false;
+    } else {
+      const src = audioUrl(data.audio_file_name, surah.number);
+      this.audio.src = src;
+      this.audio.load();
+    }
     if (this.controls.slider) {
       this.controls.slider.value = "0";
       this.controls.slider.max = "1000";
@@ -256,6 +264,7 @@ export class Reader {
 
   /** يوقف الصوت ويفرّغ لوحة القراءة (يُستخدم عند غياب بيانات السورة). */
   clear() {
+    this.loadToken += 1; // يُلغي أي تفسير/صوت قيد التحميل من السورة السابقة
     this._stopLoop();
     this._suppressAudioError = true;
     this.audio.pause();
@@ -268,9 +277,13 @@ export class Reader {
     this.ayahs = [];
     this.currentIndex = -1;
     this.repeatIndex = -1;
+    this.tafsir = null;
     this.audioOk = false;
 
     this.el.replaceChildren();
+    this._updateTafsirTitle();
+    if (this.tafsirContent) this.tafsirContent.textContent = "اختر آية لعرض تفسيرها.";
+    if (this.tafsirPanel) this.tafsirPanel.open = false;
     this.controls.repeatBtn?.setAttribute("aria-pressed", "false");
     this.controls.repeatBtn?.classList.remove("active");
     if (this.controls.slider) {
@@ -340,6 +353,10 @@ export class Reader {
 
   play() {
     if (!this.data || this.ayahs.length === 0) return;
+    if (!this.audioOk) {
+      this.onStatus("ملف الصوت غير متوفر لهذه السورة.", "error");
+      return;
+    }
     const promise = this.audio.play();
     if (promise && typeof promise.catch === "function") {
       promise.catch((error) => {
@@ -375,7 +392,7 @@ export class Reader {
     const next = Math.max(0, Math.min(this.ayahs.length - 1, from + delta));
     this.setCurrent(next, { scroll: true, smooth: true, center: false });
     this._seekSeconds(this.ayahs[next].start_ms / 1000);
-    if (this.audio.paused) this.play();
+    if (this.audioOk && this.audio.paused) this.play();
   }
 
   setRate(rate) {

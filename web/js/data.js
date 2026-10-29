@@ -106,10 +106,45 @@ export function loadSurahIndex() {
   return surahIndexPromise;
 }
 
+/* ------------------------ فهرس توفّر البيانات ------------------------ */
+
+let manifestPromise = null;
+
+/**
+ * يقرأ quran-data/manifest.json (فهرس توفّر النص/الصوت/التفسير).
+ * يعيد null بصمت إذا لم يكن الملف موجودًا، للتوافق مع بيانات قديمة.
+ */
+export function loadManifest() {
+  if (!manifestPromise) {
+    manifestPromise = fetchJson(dataUrl("manifest.json"))
+      .then((manifest) => (manifest && Array.isArray(manifest.surahs) ? manifest : null))
+      .catch((error) => {
+        // اسمح بإعادة المحاولة عند خطأ شبكة/خادم، ولا تكررها عند 404
+        if (!(error instanceof HttpError) || error.status !== 404) manifestPromise = null;
+        return null;
+      });
+  }
+  return manifestPromise;
+}
+
+function findManifestSurah(manifest, number) {
+  return (manifest?.surahs || []).find((item) => item?.number === number) || null;
+}
+
 const surahCache = new Map();
 
 /** بيانات سورة واحدة من quran-data/quran/NNN.json (مع تخزين مؤقت). */
-export function loadSurahData(number) {
+export async function loadSurahData(number) {
+  if (surahCache.has(number)) return surahCache.get(number);
+
+  // تجنّب طلب ملف سورة نعرف مسبقًا أنه غير موجود (يمنع ضجيج 404)
+  const manifest = await loadManifest();
+  const info = findManifestSurah(manifest, number);
+  if (info && info.text === false) {
+    throw new HttpError(404, dataUrl(`quran/${pad3(number)}.json`));
+  }
+
+  // قد يكون طلب آخر بدأ أثناء انتظار manifest
   if (surahCache.has(number)) return surahCache.get(number);
 
   const url = dataUrl(`quran/${pad3(number)}.json`);
@@ -143,7 +178,17 @@ const tafsirCache = new Map();
  * { "source": "...", "ayahs": [ { "ayah_number": 1, "text": "..." } ] }
  * يعيد null بصمت إن لم يكن الملف موجودًا بعد.
  */
-export function loadTafsir(number) {
+export async function loadTafsir(number) {
+  if (tafsirCache.has(number)) return tafsirCache.get(number);
+
+  const manifest = await loadManifest();
+  const info = findManifestSurah(manifest, number);
+  if (info && info.tafsir === false) {
+    const empty = Promise.resolve(null);
+    tafsirCache.set(number, empty);
+    return empty;
+  }
+
   if (tafsirCache.has(number)) return tafsirCache.get(number);
 
   const url = dataUrl(`tafsir/${pad3(number)}.json`);
@@ -167,25 +212,87 @@ export function loadTafsir(number) {
 
 let searchIndex = null;
 let searchBuilding = null;
+let searchProgress = null;
 
 /**
- * يبني فهرس بحث نصيًا عبر كل السور المتوفرة. السور غير المرفوعة تُتجاهل بصمت.
+ * يبني فهرس البحث. يفضّل quran-data/search-index.json (مولَّد مسبقًا)،
+ * ويعود إلى تحميل ملفات السور عند غيابه أو تقادمه.
+ * السور غير المتوفرة تُتجاهل بصمت.
  * @param {(percent:number)=>void} [onProgress]
  */
 export function buildSearchIndex(onProgress) {
+  if (typeof onProgress === "function") searchProgress = onProgress;
   if (searchIndex) return Promise.resolve(searchIndex);
   if (searchBuilding) return searchBuilding;
 
   searchBuilding = (async () => {
     const surahs = await loadSurahIndex();
+    const byNumber = new Map(surahs.map((surah) => [surah.number, surah]));
+    const manifest = await loadManifest();
+
+    const loadPrebuilt = async () => {
+      try {
+        const raw = await fetchJson(dataUrl("search-index.json"));
+        if (!raw || !Array.isArray(raw.entries)) return null;
+
+        // إن وُجد manifest وبصمة مختلفة، فالفهرس قديم (أُضيفت/عُدّلت سور)
+        if (manifest && raw.fingerprint && raw.fingerprint !== manifest.fingerprint) {
+          console.warn("فهرس البحث قديم؛ سيُعاد بناؤه من ملفات السور.");
+          return null;
+        }
+
+        const entries = [];
+        for (const row of raw.entries) {
+          if (!Array.isArray(row) || row.length < 3) continue;
+          const surahNumber = Number(row[0]);
+          const ayahNumber = Number(row[1]);
+          const text = cleanText(row[2]);
+          const surah = byNumber.get(surahNumber);
+          if (!surah || !Number.isInteger(ayahNumber) || ayahNumber <= 0 || !text) continue;
+          entries.push({
+            surah: surah.number,
+            surahName: surah.name,
+            ayah: ayahNumber,
+            text,
+            normalized: normalizeArabic(text),
+          });
+        }
+
+        if (entries.length === 0) return null;
+        entries.sort((a, b) => a.surah - b.surah || a.ayah - b.ayah);
+        return entries;
+      } catch (error) {
+        if (!(error instanceof HttpError) || error.status !== 404) {
+          console.warn("تعذّر تحميل فهرس البحث المسبق؛ سيُبنى من ملفات السور.", error);
+        }
+        return null;
+      }
+    };
+
+    const prebuilt = await loadPrebuilt();
+    if (prebuilt) {
+      searchIndex = prebuilt;
+      if (searchProgress) searchProgress(100);
+      return prebuilt;
+    }
+
+    // بناء احتياطي: فقط السور التي يعرف manifest أن نصها متوفر
+    const candidates = manifest
+      ? surahs.filter((surah) => {
+          const info = findManifestSurah(manifest, surah.number);
+          return !info || info.text !== false;
+        })
+      : surahs;
+
     const entries = [];
     let done = 0;
     let cursor = 0;
+    const total = Math.max(1, candidates.length);
     const CONCURRENCY = 6;
 
     async function worker() {
-      while (cursor < surahs.length) {
-        const surah = surahs[cursor++];
+      while (cursor < candidates.length) {
+        const surah = candidates[cursor++];
         try {
           const data = await loadSurahData(surah.number);
           for (const ayah of data.ayahs) {
@@ -202,18 +309,23 @@ export function buildSearchIndex(onProgress) {
           // السورة غير متوفرة بعد — تجاهل
         }
         done += 1;
-        if (onProgress) onProgress(Math.round((done / surahs.length) * 100));
+        if (searchProgress) {
+          searchProgress(Math.round((done / total) * 100));
+        }
       }
     }
 
-    await Promise.all(Array.from({ length: CONCURRENCY }, worker));
+    await Promise.all(Array.from({ length: Math.min(CONCURRENCY, total) }, worker));
     entries.sort((a, b) => a.surah - b.surah || a.ayah - b.ayah);
     searchIndex = entries;
     return entries;
   })();
 
   const building = searchBuilding;
-  building.finally(() => { searchBuilding = null; });
+  building.finally(() => {
+    searchBuilding = null;
+    searchProgress = null;
+  });
   return building;
 }
 
