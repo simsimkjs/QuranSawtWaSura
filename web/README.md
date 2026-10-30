@@ -116,7 +116,7 @@ python tools\build_quran_data.py --check
 web/
   index.html              الواجهة
   css/app.css             التنسيقات والثيمات
-  assets/fonts/           خط UthmanicHafs.otf
+  assets/fonts/           خط UthmanicHafs1Ver18.woff2 (نسخة quran.com)
   js/app.js               ربط الواجهة والأحداث
   js/reader.js            عرض الآيات ومزامنة الصوت
   js/data.js              تحميل البيانات والبحث

@@ -20,8 +20,13 @@ public class SettingsStore {
         try {
             String content = Files.readString(file.toPath(), StandardCharsets.UTF_8);
             JSONObject root = new JSONObject(content);
+            String fontFamily = root.optString("font_family", defaultFontFamily());
+            // ترحيل اسم الخط القديم (v0.09) إلى اسم الخط الجديد (v0.18) حتى لا يفقد المستخدم خطّه.
+            if ("KFGQPC Uthmanic Script HAFS".equals(fontFamily)) {
+                fontFamily = defaultFontFamily();
+            }
             AppSettings settings = new AppSettings(
-                    root.optString("font_family", defaultFontFamily()),
+                    fontFamily,
                     root.optDouble("font_size", 27),
                     AppSettings.Theme.fromName(root.optString("theme", "CLASSIC")));
             settings.setTrackProgress(root.optBoolean("track_progress", true));
@@ -51,7 +56,7 @@ public class SettingsStore {
     /** الخط الافتراضي لو مفتاح font_family غايب: الخط العثماني المضمَّن داخل التطبيق (لو تحمّل) وإلا الاسم الثابت. */
     private static String defaultFontFamily() {
         String embedded = EmbeddedFonts.uthmanicHafsFamily;
-        return (embedded == null || embedded.isBlank()) ? "KFGQPC Uthmanic Script HAFS" : embedded;
+        return (embedded == null || embedded.isBlank()) ? "KFGQPC HAFS Uthmanic Script" : embedded;
     }
 
     private static File filePath(File profileDataDir) {

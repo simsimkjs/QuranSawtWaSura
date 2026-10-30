@@ -101,7 +101,7 @@
 
 /* ===== نص الآيات ===== */
 .ayah-text {
-    -fx-font-family: "KFGQPC Uthmanic Script HAFS", "Amiri", "Sakkal Majalla", serif;
+    -fx-font-family: "KFGQPC HAFS Uthmanic Script", "Amiri", "Sakkal Majalla", serif;
     -fx-font-size: 27px;
     -fx-fill: #241a08;
 }

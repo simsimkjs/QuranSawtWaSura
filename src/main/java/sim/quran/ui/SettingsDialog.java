@@ -13,6 +13,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import sim.quran.data.EmbeddedFonts;
 import sim.quran.model.AppSettings;
 
 import java.util.function.Consumer;
@@ -27,10 +28,10 @@ public class SettingsDialog {
             "بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ ﴿١﴾ ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ ﴿٢﴾";
 
     /** الخطوط المتاحة للاختيار - محصورة عمدًا بخطوط عربية مناسبة للنص القرآني فقط (وليس كل خطوط النظام).
-     *  "KFGQPC Uthmanic Script HAFS" خط عثماني أصيل مضمّن داخل التطبيق نفسه (EmbeddedFonts)،
+     *  "KFGQPC HAFS Uthmanic Script" خط عثماني أصيل مضمّن داخل التطبيق نفسه (EmbeddedFonts)،
      *  فيظهر دائمًا بغض النظر عن الخطوط المثبَّتة فعليًا على جهاز المستخدم. */
     private static final String[] CURATED_FONTS =
-            {"KFGQPC Uthmanic Script HAFS", "Amiri", "Traditional Arabic", "Sakkal Majalla"};
+            {"KFGQPC HAFS Uthmanic Script", "Amiri", "Traditional Arabic", "Sakkal Majalla"};
 
     public static void show(AppSettings currentSettings, Consumer<AppSettings> onSave) {
         AppSettings draft = currentSettings.copy();
@@ -46,6 +47,11 @@ public class SettingsDialog {
             if (installedFamilies.contains(candidate)) {
                 fontCombo.getItems().add(candidate);
             }
+        }
+        // الخط المضمَّن محمَّل عبر Font.loadFont، نضمن ظهوره حتى لو تأخّر تحديث قائمة العائلات.
+        String embeddedFamily = EmbeddedFonts.uthmanicHafsFamily;
+        if (embeddedFamily != null && !embeddedFamily.isBlank() && !fontCombo.getItems().contains(embeddedFamily)) {
+            fontCombo.getItems().add(0, embeddedFamily);
         }
         if (fontCombo.getItems().isEmpty()) {
             // احتياط: لو ولا خط من القائمة المفضّلة مثبّت على الجهاز، لا نترك القائمة فارغة

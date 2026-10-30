@@ -19,7 +19,7 @@ public final class EmbeddedFonts {
     public static String uthmanicHafsFamily;
 
     public static void loadAll() {
-        uthmanicHafsFamily = loadFontFamily("/sim/quran/fonts/UthmanicHafs.otf", 27);
+        uthmanicHafsFamily = loadFontFamily("/sim/quran/fonts/UthmanicHafs1Ver18.ttf", 27);
     }
 
     private static String loadFontFamily(String resourcePath, double size) {

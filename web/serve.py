@@ -15,9 +15,13 @@ from __future__ import annotations
 
 import argparse
 import functools
+import mimetypes
 import os
 import re
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+
+# بعض إصدارات Windows لا تعرف امتداد woff2، فيُرسَل كـ application/octet-stream.
+mimetypes.add_type("font/woff2", ".woff2")
 
 RANGE_RE = re.compile(r"^bytes=(\d*)-(\d*)$")
 CHUNK_SIZE = 64 * 1024

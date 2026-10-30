@@ -50,6 +50,25 @@ test("يعرض نص الآيات ولا تغطيه طبقة الحالة الف�
   expect(hitsAyah).toBe(true);
 });
 
+test("يُحمّل خط quran.com العثماني ويُطبَّق على نص الآيات", async ({ page }) => {
+  await gotoApp(page);
+  await openSurah(page, 2, "البقرة");
+
+  const fontState = await page.evaluate(async () => {
+    await document.fonts.ready;
+    const ayah = document.querySelector("#ayahList .ayah-text");
+    return {
+      loaded: [...document.fonts].some(
+        (font) => font.family === "UthmanicHafs" && font.status === "loaded"
+      ),
+      family: ayah ? getComputedStyle(ayah).fontFamily : "",
+    };
+  });
+
+  expect(fontState.loaded).toBe(true);
+  expect(fontState.family).toContain("UthmanicHafs");
+});
+
 test("manifest يضيف شارات التوفر ويسمح بتصفية السور المتوفرة", async ({ page }) => {
   await gotoApp(page);
 

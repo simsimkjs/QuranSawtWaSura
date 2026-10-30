@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "UthmanicHafs";
-  src: url("../assets/fonts/UthmanicHafs.otf") format("opentype");
+  src: url("../assets/fonts/UthmanicHafs1Ver18.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 
 :root {
   --ui-font: "Segoe UI", "Tahoma", "Cairo", system-ui, sans-serif;
-  --quran-font: "UthmanicHafs", "KFGQPC Uthmanic Script HAFS", "Amiri",
+  --quran-font: "UthmanicHafs", "KFGQPC HAFS Uthmanic Script", "Amiri",
                 "Traditional Arabic", "Scheherazade New", serif;
   --quran-size: 27px;
   --radius: 12px;

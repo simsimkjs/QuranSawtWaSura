@@ -148,4 +148,4 @@ sim.quran
     └── SettingsDialog.java    الإعدادات (خط/حجم/ثيم/نمط تصميم + معاينة حية)
 ```
 
-**الموارد:** `src/main/resources/sim/quran/` تحتوي `css/` (app2.css, style.css)، `fxml/main.fxml`، `fonts/UthmanicHafs.otf`، و`images/` (أيقونات).
+**الموارد:** `src/main/resources/sim/quran/` تحتوي `css/` (app2.css, style.css)، `fxml/main.fxml`، `fonts/UthmanicHafs1Ver18.ttf`، و`images/` (أيقونات).

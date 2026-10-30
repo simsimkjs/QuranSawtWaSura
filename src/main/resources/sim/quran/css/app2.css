@@ -73,7 +73,7 @@
 
 /* ===== تنسيق الآيات (النص الأساسي) ===== */
 .ayah-text {
-    -fx-font-family: "Amiri", "Sakkal Majalla", "KFGQPC Uthman Taha Naskh", serif;
+    -fx-font-family: "KFGQPC HAFS Uthmanic Script", "Amiri", "Sakkal Majalla", "KFGQPC Uthman Taha Naskh", serif;
     -fx-font-size: 28px; /* حجم مناسب للقراءة */
     -fx-fill: #1a1a1a;
     -fx-font-smoothing-type: gray;
@@ -81,7 +81,7 @@
 
 /* تنسيق الآية الحالية (تظليل خفيف) */
 .ayah-text-current {
-    -fx-font-family: "Amiri", "Sakkal Majalla", "KFGQPC Uthman Taha Naskh", serif;
+    -fx-font-family: "KFGQPC HAFS Uthmanic Script", "Amiri", "Sakkal Majalla", "KFGQPC Uthman Taha Naskh", serif;
     -fx-font-size: 28px;
     -fx-fill: #1a1a1a;
     -fx-background-color: #f0f4fb; /* تظليل أزرق فاتح جداً */

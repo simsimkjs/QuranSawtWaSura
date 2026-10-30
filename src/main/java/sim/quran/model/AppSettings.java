@@ -58,12 +58,12 @@ public class AppSettings {
     }
 
     /**
-     * الإعدادات الافتراضية. يُفضَّل الخط العثماني المضمَّن داخل التطبيق نفسه (UthmanicHafs.otf)
+     * الإعدادات الافتراضية. يُفضَّل الخط العثماني المضمَّن داخل التطبيق نفسه (UthmanicHafs1Ver18.ttf)
      * فنستخدم اسمه الفعلي المسجَّل بخط تحميله، ونتراجع للاسم الثابت لو لم يُحمَّل الملف أصلاً.
      */
     public static AppSettings defaults() {
         String embedded = sim.quran.data.EmbeddedFonts.uthmanicHafsFamily;
-        if (embedded == null || embedded.isBlank()) embedded = "KFGQPC Uthmanic Script HAFS";
+        if (embedded == null || embedded.isBlank()) embedded = "KFGQPC HAFS Uthmanic Script";
         return new AppSettings(embedded, 27, Theme.CLASSIC);
     }
 
