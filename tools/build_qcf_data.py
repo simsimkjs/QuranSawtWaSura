@@ -408,6 +408,8 @@ def main(argv: list[str] | None = None) -> int:
 
     if not args.no_index:
         print("  … تحديث manifest.json وsearch-index.json")
+        sys.stdout.flush()
+        sys.stderr.flush()
         result = subprocess.run(
             [sys.executable, str(ROOT / "tools" / "build_quran_data.py"), "--root", str(ROOT)],
             cwd=ROOT,
