@@ -1,0 +1,18 @@
+# Keep text files LF on every platform so quran-data hashes (manifest/search-index)
+# stay stable on Windows and Linux.
+* text=auto eol=lf
+
+# Binary assets: never apply text conversion.
+*.woff2 binary
+*.woff binary
+*.ttf binary
+*.otf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.mp3 binary
+*.rar binary
+*.zip binary
+*.7z binary
