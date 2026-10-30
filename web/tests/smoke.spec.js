@@ -94,6 +94,21 @@ test("يُطبّق خط QCF لصفحة quran.com على الآيات", async ({ 
   expect(state.fontSize).toBeGreaterThan(27);
   expect(font404).toEqual([]);
 
+  // لا تتجاوز أسطر QCF حدود الآية التالية (خصوصًا مع الحروف ذات النزول).
+  const overlaps = await page.evaluate(() => {
+    const rows = [...document.querySelectorAll("#ayahList .ayah")].slice(0, 12);
+    const boxes = rows.map((row) => {
+      const range = document.createRange();
+      range.selectNodeContents(row.querySelector(".ayah-text"));
+      const rect = range.getBoundingClientRect();
+      return { top: rect.top, bottom: rect.bottom };
+    });
+    return boxes.some(
+      (box, index) => index + 1 < boxes.length && box.bottom > boxes[index + 1].top + 0.5
+    );
+  });
+  expect(overlaps).toBe(false);
+
   // التحميل تدريجي: لا تُجلب كل خطوط السورة (48 صفحة) دفعة واحدة.
   const loadedAtStart = await page.evaluate(
     () => [...document.fonts].filter((font) => font.family.startsWith("QCF-P") && font.status === "loaded").length
