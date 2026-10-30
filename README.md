@@ -22,7 +22,8 @@
 توجد نسخة ويب مستقلة في مجلد `web/` (HTML/CSS/JS بدون أدوات بناء) تقرأ نفس مجلد `quran-data/`،
 وتعمل على الحاسوب والجوال: قائمة السور والتصفية، التلاوة المتزامنة مع تظليل الآية، الانتقال المباشر،
 التصفّح (أجزاء/أحزاب/أرباع)، البحث، العلامات، التفسير، «مشواري مع القرآن»، والإعدادات — مع حفظ محلي
-في المتصفح (`localStorage`).
+في المتصفح (`localStorage`). وتعرض الآيات بخط quran.com نفسه (نصوص QCF وخط لكل صفحة مصحف،
+مع الخط العثماني الموحّد كخط أساسي واحتياطي).
 
 ```powershell
 .\web\serve.ps1            # ثم افتح http://localhost:8000/web/
@@ -41,6 +42,15 @@ python tools\build_quran_data.py
 
 يُنشئ `quran-data/manifest.json` (توفّر النص/الصوت/التفسير) و`quran-data/search-index.json`
 (فهرس البحث المسبق). للتحقق دون كتابة: `python tools\build_quran_data.py --check`.
+
+أما نصوص وخطوط QCF المطابقة لـ quran.com فتُولَّد بأمر مستقل:
+
+```powershell
+python tools\build_qcf_data.py
+```
+
+ويضيف `qcf`/`qcf_page` لكل آية، وينزّل خطوط الصفحات إلى `web/assets/fonts/qcf/`، ويكتب
+`web/css/qcf-fonts.css`، ثم يحدّث فهارس البيانات تلقائيًا. للتحقق: أضف `--check`.
 اختبارات الويب (Playwright) موجودة في `web/` وتعمل أيضًا عبر GitHub Actions.
 
 التفاصيل الكاملة: [`web/README.md`](web/README.md).

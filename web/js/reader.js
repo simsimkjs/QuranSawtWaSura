@@ -5,6 +5,7 @@
  */
 
 import { audioUrl, cleanText, hasText, loadTafsir } from "./data.js";
+import { ensureQcfFonts, hasQcf, qcfFamily } from "./qcf.js";
 
 const AR_DIGITS = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
 
@@ -47,6 +48,10 @@ export class Reader {
     this.loadToken = 0;
     this.pending = null;
     this._suppressAudioError = false;
+    this.qcfGroups = new Map();
+    this.qcfLoadedPages = new Set();
+    this.qcfPendingPages = new Set();
+    this.qcfObserver = null;
 
     this._bindAudio();
     this._bindControls();
@@ -225,7 +230,13 @@ export class Reader {
   }
 
   _render() {
+    this._disconnectQcfObserver();
+    this.qcfGroups = new Map();
+    this.qcfLoadedPages = new Set();
+    this.qcfPendingPages = new Set();
+
     const fragment = document.createDocumentFragment();
+    const qcfRows = [];
 
     for (let i = 0; i < this.ayahs.length; i++) {
       const ayah = this.ayahs[i];
@@ -238,6 +249,15 @@ export class Reader {
       text.className = "ayah-text";
       text.textContent = `${cleanText(ayah.text)} `;
 
+      if (hasQcf(ayah)) {
+        const page = ayah.qcf_page;
+        row.dataset.qcfPage = String(page);
+        const items = this.qcfGroups.get(page) || [];
+        items.push({ node: text, text: ayah.qcf.trim() });
+        this.qcfGroups.set(page, items);
+        qcfRows.push(row);
+      }
+
       const number = document.createElement("span");
       number.className = "ayah-num";
       number.textContent = toArabicDigits(ayah.ayah_number);
@@ -248,6 +268,78 @@ export class Reader {
 
     this.el.replaceChildren(fragment);
     this.emptyEl.hidden = true;
+    this._observeQcfRows(qcfRows);
+
+    // تحميل خط الصفحة الأولى (وصفحة الآية المطلوبة إن وُجدت) فورًا بدل
+    // انتظار IntersectionObserver، حتى لا يظهر النص العادي طويلًا.
+    const preload = new Set();
+    const first = this.ayahs[0];
+    if (first && hasQcf(first)) preload.add(first.qcf_page);
+    if (Number.isInteger(this.pending?.ayah) && this.pending.ayah > 0) {
+      const target = this.ayahs[this._indexForAyahNumber(this.pending.ayah)];
+      if (target && hasQcf(target)) preload.add(target.qcf_page);
+    }
+    for (const page of preload) this._loadQcfPage(page);
+  }
+
+  /** يحمّل خط صفحة QCF ويستبدل نصوص الآيات التابعة لها دفعة واحدة. */
+  _loadQcfPage(page) {
+    if (this.qcfLoadedPages.has(page) || this.qcfPendingPages.has(page)) return;
+    this.qcfPendingPages.add(page);
+
+    const token = this.loadToken;
+    ensureQcfFonts([page]).then((loaded) => {
+      if (token !== this.loadToken) return;
+      this.qcfPendingPages.delete(page);
+      if (!loaded.get(page)) return;
+
+      this.qcfLoadedPages.add(page);
+      const items = this.qcfGroups.get(page);
+      if (!items) return;
+      for (const item of items) {
+        item.node.textContent = `${item.text} `;
+        item.node.classList.add("qcf-text");
+        item.node.style.fontFamily = `"${qcfFamily(page)}", var(--quran-font)`;
+      }
+    }).catch(() => {
+      if (token === this.loadToken) this.qcfPendingPages.delete(page);
+    });
+  }
+
+  /** يطلب خطوط الصفحات عند اقتراب صفوفها من مجال الرؤية (تحميل تدريجي). */
+  _observeQcfRows(rows) {
+    if (rows.length === 0) return;
+
+    if (!("IntersectionObserver" in window)) {
+      for (const page of this.qcfGroups.keys()) this._loadQcfPage(page);
+      return;
+    }
+
+    const token = this.loadToken;
+    this.qcfObserver = new IntersectionObserver(
+      (entries, observer) => {
+        if (token !== this.loadToken) {
+          observer.disconnect();
+          return;
+        }
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          const page = Number(entry.target.dataset.qcfPage);
+          observer.unobserve(entry.target);
+          if (Number.isInteger(page) && page > 0) this._loadQcfPage(page);
+        }
+      },
+      { root: this.el, rootMargin: "1200px 0px", threshold: 0 }
+    );
+
+    for (const row of rows) this.qcfObserver.observe(row);
+  }
+
+  _disconnectQcfObserver() {
+    if (this.qcfObserver) {
+      this.qcfObserver.disconnect();
+      this.qcfObserver = null;
+    }
   }
 
   /** يعرض رسالة في مساحة القراءة بدل الآيات (لغياب البيانات أو الصوت). */
@@ -265,6 +357,10 @@ export class Reader {
   /** يوقف الصوت ويفرّغ لوحة القراءة (يُستخدم عند غياب بيانات السورة). */
   clear() {
     this.loadToken += 1; // يُلغي أي تفسير/صوت قيد التحميل من السورة السابقة
+    this._disconnectQcfObserver();
+    this.qcfGroups = new Map();
+    this.qcfLoadedPages = new Set();
+    this.qcfPendingPages = new Set();
     this._stopLoop();
     this._suppressAudioError = true;
     this.audio.pause();

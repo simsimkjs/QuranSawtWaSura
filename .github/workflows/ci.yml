@@ -40,6 +40,8 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Check generated data
         run: python3 tools/build_quran_data.py --check
+      - name: Check QCF text and fonts
+        run: python3 tools/build_qcf_data.py --check
       - name: Run smoke tests
         working-directory: web
         run: npm test

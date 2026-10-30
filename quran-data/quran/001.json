@@ -18,49 +18,63 @@
       "ayah_number": 1,
       "text": "﻿بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
       "start_ms": 6459,
-      "export": true
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ ﱅ",
+      "qcf_page": 1
     },
     {
       "index": 2,
       "ayah_number": 2,
       "text": "ٱلْحَمْدُ لِلَّهِ رَبِّ ٱلْعَٰلَمِينَ",
       "start_ms": 11524,
-      "export": true
+      "export": true,
+      "qcf": "ﱆ ﱇ ﱈ ﱉ ﱊ",
+      "qcf_page": 1
     },
     {
       "index": 3,
       "ayah_number": 3,
       "text": "ٱلرَّحْمَٰنِ ٱلرَّحِيمِ",
       "start_ms": 15019,
-      "export": true
+      "export": true,
+      "qcf": "ﱋ ﱌ ﱍ",
+      "qcf_page": 1
     },
     {
       "index": 4,
       "ayah_number": 4,
       "text": "مَٰلِكِ يَوْمِ ٱلدِّينِ",
       "start_ms": 18742,
-      "export": true
+      "export": true,
+      "qcf": "ﱎ ﱏ ﱐ ﱑ",
+      "qcf_page": 1
     },
     {
       "index": 5,
       "ayah_number": 5,
       "text": "إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ",
       "start_ms": 24044,
-      "export": true
+      "export": true,
+      "qcf": "ﱒ ﱓ ﱔ ﱕ ﱖ",
+      "qcf_page": 1
     },
     {
       "index": 6,
       "ayah_number": 6,
       "text": "ٱهْدِنَا ٱلصِّرَٰطَ ٱلْمُسْتَقِيمَ",
       "start_ms": 28568,
-      "export": true
+      "export": true,
+      "qcf": "ﱗ ﱘ ﱙ ﱚ",
+      "qcf_page": 1
     },
     {
       "index": 7,
       "ayah_number": 7,
       "text": "صِرَٰطَ ٱلَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ ٱلْمَغْضُوبِ عَلَيْهِمْ وَلَا ٱلضَّآلِّينَ",
       "start_ms": 42082,
-      "export": true
+      "export": true,
+      "qcf": "ﱛ ﱜ ﱝ ﱞ ﱟ ﱠ ﱡ ﱢ ﱣ ﱤ",
+      "qcf_page": 1
     }
   ]
 }

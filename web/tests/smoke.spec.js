@@ -37,7 +37,8 @@ test("يعرض نص الآيات ولا تغطيه طبقة الحالة الف�
 
   const firstText = await page.locator('#ayahList .ayah[data-ayah="1"] .ayah-text').innerText();
   expect(firstText.trim().length).toBeGreaterThan(0);
-  expect(firstText).toContain("ال");
+  // قد يكون النص العادي (Unicode) أو نص QCF (Arabic Presentation Forms).
+  expect(firstText).toMatch(/[\u0600-\u06FF\uFB50-\uFEFF]/);
 
   // التأكد من أن أول آية هي العنصر الظاهر فعلًا في نقطة النقر (لا تغطيها طبقة أخرى)
   const hitsAyah = await page.evaluate(() => {
@@ -50,23 +51,60 @@ test("يعرض نص الآيات ولا تغطيه طبقة الحالة الف�
   expect(hitsAyah).toBe(true);
 });
 
-test("يُحمّل خط quran.com العثماني ويُطبَّق على نص الآيات", async ({ page }) => {
+test("يُحمّل خط quran.com العثماني الأساسي", async ({ page }) => {
   await gotoApp(page);
   await openSurah(page, 2, "البقرة");
 
   const fontState = await page.evaluate(async () => {
     await document.fonts.ready;
-    const ayah = document.querySelector("#ayahList .ayah-text");
     return {
+      checked: document.fonts.check('16px "UthmanicHafs"'),
       loaded: [...document.fonts].some(
         (font) => font.family === "UthmanicHafs" && font.status === "loaded"
       ),
-      family: ayah ? getComputedStyle(ayah).fontFamily : "",
     };
   });
 
+  expect(fontState.checked).toBe(true);
   expect(fontState.loaded).toBe(true);
-  expect(fontState.family).toContain("UthmanicHafs");
+});
+
+test("يُطبّق خط QCF لصفحة quran.com على الآيات", async ({ page }) => {
+  const font404 = [];
+  page.on("response", (response) => {
+    if (response.url().includes("/web/assets/fonts/qcf/") && response.status() >= 400) {
+      font404.push(response.url());
+    }
+  });
+
+  await gotoApp(page);
+  await openSurah(page, 2, "البقرة");
+
+  const first = page.locator('#ayahList .ayah[data-ayah="1"] .ayah-text.qcf-text');
+  await expect(first).toBeVisible({ timeout: 30_000 });
+
+  const state = await first.evaluate((element) => ({
+    family: getComputedStyle(element).fontFamily,
+    text: element.textContent,
+    fontSize: parseFloat(getComputedStyle(element).fontSize),
+  }));
+
+  expect(state.family).toContain("QCF-P2");
+  expect(state.text.trim().length).toBeGreaterThan(0);
+  expect(state.fontSize).toBeGreaterThan(27);
+  expect(font404).toEqual([]);
+
+  // التحميل تدريجي: لا تُجلب كل خطوط السورة (48 صفحة) دفعة واحدة.
+  const loadedAtStart = await page.evaluate(
+    () => [...document.fonts].filter((font) => font.family.startsWith("QCF-P") && font.status === "loaded").length
+  );
+  expect(loadedAtStart).toBeLessThan(20);
+
+  // الانتقال إلى آية متأخرة يحمّل خط صفحتها عند الحاجة.
+  const late = page.locator('#ayahList .ayah[data-ayah="282"] .ayah-text');
+  await late.scrollIntoViewIfNeeded();
+  await expect(late).toHaveClass(/qcf-text/, { timeout: 30_000 });
+  expect(await late.evaluate((element) => getComputedStyle(element).fontFamily)).toContain("QCF-P");
 });
 
 test("manifest يضيف شارات التوفر ويسمح بتصفية السور المتوفرة", async ({ page }) => {

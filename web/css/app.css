@@ -430,6 +430,16 @@ body.design-modern .mushaf-frame {
   word-spacing: 0.06em;
 }
 
+/*
+ * نص QCF (code_v2) مرمّز بخط الصفحة من quran.com. خط الصفحة أصغر بصريًا من
+ * خط UthmanicHafs، لذا نكبّره 1.33× ليطابق عرض النص العادي تقريبًا.
+ */
+.ayah-text.qcf-text {
+  font-size: calc(var(--quran-size) * 1.33);
+  line-height: 2.15;
+  word-spacing: 0.02em;
+}
+
 .ayah-num {
   display: inline-flex;
   align-items: center;

@@ -1,7 +1,7 @@
 {
   "format": "qss-manifest",
   "version": 1,
-  "fingerprint": "3693b73a4499d803fa231753ccbdbf18b6fd45d769431a924c947e324b7038b4",
+  "fingerprint": "a9c09eab8188507998cb633f021e9ba26ee2a0072b80b2a702b3d91af8609df6",
   "search_index": "search-index.json",
   "counts": {
     "surahs": 114,
@@ -19,7 +19,7 @@
       "tafsir": false,
       "ayahs": 7,
       "text_ayahs": 7,
-      "text_sha256": "90fa92a069cb92ba4aa926419dd4576144479873a97c9aa8b6f4425763680998",
+      "text_sha256": "a5093359b0406257bbd4593103fd2523f2799c4848dc0edd39fb019402ae4f2c",
       "audio_file": "001.mp3",
       "audio_bytes": 542517
     },
@@ -31,7 +31,7 @@
       "tafsir": false,
       "ayahs": 286,
       "text_ayahs": 286,
-      "text_sha256": "a7130c77bad253cf02cde18b27117c85dcc00c42ae13567cc077b242c35c7ff1",
+      "text_sha256": "bffca49a84b4e4758ab4ce167d2f7a37107ff3ce8875e6010747bde0b2387012",
       "audio_file": "002.mp3",
       "audio_bytes": 167310764
     },
@@ -43,7 +43,7 @@
       "tafsir": false,
       "ayahs": 200,
       "text_ayahs": 200,
-      "text_sha256": "511313e0cb9ce7ff1988b4acb26e87de65ca0f5026fa590652e75c8849084081",
+      "text_sha256": "7f24ec57edf3dede2c0855cad6f3da786bdeb8e33cf893e77884450d92aa123b",
       "audio_file": "003.mp3",
       "audio_bytes": 67005676
     },
@@ -55,7 +55,7 @@
       "tafsir": false,
       "ayahs": 176,
       "text_ayahs": 176,
-      "text_sha256": "feb5598cac42cfca47be19cc640e5b4e7bce60c0ced90a5b419386a4746704da",
+      "text_sha256": "9a36fe76174f637ccfa56598aa2b9db8348db3612679aebbde47681dc2805f8e",
       "audio_file": "004.mp3",
       "audio_bytes": 62459408
     },
@@ -139,7 +139,7 @@
       "tafsir": false,
       "ayahs": 43,
       "text_ayahs": 43,
-      "text_sha256": "8a95695f3fe2195f251b37efd4749488456d9bba97e7fe7b5e2d46c0d5ae2636",
+      "text_sha256": "f4f761898fad198ddedfae3a8877a2062cd49f5dd8c8629af20f8bc17514e9e8",
       "audio_file": "013.mp3",
       "audio_bytes": 25762610
     },
@@ -151,7 +151,7 @@
       "tafsir": false,
       "ayahs": 52,
       "text_ayahs": 52,
-      "text_sha256": "89b6f72a56bb161d10c803cbaddd77fad5827aed316988bb56f6072e13537383",
+      "text_sha256": "3c6810fd2b8bddb20df7710304704129eae660f1597460d9abb8e4fe5b4cdbfb",
       "audio_file": "014.mp3",
       "audio_bytes": 31557638
     },
@@ -163,7 +163,7 @@
       "tafsir": false,
       "ayahs": 99,
       "text_ayahs": 99,
-      "text_sha256": "dfa7ab6f10acebd640e9e1b4e7e64ce56e2f6c61ba63ea2e1f65bb9eed033dd1",
+      "text_sha256": "f76e8de9ca9ee73cc02449c2984f44e7e245a102af81cc52bbf9ea9223a41bd1",
       "audio_file": "015.mp3",
       "audio_bytes": 24829516
     },
@@ -175,7 +175,7 @@
       "tafsir": false,
       "ayahs": 128,
       "text_ayahs": 128,
-      "text_sha256": "9040fe4ad8e22b43564996389f2e2c9cfdbdea907a3c871af477a305b7448de5",
+      "text_sha256": "9a227badf32b5001b8b888044082df2cb407977f585523174fd31a355594df78",
       "audio_file": "016.mp3",
       "audio_bytes": 58121011
     },
@@ -187,7 +187,7 @@
       "tafsir": false,
       "ayahs": 111,
       "text_ayahs": 111,
-      "text_sha256": "9eba3f01875b51a60eb7f770af37f7afcc3c22e592db2d27aa54090659049e12",
+      "text_sha256": "18951eb9ad1177350f7a7d137257f999993df9ea2b19d2435a2fed038b5f36c5",
       "audio_file": "017.mp3",
       "audio_bytes": 56042723
     },
@@ -199,7 +199,7 @@
       "tafsir": false,
       "ayahs": 110,
       "text_ayahs": 110,
-      "text_sha256": "d0223e61e1de3bb4ef71271d0ad2596dd28146621129a0e58fc9d48fa985fa2f",
+      "text_sha256": "c97e50e75d930e7ade9cc4f27007d72c06ae2d432da2e982a192ce7b921196fe",
       "audio_file": "018.mp3",
       "audio_bytes": 52601870
     },
@@ -400,7 +400,7 @@
       "tafsir": false,
       "ayahs": 85,
       "text_ayahs": 85,
-      "text_sha256": "26cc408d57d2db8e03540b7e1a489ebd404c564702bd19fae9540b077d1df2df",
+      "text_sha256": "fdbbc73f70ad46775843e4560c777eccf61277549c510dd8be05155c61cdeafd",
       "audio_file": "040.mp3",
       "audio_bytes": 42349282
     },
