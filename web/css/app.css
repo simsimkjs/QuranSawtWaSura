@@ -407,17 +407,26 @@ body.design-modern .mushaf-frame {
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 14px 16px 26px;
+  padding: 18px 18px 30px;
   scroll-behavior: smooth;
   scrollbar-width: thin;
 }
 
+/* تدفّق المصحف: الآيات كلمات متصلة في فقرة واحدة متمركزة، لا صفوف منفصلة. */
+.ayah-flow {
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .ayah {
   position: relative;
-  display: block;
-  padding: 7px 6px;
-  border-radius: 10px;
+  display: inline;
+  padding: 0 0.08em;
+  border-radius: 6px;
   cursor: pointer;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
   transition: background var(--transition), box-shadow var(--transition);
 }
 .ayah:hover { background: color-mix(in srgb, var(--accent) 7%, transparent); }
@@ -436,7 +445,8 @@ body.design-modern .mushaf-frame {
  */
 .ayah-text.qcf-text {
   font-size: calc(var(--quran-size) * 1.33);
-  line-height: 2.15;
+  /* ارتفاع سطر يحافظ على تقارب المصحف مع منع تراكب صندوق حروف QCF. */
+  line-height: 2;
   word-spacing: 0.02em;
 }
 
@@ -460,7 +470,7 @@ body.design-modern .mushaf-frame {
 
 .ayah.current {
   background: var(--current-bg);
-  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 28%, transparent);
 }
 .ayah.current .ayah-text { color: var(--current-color); }
 .ayah.current .ayah-num { border-color: var(--current-color); color: var(--current-color); }

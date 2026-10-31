@@ -235,7 +235,8 @@ export class Reader {
     this.qcfLoadedPages = new Set();
     this.qcfPendingPages = new Set();
 
-    const fragment = document.createDocumentFragment();
+    const flow = document.createElement("div");
+    flow.className = "ayah-flow";
     const qcfRows = [];
 
     for (let i = 0; i < this.ayahs.length; i++) {
@@ -263,10 +264,15 @@ export class Reader {
       number.textContent = toArabicDigits(ayah.ayah_number);
 
       row.append(text, number);
-      fragment.appendChild(row);
+      // مسافة قابلة للكسر بين الآية والتي تليها في التدفق المستمر.
+      flow.append(row, document.createTextNode(" "));
+      // البسملة في الفاتحة سطر مستقل كما في المصحف، لا تندمج مع الحمد.
+      if (this.surah?.number === 1 && ayah.ayah_number === 1) {
+        flow.append(document.createElement("br"));
+      }
     }
 
-    this.el.replaceChildren(fragment);
+    this.el.replaceChildren(flow);
     this.emptyEl.hidden = true;
     this._observeQcfRows(qcfRows);
 
