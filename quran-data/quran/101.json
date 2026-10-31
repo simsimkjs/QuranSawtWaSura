@@ -1,0 +1,116 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 101,
+  "surah_name": "القارعة",
+  "audio_file_name": "101.mp3",
+  "saved_at": "2026-10-30T07:10:24.943Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "ٱلْقَارِعَةُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱤ ﱥ",
+      "qcf_page": 600
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "مَا ٱلْقَارِعَةُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱦ ﱧ ﱨ",
+      "qcf_page": 600
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَمَآ أَدْرَىٰكَ مَا ٱلْقَارِعَةُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱩ ﱪ ﱫ ﱬ ﱭ",
+      "qcf_page": 600
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "يَوْمَ يَكُونُ ٱلنَّاسُ كَٱلْفَرَاشِ ٱلْمَبْثُوثِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱮ ﱯ ﱰ ﱱ ﱲ ﱳ",
+      "qcf_page": 600
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "وَتَكُونُ ٱلْجِبَالُ كَٱلْعِهْنِ ٱلْمَنفُوشِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱴ ﱵ ﱶ ﱷ ﱸ",
+      "qcf_page": 600
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "فَأَمَّا مَن ثَقُلَتْ مَوَٰزِينُهُۥ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱹ ﱺ ﱻ ﱼ ﱽ",
+      "qcf_page": 600
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "فَهُوَ فِى عِيشَةٍ رَّاضِيَةٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱾ ﱿ ﲀ ﲁ ﲂ",
+      "qcf_page": 600
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "وَأَمَّا مَنْ خَفَّتْ مَوَٰزِينُهُۥ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲃ ﲄ ﲅ ﲆ ﲇ",
+      "qcf_page": 600
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "فَأُمُّهُۥ هَاوِيَةٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲈ ﲉ ﲊ",
+      "qcf_page": 600
+    },
+    {
+      "index": 10,
+      "ayah_number": 10,
+      "text": "وَمَآ أَدْرَىٰكَ مَا هِيَهْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲋ ﲌ ﲍ ﲎ ﲏ",
+      "qcf_page": 600
+    },
+    {
+      "index": 11,
+      "ayah_number": 11,
+      "text": "نَارٌ حَامِيَةٌۢ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲐ ﲑ ﲒ",
+      "qcf_page": 600
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 105,
+  "surah_name": "الفيل",
+  "audio_file_name": "105.mp3",
+  "saved_at": "2026-10-30T07:10:25.691Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَـٰبِ ٱلْفِيلِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱽ ﱾ ﱿ ﲀ ﲁ ﲂ ﲃ ﲄ",
+      "qcf_page": 601
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "أَلَمْ يَجْعَلْ كَيْدَهُمْ فِى تَضْلِيلٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲅ ﲆ ﲇ ﲈ ﲉ ﲊ",
+      "qcf_page": 601
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲋ ﲌ ﲍ ﲎ ﲏ",
+      "qcf_page": 601
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲐ ﲑ ﲒ ﲓ ﲔ",
+      "qcf_page": 601
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍۭ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲕ ﲖ ﲗ ﲘ",
+      "qcf_page": 601
+    }
+  ]
+}

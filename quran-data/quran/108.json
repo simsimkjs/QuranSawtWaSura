@@ -1,0 +1,44 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 108,
+  "surah_name": "الكوثر",
+  "audio_file_name": "108.mp3",
+  "saved_at": "2026-10-30T07:10:26.244Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "إِنَّآ أَعْطَيْنَـٰكَ ٱلْكَوْثَرَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱶ ﱷ ﱸ ﱹ",
+      "qcf_page": 602
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "فَصَلِّ لِرَبِّكَ وَٱنْحَرْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱺ ﱻ ﱼ ﱽ",
+      "qcf_page": 602
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "إِنَّ شَانِئَكَ هُوَ ٱلْأَبْتَرُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱾ ﱿ ﲀ ﲁ ﲂ",
+      "qcf_page": 602
+    }
+  ]
+}

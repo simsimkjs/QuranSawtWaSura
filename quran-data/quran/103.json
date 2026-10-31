@@ -1,0 +1,44 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 103,
+  "surah_name": "العصر",
+  "audio_file_name": "103.mp3",
+  "saved_at": "2026-10-30T07:10:25.287Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "وَٱلْعَصْرِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ",
+      "qcf_page": 601
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "إِنَّ ٱلْإِنسَـٰنَ لَفِى خُسْرٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱃ ﱄ ﱅ ﱆ ﱇ",
+      "qcf_page": 601
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ وَتَوَاصَوْا۟ بِٱلْحَقِّ وَتَوَاصَوْا۟ بِٱلصَّبْرِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱈ ﱉ ﱊ ﱋ ﱌ ﱍ ﱎ ﱏ ﱐ ﱑ",
+      "qcf_page": 601
+    }
+  ]
+}

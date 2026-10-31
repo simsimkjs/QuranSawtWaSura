@@ -1,0 +1,89 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 99,
+  "surah_name": "الزلزلة",
+  "audio_file_name": "099.mp3",
+  "saved_at": "2026-10-30T07:10:24.345Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "إِذَا زُلْزِلَتِ ٱلْأَرْضُ زِلْزَالَهَا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱵ ﱶ ﱷ ﱸ ﱹ",
+      "qcf_page": 599
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "وَأَخْرَجَتِ ٱلْأَرْضُ أَثْقَالَهَا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱺ ﱻ ﱼ ﱽ",
+      "qcf_page": 599
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَقَالَ ٱلْإِنسَـٰنُ مَا لَهَا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱾ ﱿ ﲀ ﲁ ﲂ",
+      "qcf_page": 599
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "يَوْمَئِذٍ تُحَدِّثُ أَخْبَارَهَا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲃ ﲄ ﲅ ﲆ",
+      "qcf_page": 599
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲇ ﲈ ﲉ ﲊ ﲋ",
+      "qcf_page": 599
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "يَوْمَئِذٍ يَصْدُرُ ٱلنَّاسُ أَشْتَاتًا لِّيُرَوْا۟ أَعْمَـٰلَهُمْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲌ ﲍ ﲎ ﲏ ﲐ ﲑ ﲒ",
+      "qcf_page": 599
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًا يَرَهُۥ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲓ ﲔ ﲕ ﲖ ﲗ ﲘ ﲙ",
+      "qcf_page": 599
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ شَرًّا يَرَهُۥ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲚ ﲛ ﲜ ﲝ ﲞ ﲟ ﲠ",
+      "qcf_page": 599
+    }
+  ]
+}

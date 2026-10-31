@@ -1,0 +1,242 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 84,
+  "surah_name": "الإنشقاق",
+  "audio_file_name": "084.mp3",
+  "saved_at": "2026-10-30T07:10:19.295Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "إِذَا ٱلسَّمَآءُ ٱنشَقَّتْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱓ ﱔ ﱕ ﱖ",
+      "qcf_page": 589
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱗ ﱘ ﱙ ﱚ",
+      "qcf_page": 589
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَإِذَا ٱلْأَرْضُ مُدَّتْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱛ ﱜ ﱝ ﱞ",
+      "qcf_page": 589
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "وَأَلْقَتْ مَا فِيهَا وَتَخَلَّتْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱟ ﱠ ﱡ ﱢ ﱣ",
+      "qcf_page": 589
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "وَأَذِنَتْ لِرَبِّهَا وَحُقَّتْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱤ ﱥ ﱦ ﱧ",
+      "qcf_page": 589
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ إِنَّكَ كَادِحٌ إِلَىٰ رَبِّكَ كَدْحًا فَمُلَـٰقِيهِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱨ ﱩ ﱪ ﱫ ﱬ ﱭ ﱮ ﱯ ﱰ",
+      "qcf_page": 589
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "فَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ بِيَمِينِهِۦ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱱ ﱲ ﱳ ﱴ ﱵ ﱶ",
+      "qcf_page": 589
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "فَسَوْفَ يُحَاسَبُ حِسَابًا يَسِيرًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱷ ﱸ ﱹ ﱺ ﱻ",
+      "qcf_page": 589
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "وَيَنقَلِبُ إِلَىٰٓ أَهْلِهِۦ مَسْرُورًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱼ ﱽ ﱾ ﱿ ﲀ",
+      "qcf_page": 589
+    },
+    {
+      "index": 10,
+      "ayah_number": 10,
+      "text": "وَأَمَّا مَنْ أُوتِىَ كِتَـٰبَهُۥ وَرَآءَ ظَهْرِهِۦ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲁ ﲂ ﲃ ﲄ ﲅ ﲆ ﲇ",
+      "qcf_page": 589
+    },
+    {
+      "index": 11,
+      "ayah_number": 11,
+      "text": "فَسَوْفَ يَدْعُوا۟ ثُبُورًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲈ ﲉ ﲊ ﲋ",
+      "qcf_page": 589
+    },
+    {
+      "index": 12,
+      "ayah_number": 12,
+      "text": "وَيَصْلَىٰ سَعِيرًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲌ ﲍ ﲎ",
+      "qcf_page": 589
+    },
+    {
+      "index": 13,
+      "ayah_number": 13,
+      "text": "إِنَّهُۥ كَانَ فِىٓ أَهْلِهِۦ مَسْرُورًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲏ ﲐ ﲑ ﲒ ﲓ ﲔ",
+      "qcf_page": 589
+    },
+    {
+      "index": 14,
+      "ayah_number": 14,
+      "text": "إِنَّهُۥ ظَنَّ أَن لَّن يَحُورَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲕ ﲖ ﲗ ﲘ ﲙ ﲚ",
+      "qcf_page": 589
+    },
+    {
+      "index": 15,
+      "ayah_number": 15,
+      "text": "بَلَىٰٓ إِنَّ رَبَّهُۥ كَانَ بِهِۦ بَصِيرًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲛﲜ ﲝ ﲞ ﲟ ﲠ ﲡ ﲢ",
+      "qcf_page": 589
+    },
+    {
+      "index": 16,
+      "ayah_number": 16,
+      "text": "فَلَآ أُقْسِمُ بِٱلشَّفَقِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲣ ﲤ ﲥ ﲦ",
+      "qcf_page": 589
+    },
+    {
+      "index": 17,
+      "ayah_number": 17,
+      "text": "وَٱلَّيْلِ وَمَا وَسَقَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲧ ﲨ ﲩ ﲪ",
+      "qcf_page": 589
+    },
+    {
+      "index": 18,
+      "ayah_number": 18,
+      "text": "وَٱلْقَمَرِ إِذَا ٱتَّسَقَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲫ ﲬ ﲭ ﲮ",
+      "qcf_page": 589
+    },
+    {
+      "index": 19,
+      "ayah_number": 19,
+      "text": "لَتَرْكَبُنَّ طَبَقًا عَن طَبَقٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲯ ﲰ ﲱ ﲲ ﲳ",
+      "qcf_page": 589
+    },
+    {
+      "index": 20,
+      "ayah_number": 20,
+      "text": "فَمَا لَهُمْ لَا يُؤْمِنُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲴ ﲵ ﲶ ﲷ ﲸ",
+      "qcf_page": 589
+    },
+    {
+      "index": 21,
+      "ayah_number": 21,
+      "text": "وَإِذَا قُرِئَ عَلَيْهِمُ ٱلْقُرْءَانُ لَا يَسْجُدُونَ ۩",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲹ ﲺ ﲻ ﲼ ﲽ ﲾﲿ ﳀ ﳁ",
+      "qcf_page": 589
+    },
+    {
+      "index": 22,
+      "ayah_number": 22,
+      "text": "بَلِ ٱلَّذِينَ كَفَرُوا۟ يُكَذِّبُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳂ ﳃ ﳄ ﳅ ﳆ",
+      "qcf_page": 589
+    },
+    {
+      "index": 23,
+      "ayah_number": 23,
+      "text": "وَٱللَّهُ أَعْلَمُ بِمَا يُوعُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳇ ﳈ ﳉ ﳊ ﳋ",
+      "qcf_page": 589
+    },
+    {
+      "index": 24,
+      "ayah_number": 24,
+      "text": "فَبَشِّرْهُم بِعَذَابٍ أَلِيمٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳌ ﳍ ﳎ ﳏ",
+      "qcf_page": 589
+    },
+    {
+      "index": 25,
+      "ayah_number": 25,
+      "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍۭ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ ﱅ ﱆ ﱇ ﱈ ﱉ ﱊ",
+      "qcf_page": 590
+    }
+  ]
+}

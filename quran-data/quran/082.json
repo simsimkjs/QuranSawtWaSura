@@ -1,0 +1,188 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 82,
+  "surah_name": "الإنفطار",
+  "audio_file_name": "082.mp3",
+  "saved_at": "2026-10-30T07:10:18.538Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "إِذَا ٱلسَّمَآءُ ٱنفَطَرَتْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ",
+      "qcf_page": 587
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "وَإِذَا ٱلْكَوَاكِبُ ٱنتَثَرَتْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱅ ﱆ ﱇ ﱈ",
+      "qcf_page": 587
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَإِذَا ٱلْبِحَارُ فُجِّرَتْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱉ ﱊ ﱋ ﱌ",
+      "qcf_page": 587
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "وَإِذَا ٱلْقُبُورُ بُعْثِرَتْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱍ ﱎ ﱏ ﱐ",
+      "qcf_page": 587
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "عَلِمَتْ نَفْسٌ مَّا قَدَّمَتْ وَأَخَّرَتْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱑ ﱒ ﱓ ﱔ ﱕ ﱖ",
+      "qcf_page": 587
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "يَـٰٓأَيُّهَا ٱلْإِنسَـٰنُ مَا غَرَّكَ بِرَبِّكَ ٱلْكَرِيمِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱗ ﱘ ﱙ ﱚ ﱛ ﱜ ﱝ",
+      "qcf_page": 587
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "ٱلَّذِى خَلَقَكَ فَسَوَّىٰكَ فَعَدَلَكَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱞ ﱟ ﱠ ﱡ ﱢ",
+      "qcf_page": 587
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "فِىٓ أَىِّ صُورَةٍ مَّا شَآءَ رَكَّبَكَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱣ ﱤ ﱥ ﱦ ﱧ ﱨ ﱩ",
+      "qcf_page": 587
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "كَلَّا بَلْ تُكَذِّبُونَ بِٱلدِّينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱪ ﱫ ﱬ ﱭ ﱮ",
+      "qcf_page": 587
+    },
+    {
+      "index": 10,
+      "ayah_number": 10,
+      "text": "وَإِنَّ عَلَيْكُمْ لَحَـٰفِظِينَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱯ ﱰ ﱱ ﱲ",
+      "qcf_page": 587
+    },
+    {
+      "index": 11,
+      "ayah_number": 11,
+      "text": "كِرَامًا كَـٰتِبِينَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱳ ﱴ ﱵ",
+      "qcf_page": 587
+    },
+    {
+      "index": 12,
+      "ayah_number": 12,
+      "text": "يَعْلَمُونَ مَا تَفْعَلُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱶ ﱷ ﱸ ﱹ",
+      "qcf_page": 587
+    },
+    {
+      "index": 13,
+      "ayah_number": 13,
+      "text": "إِنَّ ٱلْأَبْرَارَ لَفِى نَعِيمٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱺ ﱻ ﱼ ﱽ ﱾ",
+      "qcf_page": 587
+    },
+    {
+      "index": 14,
+      "ayah_number": 14,
+      "text": "وَإِنَّ ٱلْفُجَّارَ لَفِى جَحِيمٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱿ ﲀ ﲁ ﲂ ﲃ",
+      "qcf_page": 587
+    },
+    {
+      "index": 15,
+      "ayah_number": 15,
+      "text": "يَصْلَوْنَهَا يَوْمَ ٱلدِّينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲄ ﲅ ﲆ ﲇ",
+      "qcf_page": 587
+    },
+    {
+      "index": 16,
+      "ayah_number": 16,
+      "text": "وَمَا هُمْ عَنْهَا بِغَآئِبِينَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲈ ﲉ ﲊ ﲋ ﲌ",
+      "qcf_page": 587
+    },
+    {
+      "index": 17,
+      "ayah_number": 17,
+      "text": "وَمَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲍ ﲎ ﲏ ﲐ ﲑ ﲒ",
+      "qcf_page": 587
+    },
+    {
+      "index": 18,
+      "ayah_number": 18,
+      "text": "ثُمَّ مَآ أَدْرَىٰكَ مَا يَوْمُ ٱلدِّينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲓ ﲔ ﲕ ﲖ ﲗ ﲘ ﲙ",
+      "qcf_page": 587
+    },
+    {
+      "index": 19,
+      "ayah_number": 19,
+      "text": "يَوْمَ لَا تَمْلِكُ نَفْسٌ لِّنَفْسٍ شَيْـًٔا ۖ وَٱلْأَمْرُ يَوْمَئِذٍ لِّلَّهِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲚ ﲛ ﲜ ﲝ ﲞ ﲟ ﲠ ﲡ ﲢ ﲣ ﲤ",
+      "qcf_page": 587
+    }
+  ]
+}

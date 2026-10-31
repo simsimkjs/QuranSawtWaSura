@@ -1,0 +1,188 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 96,
+  "surah_name": "العلق",
+  "audio_file_name": "096.mp3",
+  "saved_at": "2026-10-30T07:10:23.589Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "ٱقْرَأْ بِٱسْمِ رَبِّكَ ٱلَّذِى خَلَقَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲅ ﲆ ﲇ ﲈ ﲉ ﲊ",
+      "qcf_page": 597
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "خَلَقَ ٱلْإِنسَـٰنَ مِنْ عَلَقٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲋ ﲌ ﲍ ﲎ ﲏ",
+      "qcf_page": 597
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "ٱقْرَأْ وَرَبُّكَ ٱلْأَكْرَمُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲐ ﲑ ﲒ ﲓ",
+      "qcf_page": 597
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "ٱلَّذِى عَلَّمَ بِٱلْقَلَمِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲔ ﲕ ﲖ ﲗ",
+      "qcf_page": 597
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "عَلَّمَ ٱلْإِنسَـٰنَ مَا لَمْ يَعْلَمْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲘ ﲙ ﲚ ﲛ ﲜ ﲝ",
+      "qcf_page": 597
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "كَلَّآ إِنَّ ٱلْإِنسَـٰنَ لَيَطْغَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲞ ﲟ ﲠ ﲡ ﲢ",
+      "qcf_page": 597
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "أَن رَّءَاهُ ٱسْتَغْنَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲣ ﲤ ﲥ ﲦ",
+      "qcf_page": 597
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "إِنَّ إِلَىٰ رَبِّكَ ٱلرُّجْعَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲧ ﲨ ﲩ ﲪ ﲫ",
+      "qcf_page": 597
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "أَرَءَيْتَ ٱلَّذِى يَنْهَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲬ ﲭ ﲮ ﲯ",
+      "qcf_page": 597
+    },
+    {
+      "index": 10,
+      "ayah_number": 10,
+      "text": "عَبْدًا إِذَا صَلَّىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲰ ﲱ ﲲ ﲳ",
+      "qcf_page": 597
+    },
+    {
+      "index": 11,
+      "ayah_number": 11,
+      "text": "أَرَءَيْتَ إِن كَانَ عَلَى ٱلْهُدَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲴ ﲵ ﲶ ﲷ ﲸ ﲹ",
+      "qcf_page": 597
+    },
+    {
+      "index": 12,
+      "ayah_number": 12,
+      "text": "أَوْ أَمَرَ بِٱلتَّقْوَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲺ ﲻ ﲼ ﲽ",
+      "qcf_page": 597
+    },
+    {
+      "index": 13,
+      "ayah_number": 13,
+      "text": "أَرَءَيْتَ إِن كَذَّبَ وَتَوَلَّىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ ﱅ",
+      "qcf_page": 598
+    },
+    {
+      "index": 14,
+      "ayah_number": 14,
+      "text": "أَلَمْ يَعْلَم بِأَنَّ ٱللَّهَ يَرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱆ ﱇ ﱈ ﱉ ﱊ ﱋ",
+      "qcf_page": 598
+    },
+    {
+      "index": 15,
+      "ayah_number": 15,
+      "text": "كَلَّا لَئِن لَّمْ يَنتَهِ لَنَسْفَعًۢا بِٱلنَّاصِيَةِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱌ ﱍ ﱎ ﱏ ﱐ ﱑ ﱒ",
+      "qcf_page": 598
+    },
+    {
+      "index": 16,
+      "ayah_number": 16,
+      "text": "نَاصِيَةٍ كَـٰذِبَةٍ خَاطِئَةٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱓ ﱔ ﱕ ﱖ",
+      "qcf_page": 598
+    },
+    {
+      "index": 17,
+      "ayah_number": 17,
+      "text": "فَلْيَدْعُ نَادِيَهُۥ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱗ ﱘ ﱙ",
+      "qcf_page": 598
+    },
+    {
+      "index": 18,
+      "ayah_number": 18,
+      "text": "سَنَدْعُ ٱلزَّبَانِيَةَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱚ ﱛ ﱜ",
+      "qcf_page": 598
+    },
+    {
+      "index": 19,
+      "ayah_number": 19,
+      "text": "كَلَّا لَا تُطِعْهُ وَٱسْجُدْ وَٱقْتَرِب ۩",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱝ ﱞ ﱟ ﱠﱡ ﱢ ﱣ ﱤ",
+      "qcf_page": 598
+    }
+  ]
+}

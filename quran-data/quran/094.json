@@ -1,0 +1,89 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 94,
+  "surah_name": "الشرح",
+  "audio_file_name": "094.mp3",
+  "saved_at": "2026-10-30T07:10:22.848Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "أَلَمْ نَشْرَحْ لَكَ صَدْرَكَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲬ ﲭ ﲮ ﲯ ﲰ",
+      "qcf_page": 596
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "وَوَضَعْنَا عَنكَ وِزْرَكَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲱ ﲲ ﲳ ﲴ",
+      "qcf_page": 596
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "ٱلَّذِىٓ أَنقَضَ ظَهْرَكَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ",
+      "qcf_page": 597
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "وَرَفَعْنَا لَكَ ذِكْرَكَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱅ ﱆ ﱇ ﱈ",
+      "qcf_page": 597
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "فَإِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱉ ﱊ ﱋ ﱌ ﱍ",
+      "qcf_page": 597
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "إِنَّ مَعَ ٱلْعُسْرِ يُسْرًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱎ ﱏ ﱐ ﱑ ﱒ",
+      "qcf_page": 597
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "فَإِذَا فَرَغْتَ فَٱنصَبْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱓ ﱔ ﱕ ﱖ",
+      "qcf_page": 597
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "وَإِلَىٰ رَبِّكَ فَٱرْغَب",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱗ ﱘ ﱙ ﱚ",
+      "qcf_page": 597
+    }
+  ]
+}

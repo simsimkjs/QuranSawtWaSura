@@ -1,0 +1,89 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 95,
+  "surah_name": "التين",
+  "audio_file_name": "095.mp3",
+  "saved_at": "2026-10-30T07:10:23.214Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "وَٱلتِّينِ وَٱلزَّيْتُونِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱛ ﱜ ﱝ",
+      "qcf_page": 597
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "وَطُورِ سِينِينَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱞ ﱟ ﱠ",
+      "qcf_page": 597
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَهَـٰذَا ٱلْبَلَدِ ٱلْأَمِينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱡ ﱢ ﱣ ﱤ",
+      "qcf_page": 597
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "لَقَدْ خَلَقْنَا ٱلْإِنسَـٰنَ فِىٓ أَحْسَنِ تَقْوِيمٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱥ ﱦ ﱧ ﱨ ﱩ ﱪ ﱫ",
+      "qcf_page": 597
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "ثُمَّ رَدَدْنَـٰهُ أَسْفَلَ سَـٰفِلِينَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱬ ﱭ ﱮ ﱯ ﱰ",
+      "qcf_page": 597
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "إِلَّا ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ فَلَهُمْ أَجْرٌ غَيْرُ مَمْنُونٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱱ ﱲ ﱳ ﱴ ﱵ ﱶ ﱷ ﱸ ﱹ ﱺ",
+      "qcf_page": 597
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "فَمَا يُكَذِّبُكَ بَعْدُ بِٱلدِّينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱻ ﱼ ﱽ ﱾ ﱿ",
+      "qcf_page": 597
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "أَلَيْسَ ٱللَّهُ بِأَحْكَمِ ٱلْحَـٰكِمِينَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲀ ﲁ ﲂ ﲃ ﲄ",
+      "qcf_page": 597
+    }
+  ]
+}

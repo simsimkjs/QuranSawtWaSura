@@ -637,6 +637,858 @@
 }
 
 @font-face {
+  font-family: "QCF-P107";
+  src: url("../assets/fonts/qcf/p107.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P108";
+  src: url("../assets/fonts/qcf/p108.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P109";
+  src: url("../assets/fonts/qcf/p109.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P110";
+  src: url("../assets/fonts/qcf/p110.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P111";
+  src: url("../assets/fonts/qcf/p111.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P112";
+  src: url("../assets/fonts/qcf/p112.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P113";
+  src: url("../assets/fonts/qcf/p113.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P114";
+  src: url("../assets/fonts/qcf/p114.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P115";
+  src: url("../assets/fonts/qcf/p115.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P116";
+  src: url("../assets/fonts/qcf/p116.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P117";
+  src: url("../assets/fonts/qcf/p117.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P118";
+  src: url("../assets/fonts/qcf/p118.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P119";
+  src: url("../assets/fonts/qcf/p119.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P120";
+  src: url("../assets/fonts/qcf/p120.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P121";
+  src: url("../assets/fonts/qcf/p121.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P122";
+  src: url("../assets/fonts/qcf/p122.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P123";
+  src: url("../assets/fonts/qcf/p123.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P124";
+  src: url("../assets/fonts/qcf/p124.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P125";
+  src: url("../assets/fonts/qcf/p125.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P126";
+  src: url("../assets/fonts/qcf/p126.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P127";
+  src: url("../assets/fonts/qcf/p127.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P128";
+  src: url("../assets/fonts/qcf/p128.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P129";
+  src: url("../assets/fonts/qcf/p129.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P130";
+  src: url("../assets/fonts/qcf/p130.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P131";
+  src: url("../assets/fonts/qcf/p131.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P132";
+  src: url("../assets/fonts/qcf/p132.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P133";
+  src: url("../assets/fonts/qcf/p133.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P134";
+  src: url("../assets/fonts/qcf/p134.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P135";
+  src: url("../assets/fonts/qcf/p135.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P136";
+  src: url("../assets/fonts/qcf/p136.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P137";
+  src: url("../assets/fonts/qcf/p137.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P138";
+  src: url("../assets/fonts/qcf/p138.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P139";
+  src: url("../assets/fonts/qcf/p139.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P140";
+  src: url("../assets/fonts/qcf/p140.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P141";
+  src: url("../assets/fonts/qcf/p141.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P142";
+  src: url("../assets/fonts/qcf/p142.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P143";
+  src: url("../assets/fonts/qcf/p143.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P144";
+  src: url("../assets/fonts/qcf/p144.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P145";
+  src: url("../assets/fonts/qcf/p145.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P146";
+  src: url("../assets/fonts/qcf/p146.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P147";
+  src: url("../assets/fonts/qcf/p147.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P148";
+  src: url("../assets/fonts/qcf/p148.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P149";
+  src: url("../assets/fonts/qcf/p149.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P150";
+  src: url("../assets/fonts/qcf/p150.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P151";
+  src: url("../assets/fonts/qcf/p151.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P152";
+  src: url("../assets/fonts/qcf/p152.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P153";
+  src: url("../assets/fonts/qcf/p153.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P154";
+  src: url("../assets/fonts/qcf/p154.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P155";
+  src: url("../assets/fonts/qcf/p155.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P156";
+  src: url("../assets/fonts/qcf/p156.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P157";
+  src: url("../assets/fonts/qcf/p157.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P158";
+  src: url("../assets/fonts/qcf/p158.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P159";
+  src: url("../assets/fonts/qcf/p159.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P160";
+  src: url("../assets/fonts/qcf/p160.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P161";
+  src: url("../assets/fonts/qcf/p161.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P162";
+  src: url("../assets/fonts/qcf/p162.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P163";
+  src: url("../assets/fonts/qcf/p163.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P164";
+  src: url("../assets/fonts/qcf/p164.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P165";
+  src: url("../assets/fonts/qcf/p165.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P166";
+  src: url("../assets/fonts/qcf/p166.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P167";
+  src: url("../assets/fonts/qcf/p167.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P168";
+  src: url("../assets/fonts/qcf/p168.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P169";
+  src: url("../assets/fonts/qcf/p169.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P170";
+  src: url("../assets/fonts/qcf/p170.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P171";
+  src: url("../assets/fonts/qcf/p171.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P172";
+  src: url("../assets/fonts/qcf/p172.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P173";
+  src: url("../assets/fonts/qcf/p173.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P174";
+  src: url("../assets/fonts/qcf/p174.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P175";
+  src: url("../assets/fonts/qcf/p175.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P176";
+  src: url("../assets/fonts/qcf/p176.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P177";
+  src: url("../assets/fonts/qcf/p177.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P178";
+  src: url("../assets/fonts/qcf/p178.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P179";
+  src: url("../assets/fonts/qcf/p179.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P180";
+  src: url("../assets/fonts/qcf/p180.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P181";
+  src: url("../assets/fonts/qcf/p181.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P182";
+  src: url("../assets/fonts/qcf/p182.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P183";
+  src: url("../assets/fonts/qcf/p183.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P184";
+  src: url("../assets/fonts/qcf/p184.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P185";
+  src: url("../assets/fonts/qcf/p185.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P186";
+  src: url("../assets/fonts/qcf/p186.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P187";
+  src: url("../assets/fonts/qcf/p187.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P188";
+  src: url("../assets/fonts/qcf/p188.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P189";
+  src: url("../assets/fonts/qcf/p189.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P190";
+  src: url("../assets/fonts/qcf/p190.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P191";
+  src: url("../assets/fonts/qcf/p191.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P192";
+  src: url("../assets/fonts/qcf/p192.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P193";
+  src: url("../assets/fonts/qcf/p193.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P194";
+  src: url("../assets/fonts/qcf/p194.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P195";
+  src: url("../assets/fonts/qcf/p195.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P196";
+  src: url("../assets/fonts/qcf/p196.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P197";
+  src: url("../assets/fonts/qcf/p197.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P198";
+  src: url("../assets/fonts/qcf/p198.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P199";
+  src: url("../assets/fonts/qcf/p199.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P200";
+  src: url("../assets/fonts/qcf/p200.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P201";
+  src: url("../assets/fonts/qcf/p201.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P202";
+  src: url("../assets/fonts/qcf/p202.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P203";
+  src: url("../assets/fonts/qcf/p203.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P204";
+  src: url("../assets/fonts/qcf/p204.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P205";
+  src: url("../assets/fonts/qcf/p205.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P206";
+  src: url("../assets/fonts/qcf/p206.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P207";
+  src: url("../assets/fonts/qcf/p207.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P208";
+  src: url("../assets/fonts/qcf/p208.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P209";
+  src: url("../assets/fonts/qcf/p209.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P210";
+  src: url("../assets/fonts/qcf/p210.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P211";
+  src: url("../assets/fonts/qcf/p211.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P212";
+  src: url("../assets/fonts/qcf/p212.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P213";
+  src: url("../assets/fonts/qcf/p213.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P214";
+  src: url("../assets/fonts/qcf/p214.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P215";
+  src: url("../assets/fonts/qcf/p215.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P216";
+  src: url("../assets/fonts/qcf/p216.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P217";
+  src: url("../assets/fonts/qcf/p217.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P218";
+  src: url("../assets/fonts/qcf/p218.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P219";
+  src: url("../assets/fonts/qcf/p219.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P220";
+  src: url("../assets/fonts/qcf/p220.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P221";
+  src: url("../assets/fonts/qcf/p221.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P222";
+  src: url("../assets/fonts/qcf/p222.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P223";
+  src: url("../assets/fonts/qcf/p223.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P224";
+  src: url("../assets/fonts/qcf/p224.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P225";
+  src: url("../assets/fonts/qcf/p225.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P226";
+  src: url("../assets/fonts/qcf/p226.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P227";
+  src: url("../assets/fonts/qcf/p227.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P228";
+  src: url("../assets/fonts/qcf/p228.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P229";
+  src: url("../assets/fonts/qcf/p229.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P230";
+  src: url("../assets/fonts/qcf/p230.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P231";
+  src: url("../assets/fonts/qcf/p231.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P232";
+  src: url("../assets/fonts/qcf/p232.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P233";
+  src: url("../assets/fonts/qcf/p233.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P234";
+  src: url("../assets/fonts/qcf/p234.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P235";
+  src: url("../assets/fonts/qcf/p235.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P236";
+  src: url("../assets/fonts/qcf/p236.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P237";
+  src: url("../assets/fonts/qcf/p237.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P238";
+  src: url("../assets/fonts/qcf/p238.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P239";
+  src: url("../assets/fonts/qcf/p239.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P240";
+  src: url("../assets/fonts/qcf/p240.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P241";
+  src: url("../assets/fonts/qcf/p241.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P242";
+  src: url("../assets/fonts/qcf/p242.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P243";
+  src: url("../assets/fonts/qcf/p243.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P244";
+  src: url("../assets/fonts/qcf/p244.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P245";
+  src: url("../assets/fonts/qcf/p245.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P246";
+  src: url("../assets/fonts/qcf/p246.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P247";
+  src: url("../assets/fonts/qcf/p247.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P248";
+  src: url("../assets/fonts/qcf/p248.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "QCF-P249";
   src: url("../assets/fonts/qcf/p249.woff2?rev=2026-09-09-1") format("woff2");
   font-display: swap;
@@ -973,6 +1825,978 @@
 }
 
 @font-face {
+  font-family: "QCF-P305";
+  src: url("../assets/fonts/qcf/p305.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P306";
+  src: url("../assets/fonts/qcf/p306.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P307";
+  src: url("../assets/fonts/qcf/p307.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P308";
+  src: url("../assets/fonts/qcf/p308.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P309";
+  src: url("../assets/fonts/qcf/p309.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P310";
+  src: url("../assets/fonts/qcf/p310.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P311";
+  src: url("../assets/fonts/qcf/p311.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P312";
+  src: url("../assets/fonts/qcf/p312.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P313";
+  src: url("../assets/fonts/qcf/p313.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P314";
+  src: url("../assets/fonts/qcf/p314.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P315";
+  src: url("../assets/fonts/qcf/p315.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P316";
+  src: url("../assets/fonts/qcf/p316.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P317";
+  src: url("../assets/fonts/qcf/p317.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P318";
+  src: url("../assets/fonts/qcf/p318.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P319";
+  src: url("../assets/fonts/qcf/p319.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P320";
+  src: url("../assets/fonts/qcf/p320.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P321";
+  src: url("../assets/fonts/qcf/p321.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P322";
+  src: url("../assets/fonts/qcf/p322.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P323";
+  src: url("../assets/fonts/qcf/p323.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P324";
+  src: url("../assets/fonts/qcf/p324.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P325";
+  src: url("../assets/fonts/qcf/p325.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P326";
+  src: url("../assets/fonts/qcf/p326.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P327";
+  src: url("../assets/fonts/qcf/p327.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P328";
+  src: url("../assets/fonts/qcf/p328.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P329";
+  src: url("../assets/fonts/qcf/p329.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P330";
+  src: url("../assets/fonts/qcf/p330.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P331";
+  src: url("../assets/fonts/qcf/p331.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P332";
+  src: url("../assets/fonts/qcf/p332.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P333";
+  src: url("../assets/fonts/qcf/p333.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P334";
+  src: url("../assets/fonts/qcf/p334.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P335";
+  src: url("../assets/fonts/qcf/p335.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P336";
+  src: url("../assets/fonts/qcf/p336.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P337";
+  src: url("../assets/fonts/qcf/p337.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P338";
+  src: url("../assets/fonts/qcf/p338.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P339";
+  src: url("../assets/fonts/qcf/p339.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P340";
+  src: url("../assets/fonts/qcf/p340.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P341";
+  src: url("../assets/fonts/qcf/p341.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P342";
+  src: url("../assets/fonts/qcf/p342.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P343";
+  src: url("../assets/fonts/qcf/p343.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P344";
+  src: url("../assets/fonts/qcf/p344.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P345";
+  src: url("../assets/fonts/qcf/p345.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P346";
+  src: url("../assets/fonts/qcf/p346.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P347";
+  src: url("../assets/fonts/qcf/p347.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P348";
+  src: url("../assets/fonts/qcf/p348.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P349";
+  src: url("../assets/fonts/qcf/p349.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P350";
+  src: url("../assets/fonts/qcf/p350.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P351";
+  src: url("../assets/fonts/qcf/p351.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P352";
+  src: url("../assets/fonts/qcf/p352.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P353";
+  src: url("../assets/fonts/qcf/p353.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P354";
+  src: url("../assets/fonts/qcf/p354.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P355";
+  src: url("../assets/fonts/qcf/p355.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P356";
+  src: url("../assets/fonts/qcf/p356.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P357";
+  src: url("../assets/fonts/qcf/p357.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P358";
+  src: url("../assets/fonts/qcf/p358.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P359";
+  src: url("../assets/fonts/qcf/p359.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P360";
+  src: url("../assets/fonts/qcf/p360.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P361";
+  src: url("../assets/fonts/qcf/p361.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P362";
+  src: url("../assets/fonts/qcf/p362.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P363";
+  src: url("../assets/fonts/qcf/p363.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P364";
+  src: url("../assets/fonts/qcf/p364.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P365";
+  src: url("../assets/fonts/qcf/p365.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P366";
+  src: url("../assets/fonts/qcf/p366.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P367";
+  src: url("../assets/fonts/qcf/p367.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P368";
+  src: url("../assets/fonts/qcf/p368.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P369";
+  src: url("../assets/fonts/qcf/p369.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P370";
+  src: url("../assets/fonts/qcf/p370.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P371";
+  src: url("../assets/fonts/qcf/p371.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P372";
+  src: url("../assets/fonts/qcf/p372.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P373";
+  src: url("../assets/fonts/qcf/p373.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P374";
+  src: url("../assets/fonts/qcf/p374.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P375";
+  src: url("../assets/fonts/qcf/p375.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P376";
+  src: url("../assets/fonts/qcf/p376.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P377";
+  src: url("../assets/fonts/qcf/p377.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P378";
+  src: url("../assets/fonts/qcf/p378.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P379";
+  src: url("../assets/fonts/qcf/p379.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P380";
+  src: url("../assets/fonts/qcf/p380.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P381";
+  src: url("../assets/fonts/qcf/p381.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P382";
+  src: url("../assets/fonts/qcf/p382.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P383";
+  src: url("../assets/fonts/qcf/p383.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P384";
+  src: url("../assets/fonts/qcf/p384.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P385";
+  src: url("../assets/fonts/qcf/p385.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P386";
+  src: url("../assets/fonts/qcf/p386.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P387";
+  src: url("../assets/fonts/qcf/p387.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P388";
+  src: url("../assets/fonts/qcf/p388.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P389";
+  src: url("../assets/fonts/qcf/p389.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P390";
+  src: url("../assets/fonts/qcf/p390.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P391";
+  src: url("../assets/fonts/qcf/p391.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P392";
+  src: url("../assets/fonts/qcf/p392.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P393";
+  src: url("../assets/fonts/qcf/p393.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P394";
+  src: url("../assets/fonts/qcf/p394.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P395";
+  src: url("../assets/fonts/qcf/p395.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P396";
+  src: url("../assets/fonts/qcf/p396.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P397";
+  src: url("../assets/fonts/qcf/p397.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P398";
+  src: url("../assets/fonts/qcf/p398.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P399";
+  src: url("../assets/fonts/qcf/p399.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P400";
+  src: url("../assets/fonts/qcf/p400.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P401";
+  src: url("../assets/fonts/qcf/p401.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P402";
+  src: url("../assets/fonts/qcf/p402.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P403";
+  src: url("../assets/fonts/qcf/p403.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P404";
+  src: url("../assets/fonts/qcf/p404.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P405";
+  src: url("../assets/fonts/qcf/p405.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P406";
+  src: url("../assets/fonts/qcf/p406.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P407";
+  src: url("../assets/fonts/qcf/p407.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P408";
+  src: url("../assets/fonts/qcf/p408.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P409";
+  src: url("../assets/fonts/qcf/p409.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P410";
+  src: url("../assets/fonts/qcf/p410.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P411";
+  src: url("../assets/fonts/qcf/p411.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P412";
+  src: url("../assets/fonts/qcf/p412.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P413";
+  src: url("../assets/fonts/qcf/p413.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P414";
+  src: url("../assets/fonts/qcf/p414.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P415";
+  src: url("../assets/fonts/qcf/p415.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P416";
+  src: url("../assets/fonts/qcf/p416.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P417";
+  src: url("../assets/fonts/qcf/p417.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P418";
+  src: url("../assets/fonts/qcf/p418.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P419";
+  src: url("../assets/fonts/qcf/p419.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P420";
+  src: url("../assets/fonts/qcf/p420.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P421";
+  src: url("../assets/fonts/qcf/p421.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P422";
+  src: url("../assets/fonts/qcf/p422.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P423";
+  src: url("../assets/fonts/qcf/p423.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P424";
+  src: url("../assets/fonts/qcf/p424.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P425";
+  src: url("../assets/fonts/qcf/p425.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P426";
+  src: url("../assets/fonts/qcf/p426.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P427";
+  src: url("../assets/fonts/qcf/p427.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P428";
+  src: url("../assets/fonts/qcf/p428.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P429";
+  src: url("../assets/fonts/qcf/p429.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P430";
+  src: url("../assets/fonts/qcf/p430.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P431";
+  src: url("../assets/fonts/qcf/p431.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P432";
+  src: url("../assets/fonts/qcf/p432.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P433";
+  src: url("../assets/fonts/qcf/p433.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P434";
+  src: url("../assets/fonts/qcf/p434.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P435";
+  src: url("../assets/fonts/qcf/p435.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P436";
+  src: url("../assets/fonts/qcf/p436.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P437";
+  src: url("../assets/fonts/qcf/p437.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P438";
+  src: url("../assets/fonts/qcf/p438.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P439";
+  src: url("../assets/fonts/qcf/p439.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P440";
+  src: url("../assets/fonts/qcf/p440.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P441";
+  src: url("../assets/fonts/qcf/p441.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P442";
+  src: url("../assets/fonts/qcf/p442.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P443";
+  src: url("../assets/fonts/qcf/p443.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P444";
+  src: url("../assets/fonts/qcf/p444.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P445";
+  src: url("../assets/fonts/qcf/p445.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P446";
+  src: url("../assets/fonts/qcf/p446.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P447";
+  src: url("../assets/fonts/qcf/p447.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P448";
+  src: url("../assets/fonts/qcf/p448.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P449";
+  src: url("../assets/fonts/qcf/p449.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P450";
+  src: url("../assets/fonts/qcf/p450.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P451";
+  src: url("../assets/fonts/qcf/p451.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P452";
+  src: url("../assets/fonts/qcf/p452.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P453";
+  src: url("../assets/fonts/qcf/p453.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P454";
+  src: url("../assets/fonts/qcf/p454.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P455";
+  src: url("../assets/fonts/qcf/p455.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P456";
+  src: url("../assets/fonts/qcf/p456.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P457";
+  src: url("../assets/fonts/qcf/p457.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P458";
+  src: url("../assets/fonts/qcf/p458.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P459";
+  src: url("../assets/fonts/qcf/p459.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P460";
+  src: url("../assets/fonts/qcf/p460.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P461";
+  src: url("../assets/fonts/qcf/p461.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P462";
+  src: url("../assets/fonts/qcf/p462.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P463";
+  src: url("../assets/fonts/qcf/p463.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P464";
+  src: url("../assets/fonts/qcf/p464.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P465";
+  src: url("../assets/fonts/qcf/p465.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P466";
+  src: url("../assets/fonts/qcf/p466.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "QCF-P467";
   src: url("../assets/fonts/qcf/p467.woff2?rev=2026-09-09-1") format("woff2");
   font-display: swap;
@@ -1029,5 +2853,773 @@
 @font-face {
   font-family: "QCF-P476";
   src: url("../assets/fonts/qcf/p476.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P477";
+  src: url("../assets/fonts/qcf/p477.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P478";
+  src: url("../assets/fonts/qcf/p478.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P479";
+  src: url("../assets/fonts/qcf/p479.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P480";
+  src: url("../assets/fonts/qcf/p480.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P481";
+  src: url("../assets/fonts/qcf/p481.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P482";
+  src: url("../assets/fonts/qcf/p482.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P483";
+  src: url("../assets/fonts/qcf/p483.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P484";
+  src: url("../assets/fonts/qcf/p484.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P485";
+  src: url("../assets/fonts/qcf/p485.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P486";
+  src: url("../assets/fonts/qcf/p486.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P487";
+  src: url("../assets/fonts/qcf/p487.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P488";
+  src: url("../assets/fonts/qcf/p488.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P489";
+  src: url("../assets/fonts/qcf/p489.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P490";
+  src: url("../assets/fonts/qcf/p490.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P491";
+  src: url("../assets/fonts/qcf/p491.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P492";
+  src: url("../assets/fonts/qcf/p492.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P493";
+  src: url("../assets/fonts/qcf/p493.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P494";
+  src: url("../assets/fonts/qcf/p494.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P495";
+  src: url("../assets/fonts/qcf/p495.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P496";
+  src: url("../assets/fonts/qcf/p496.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P497";
+  src: url("../assets/fonts/qcf/p497.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P498";
+  src: url("../assets/fonts/qcf/p498.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P499";
+  src: url("../assets/fonts/qcf/p499.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P500";
+  src: url("../assets/fonts/qcf/p500.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P501";
+  src: url("../assets/fonts/qcf/p501.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P502";
+  src: url("../assets/fonts/qcf/p502.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P503";
+  src: url("../assets/fonts/qcf/p503.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P504";
+  src: url("../assets/fonts/qcf/p504.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P505";
+  src: url("../assets/fonts/qcf/p505.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P506";
+  src: url("../assets/fonts/qcf/p506.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P507";
+  src: url("../assets/fonts/qcf/p507.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P508";
+  src: url("../assets/fonts/qcf/p508.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P509";
+  src: url("../assets/fonts/qcf/p509.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P510";
+  src: url("../assets/fonts/qcf/p510.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P511";
+  src: url("../assets/fonts/qcf/p511.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P512";
+  src: url("../assets/fonts/qcf/p512.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P513";
+  src: url("../assets/fonts/qcf/p513.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P514";
+  src: url("../assets/fonts/qcf/p514.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P515";
+  src: url("../assets/fonts/qcf/p515.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P516";
+  src: url("../assets/fonts/qcf/p516.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P517";
+  src: url("../assets/fonts/qcf/p517.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P518";
+  src: url("../assets/fonts/qcf/p518.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P519";
+  src: url("../assets/fonts/qcf/p519.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P520";
+  src: url("../assets/fonts/qcf/p520.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P521";
+  src: url("../assets/fonts/qcf/p521.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P522";
+  src: url("../assets/fonts/qcf/p522.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P523";
+  src: url("../assets/fonts/qcf/p523.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P524";
+  src: url("../assets/fonts/qcf/p524.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P525";
+  src: url("../assets/fonts/qcf/p525.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P526";
+  src: url("../assets/fonts/qcf/p526.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P527";
+  src: url("../assets/fonts/qcf/p527.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P528";
+  src: url("../assets/fonts/qcf/p528.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P529";
+  src: url("../assets/fonts/qcf/p529.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P530";
+  src: url("../assets/fonts/qcf/p530.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P531";
+  src: url("../assets/fonts/qcf/p531.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P532";
+  src: url("../assets/fonts/qcf/p532.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P533";
+  src: url("../assets/fonts/qcf/p533.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P534";
+  src: url("../assets/fonts/qcf/p534.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P535";
+  src: url("../assets/fonts/qcf/p535.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P536";
+  src: url("../assets/fonts/qcf/p536.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P537";
+  src: url("../assets/fonts/qcf/p537.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P538";
+  src: url("../assets/fonts/qcf/p538.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P539";
+  src: url("../assets/fonts/qcf/p539.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P540";
+  src: url("../assets/fonts/qcf/p540.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P541";
+  src: url("../assets/fonts/qcf/p541.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P542";
+  src: url("../assets/fonts/qcf/p542.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P543";
+  src: url("../assets/fonts/qcf/p543.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P544";
+  src: url("../assets/fonts/qcf/p544.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P545";
+  src: url("../assets/fonts/qcf/p545.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P546";
+  src: url("../assets/fonts/qcf/p546.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P547";
+  src: url("../assets/fonts/qcf/p547.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P548";
+  src: url("../assets/fonts/qcf/p548.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P549";
+  src: url("../assets/fonts/qcf/p549.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P550";
+  src: url("../assets/fonts/qcf/p550.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P551";
+  src: url("../assets/fonts/qcf/p551.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P552";
+  src: url("../assets/fonts/qcf/p552.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P553";
+  src: url("../assets/fonts/qcf/p553.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P554";
+  src: url("../assets/fonts/qcf/p554.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P555";
+  src: url("../assets/fonts/qcf/p555.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P556";
+  src: url("../assets/fonts/qcf/p556.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P557";
+  src: url("../assets/fonts/qcf/p557.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P558";
+  src: url("../assets/fonts/qcf/p558.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P559";
+  src: url("../assets/fonts/qcf/p559.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P560";
+  src: url("../assets/fonts/qcf/p560.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P561";
+  src: url("../assets/fonts/qcf/p561.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P562";
+  src: url("../assets/fonts/qcf/p562.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P563";
+  src: url("../assets/fonts/qcf/p563.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P564";
+  src: url("../assets/fonts/qcf/p564.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P565";
+  src: url("../assets/fonts/qcf/p565.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P566";
+  src: url("../assets/fonts/qcf/p566.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P567";
+  src: url("../assets/fonts/qcf/p567.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P568";
+  src: url("../assets/fonts/qcf/p568.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P569";
+  src: url("../assets/fonts/qcf/p569.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P570";
+  src: url("../assets/fonts/qcf/p570.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P571";
+  src: url("../assets/fonts/qcf/p571.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P572";
+  src: url("../assets/fonts/qcf/p572.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P573";
+  src: url("../assets/fonts/qcf/p573.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P574";
+  src: url("../assets/fonts/qcf/p574.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P575";
+  src: url("../assets/fonts/qcf/p575.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P576";
+  src: url("../assets/fonts/qcf/p576.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P577";
+  src: url("../assets/fonts/qcf/p577.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P578";
+  src: url("../assets/fonts/qcf/p578.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P579";
+  src: url("../assets/fonts/qcf/p579.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P580";
+  src: url("../assets/fonts/qcf/p580.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P581";
+  src: url("../assets/fonts/qcf/p581.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P582";
+  src: url("../assets/fonts/qcf/p582.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P583";
+  src: url("../assets/fonts/qcf/p583.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P584";
+  src: url("../assets/fonts/qcf/p584.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P585";
+  src: url("../assets/fonts/qcf/p585.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P586";
+  src: url("../assets/fonts/qcf/p586.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P587";
+  src: url("../assets/fonts/qcf/p587.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P588";
+  src: url("../assets/fonts/qcf/p588.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P589";
+  src: url("../assets/fonts/qcf/p589.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P590";
+  src: url("../assets/fonts/qcf/p590.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P591";
+  src: url("../assets/fonts/qcf/p591.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P592";
+  src: url("../assets/fonts/qcf/p592.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P593";
+  src: url("../assets/fonts/qcf/p593.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P594";
+  src: url("../assets/fonts/qcf/p594.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P595";
+  src: url("../assets/fonts/qcf/p595.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P596";
+  src: url("../assets/fonts/qcf/p596.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P597";
+  src: url("../assets/fonts/qcf/p597.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P598";
+  src: url("../assets/fonts/qcf/p598.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P599";
+  src: url("../assets/fonts/qcf/p599.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P600";
+  src: url("../assets/fonts/qcf/p600.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P601";
+  src: url("../assets/fonts/qcf/p601.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P602";
+  src: url("../assets/fonts/qcf/p602.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P603";
+  src: url("../assets/fonts/qcf/p603.woff2?rev=2026-09-09-1") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "QCF-P604";
+  src: url("../assets/fonts/qcf/p604.woff2?rev=2026-09-09-1") format("woff2");
   font-display: swap;
 }

@@ -1,0 +1,215 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 85,
+  "surah_name": "البروج",
+  "audio_file_name": "085.mp3",
+  "saved_at": "2026-10-30T07:10:19.676Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "وَٱلسَّمَآءِ ذَاتِ ٱلْبُرُوجِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱋ ﱌ ﱍ ﱎ",
+      "qcf_page": 590
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "وَٱلْيَوْمِ ٱلْمَوْعُودِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱏ ﱐ ﱑ",
+      "qcf_page": 590
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَشَاهِدٍ وَمَشْهُودٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱒ ﱓ ﱔ",
+      "qcf_page": 590
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "قُتِلَ أَصْحَـٰبُ ٱلْأُخْدُودِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱕ ﱖ ﱗ ﱘ",
+      "qcf_page": 590
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "ٱلنَّارِ ذَاتِ ٱلْوَقُودِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱙ ﱚ ﱛ ﱜ",
+      "qcf_page": 590
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "إِذْ هُمْ عَلَيْهَا قُعُودٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱝ ﱞ ﱟ ﱠ ﱡ",
+      "qcf_page": 590
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "وَهُمْ عَلَىٰ مَا يَفْعَلُونَ بِٱلْمُؤْمِنِينَ شُهُودٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱢ ﱣ ﱤ ﱥ ﱦ ﱧ ﱨ",
+      "qcf_page": 590
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "وَمَا نَقَمُوا۟ مِنْهُمْ إِلَّآ أَن يُؤْمِنُوا۟ بِٱللَّهِ ٱلْعَزِيزِ ٱلْحَمِيدِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱩ ﱪ ﱫ ﱬ ﱭ ﱮ ﱯ ﱰ ﱱ ﱲ",
+      "qcf_page": 590
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "ٱلَّذِى لَهُۥ مُلْكُ ٱلسَّمَـٰوَٰتِ وَٱلْأَرْضِ ۚ وَٱللَّهُ عَلَىٰ كُلِّ شَىْءٍ شَهِيدٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱳ ﱴ ﱵ ﱶ ﱷ ﱸ ﱹ ﱺ ﱻ ﱼ ﱽ ﱾ",
+      "qcf_page": 590
+    },
+    {
+      "index": 10,
+      "ayah_number": 10,
+      "text": "إِنَّ ٱلَّذِينَ فَتَنُوا۟ ٱلْمُؤْمِنِينَ وَٱلْمُؤْمِنَـٰتِ ثُمَّ لَمْ يَتُوبُوا۟ فَلَهُمْ عَذَابُ جَهَنَّمَ وَلَهُمْ عَذَابُ ٱلْحَرِيقِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱿ ﲀ ﲁ ﲂ ﲃ ﲄ ﲅ ﲆ ﲇ ﲈ ﲉ ﲊ ﲋ ﲌ ﲍ",
+      "qcf_page": 590
+    },
+    {
+      "index": 11,
+      "ayah_number": 11,
+      "text": "إِنَّ ٱلَّذِينَ ءَامَنُوا۟ وَعَمِلُوا۟ ٱلصَّـٰلِحَـٰتِ لَهُمْ جَنَّـٰتٌ تَجْرِى مِن تَحْتِهَا ٱلْأَنْهَـٰرُ ۚ ذَٰلِكَ ٱلْفَوْزُ ٱلْكَبِيرُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲎ ﲏ ﲐ ﲑ ﲒ ﲓ ﲔ ﲕ ﲖ ﲗ ﲘ ﲙ ﲚ ﲛ ﲜ ﲝ",
+      "qcf_page": 590
+    },
+    {
+      "index": 12,
+      "ayah_number": 12,
+      "text": "إِنَّ بَطْشَ رَبِّكَ لَشَدِيدٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲞ ﲟ ﲠ ﲡ ﲢ",
+      "qcf_page": 590
+    },
+    {
+      "index": 13,
+      "ayah_number": 13,
+      "text": "إِنَّهُۥ هُوَ يُبْدِئُ وَيُعِيدُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲣ ﲤ ﲥ ﲦ ﲧ",
+      "qcf_page": 590
+    },
+    {
+      "index": 14,
+      "ayah_number": 14,
+      "text": "وَهُوَ ٱلْغَفُورُ ٱلْوَدُودُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲨ ﲩ ﲪ ﲫ",
+      "qcf_page": 590
+    },
+    {
+      "index": 15,
+      "ayah_number": 15,
+      "text": "ذُو ٱلْعَرْشِ ٱلْمَجِيدُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲬ ﲭ ﲮ ﲯ",
+      "qcf_page": 590
+    },
+    {
+      "index": 16,
+      "ayah_number": 16,
+      "text": "فَعَّالٌ لِّمَا يُرِيدُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲰ ﲱ ﲲ ﲳ",
+      "qcf_page": 590
+    },
+    {
+      "index": 17,
+      "ayah_number": 17,
+      "text": "هَلْ أَتَىٰكَ حَدِيثُ ٱلْجُنُودِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲴ ﲵ ﲶ ﲷ ﲸ",
+      "qcf_page": 590
+    },
+    {
+      "index": 18,
+      "ayah_number": 18,
+      "text": "فِرْعَوْنَ وَثَمُودَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲹ ﲺ ﲻ",
+      "qcf_page": 590
+    },
+    {
+      "index": 19,
+      "ayah_number": 19,
+      "text": "بَلِ ٱلَّذِينَ كَفَرُوا۟ فِى تَكْذِيبٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲼ ﲽ ﲾ ﲿ ﳀ ﳁ",
+      "qcf_page": 590
+    },
+    {
+      "index": 20,
+      "ayah_number": 20,
+      "text": "وَٱللَّهُ مِن وَرَآئِهِم مُّحِيطٌۢ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳂ ﳃ ﳄ ﳅ ﳆ",
+      "qcf_page": 590
+    },
+    {
+      "index": 21,
+      "ayah_number": 21,
+      "text": "بَلْ هُوَ قُرْءَانٌ مَّجِيدٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳇ ﳈ ﳉ ﳊ ﳋ",
+      "qcf_page": 590
+    },
+    {
+      "index": 22,
+      "ayah_number": 22,
+      "text": "فِى لَوْحٍ مَّحْفُوظٍۭ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳌ ﳍ ﳎ ﳏ",
+      "qcf_page": 590
+    }
+  ]
+}

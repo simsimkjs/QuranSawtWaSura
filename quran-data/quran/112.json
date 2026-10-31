@@ -1,0 +1,53 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 112,
+  "surah_name": "الإخلاص",
+  "audio_file_name": "112.mp3",
+  "saved_at": "2026-10-30T07:10:27.580Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "قُلْ هُوَ ٱللَّهُ أَحَدٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ ﱅ",
+      "qcf_page": 604
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "ٱللَّهُ ٱلصَّمَدُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱆ ﱇ ﱈ",
+      "qcf_page": 604
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "لَمْ يَلِدْ وَلَمْ يُولَدْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱉ ﱊ ﱋ ﱌ ﱍ",
+      "qcf_page": 604
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱎ ﱏ ﱐ ﱑ ﱒ ﱓ",
+      "qcf_page": 604
+    }
+  ]
+}

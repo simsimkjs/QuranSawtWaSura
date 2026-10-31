@@ -1,0 +1,98 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 104,
+  "surah_name": "الهمزة",
+  "audio_file_name": "104.mp3",
+  "saved_at": "2026-10-30T07:10:25.482Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "وَيْلٌ لِّكُلِّ هُمَزَةٍ لُّمَزَةٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱒ ﱓ ﱔ ﱕ ﱖ",
+      "qcf_page": 601
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "ٱلَّذِى جَمَعَ مَالًا وَعَدَّدَهُۥ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱗ ﱘ ﱙ ﱚ ﱛ",
+      "qcf_page": 601
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "يَحْسَبُ أَنَّ مَالَهُۥٓ أَخْلَدَهُۥ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱜ ﱝ ﱞ ﱟ ﱠ",
+      "qcf_page": 601
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "كَلَّا ۖ لَيُنۢبَذَنَّ فِى ٱلْحُطَمَةِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱡ ﱢ ﱣ ﱤ ﱥ ﱦ",
+      "qcf_page": 601
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "وَمَآ أَدْرَىٰكَ مَا ٱلْحُطَمَةُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱧ ﱨ ﱩ ﱪ ﱫ",
+      "qcf_page": 601
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "نَارُ ٱللَّهِ ٱلْمُوقَدَةُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱬ ﱭ ﱮ ﱯ",
+      "qcf_page": 601
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "ٱلَّتِى تَطَّلِعُ عَلَى ٱلْأَفْـِٔدَةِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱰ ﱱ ﱲ ﱳ ﱴ",
+      "qcf_page": 601
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "إِنَّهَا عَلَيْهِم مُّؤْصَدَةٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱵ ﱶ ﱷ ﱸ",
+      "qcf_page": 601
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "فِى عَمَدٍ مُّمَدَّدَةٍۭ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱹ ﱺ ﱻ ﱼ",
+      "qcf_page": 601
+    }
+  ]
+}

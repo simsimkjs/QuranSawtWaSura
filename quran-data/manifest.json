@@ -1,14 +1,14 @@
 {
   "format": "qss-manifest",
   "version": 1,
-  "fingerprint": "a9c09eab8188507998cb633f021e9ba26ee2a0072b80b2a702b3d91af8609df6",
+  "fingerprint": "5bd042e67339bb9d52cb0cd4987ca042327bb7f49038888d4b17ea284854627f",
   "search_index": "search-index.json",
   "counts": {
     "surahs": 114,
-    "text": 11,
-    "audio": 11,
+    "text": 114,
+    "audio": 13,
     "tafsir": 0,
-    "ayahs": 1297
+    "ayahs": 6236
   },
   "surahs": [
     {
@@ -62,74 +62,86 @@
     {
       "number": 5,
       "name": "المائدة",
-      "text": false,
-      "audio": false,
+      "text": true,
+      "audio": true,
       "tafsir": false,
       "ayahs": 120,
-      "text_ayahs": 0
+      "text_ayahs": 120,
+      "text_sha256": "82d24ef43fd933284f3e6b14dd6be1511d89a73f840821d7c4416d7cd823f66d",
+      "audio_file": "005.mp3",
+      "audio_bytes": 52489173
     },
     {
       "number": 6,
       "name": "الأنعام",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 165,
-      "text_ayahs": 0
+      "text_ayahs": 165,
+      "text_sha256": "159ca94d36b871f54d91b63335ef9e3e9722759faa95f2739f5eeb12a19f4ccc"
     },
     {
       "number": 7,
       "name": "الأعراف",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 206,
-      "text_ayahs": 0
+      "text_ayahs": 206,
+      "text_sha256": "26ae5f8fcdfdc192816bd7cc6b9bf6f5a5ac7f0a007a011dce282a9e8e3b227e"
     },
     {
       "number": 8,
       "name": "الأنفال",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 75,
-      "text_ayahs": 0
+      "text_ayahs": 75,
+      "text_sha256": "faf8931da0ec1be9726db07ceb1ed6ff83811e592611ad82dd794c9687a1f541"
     },
     {
       "number": 9,
       "name": "التوبة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 129,
-      "text_ayahs": 0
+      "text_ayahs": 129,
+      "text_sha256": "4a8acc334e91b1f1a878ccf1407a4fb80a5682525ed256dc07458e648dd5e7a2"
     },
     {
       "number": 10,
       "name": "يونس",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 109,
-      "text_ayahs": 0
+      "text_ayahs": 109,
+      "text_sha256": "d388a17c25d549857cf08247a6e09b5a8a629dfcb226fd6c8ba2a4a9ee747a7a"
     },
     {
       "number": 11,
       "name": "هود",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 123,
-      "text_ayahs": 0
+      "text_ayahs": 123,
+      "text_sha256": "04d471e00884986b9464bf2fe7847dae5c6e975f82f24e64ed39b556a1ffc344"
     },
     {
       "number": 12,
       "name": "يوسف",
-      "text": false,
-      "audio": false,
+      "text": true,
+      "audio": true,
       "tafsir": false,
       "ayahs": 111,
-      "text_ayahs": 0
+      "text_ayahs": 111,
+      "text_sha256": "85edb112eb691a00d70e54f6e42812b9074be11046067075334cc58e7329c768",
+      "audio_file": "012.mp3",
+      "audio_bytes": 63048747
     },
     {
       "number": 13,
@@ -206,191 +218,212 @@
     {
       "number": 19,
       "name": "مريم",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 98,
-      "text_ayahs": 0
+      "text_ayahs": 98,
+      "text_sha256": "ae4b88feb8e86a59461af85f555213741ef11e1221471ccf9feb2239b555908f"
     },
     {
       "number": 20,
       "name": "طه",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 135,
-      "text_ayahs": 0
+      "text_ayahs": 135,
+      "text_sha256": "572a30427afb99c0aeec26e103837c68e56d278743c5384d405402743f38968a"
     },
     {
       "number": 21,
       "name": "الأنبياء",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 112,
-      "text_ayahs": 0
+      "text_ayahs": 112,
+      "text_sha256": "25a03a21ef8c3fb7684301bd4d5404b1f5a18b82594657d93deea6eac78955fb"
     },
     {
       "number": 22,
       "name": "الحج",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 78,
-      "text_ayahs": 0
+      "text_ayahs": 78,
+      "text_sha256": "a4d92dae1c8958f039815392bfaf2a7b4df798ca80aa0f3bc0bd4a29518fa87a"
     },
     {
       "number": 23,
       "name": "المؤمنون",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 118,
-      "text_ayahs": 0
+      "text_ayahs": 118,
+      "text_sha256": "ab4688b14e68139a217c83a5ccb59386c309278fbeb922d2fef3ea2ed02f0860"
     },
     {
       "number": 24,
       "name": "النور",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 64,
-      "text_ayahs": 0
+      "text_ayahs": 64,
+      "text_sha256": "546a420520362ff90259d0bd5018c0ff060d0592ea4f7f8c18a5e5104f3b0c2c"
     },
     {
       "number": 25,
       "name": "الفرقان",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 77,
-      "text_ayahs": 0
+      "text_ayahs": 77,
+      "text_sha256": "305595a1ec4d61b43b74a2e7c81fab2217a69ffb5b4f159411ec403255586591"
     },
     {
       "number": 26,
       "name": "الشعراء",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 227,
-      "text_ayahs": 0
+      "text_ayahs": 227,
+      "text_sha256": "2b29b008878be4877af6523affc0b5f47754092230018225ff973092731de662"
     },
     {
       "number": 27,
       "name": "النمل",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 93,
-      "text_ayahs": 0
+      "text_ayahs": 93,
+      "text_sha256": "9997e7d491acff7e9b7240e927b8f6022984623c09a25c4fe0ff50e576b25948"
     },
     {
       "number": 28,
       "name": "القصص",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 88,
-      "text_ayahs": 0
+      "text_ayahs": 88,
+      "text_sha256": "dce69f132af3c43b8021adf768204b1b257ea8be13406e258d0d14dc11773a69"
     },
     {
       "number": 29,
       "name": "العنكبوت",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 69,
-      "text_ayahs": 0
+      "text_ayahs": 69,
+      "text_sha256": "8b1330ff8969ebca5dda343f6459c126792cd6a04645293396c230fc427149b1"
     },
     {
       "number": 30,
       "name": "الروم",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 60,
-      "text_ayahs": 0
+      "text_ayahs": 60,
+      "text_sha256": "677ee3f774a9efa255bfcd6978dd83ef57bd12cd63400825084711a89f713147"
     },
     {
       "number": 31,
       "name": "لقمان",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 34,
-      "text_ayahs": 0
+      "text_ayahs": 34,
+      "text_sha256": "7fedcec7f942e012ccd02185dbd2d354ac1c23f65f92b33e94c0ec12e619311f"
     },
     {
       "number": 32,
       "name": "السجدة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 30,
-      "text_ayahs": 0
+      "text_ayahs": 30,
+      "text_sha256": "633b688593f6e75fda963a2aa06e0f76835e3eafdcf283fb16fc2ab32a4b83d9"
     },
     {
       "number": 33,
       "name": "الأحزاب",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 73,
-      "text_ayahs": 0
+      "text_ayahs": 73,
+      "text_sha256": "2c4cfa085a1932bed3da4dfd6cf85dc0ac4a8a453ea216da1e56fe173c481c87"
     },
     {
       "number": 34,
       "name": "سبأ",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 54,
-      "text_ayahs": 0
+      "text_ayahs": 54,
+      "text_sha256": "12158d2a57b71129418c35a1c4024e608462ca36e9c44ade7b186df1d2bd7b22"
     },
     {
       "number": 35,
       "name": "فاطر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 45,
-      "text_ayahs": 0
+      "text_ayahs": 45,
+      "text_sha256": "872dce71e6da831031733f891d4d334369575f50372156e61a1e635507188724"
     },
     {
       "number": 36,
       "name": "يس",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 83,
-      "text_ayahs": 0
+      "text_ayahs": 83,
+      "text_sha256": "4d4f58a248c6f518a16481ca30eaf214f5ca04c91fb3a4d5719050648df5895e"
     },
     {
       "number": 37,
       "name": "الصافات",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 182,
-      "text_ayahs": 0
+      "text_ayahs": 182,
+      "text_sha256": "5fe067843559df1ada3dd213201371692908655cd3e68ab80dc31eeecca932d7"
     },
     {
       "number": 38,
       "name": "ص",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 88,
-      "text_ayahs": 0
+      "text_ayahs": 88,
+      "text_sha256": "a56b3520ccf7dd7854a5cdf43f41ddfa5ecfae21f3b97c500fb53841be6c418d"
     },
     {
       "number": 39,
       "name": "الزمر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 75,
-      "text_ayahs": 0
+      "text_ayahs": 75,
+      "text_sha256": "731641713d2ec303c1fdf88267050fe139e2d1dbf4ede921e2b71bccdf65df55"
     },
     {
       "number": 40,
@@ -407,668 +440,742 @@
     {
       "number": 41,
       "name": "فصلت",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 54,
-      "text_ayahs": 0
+      "text_ayahs": 54,
+      "text_sha256": "11e5291acdb2703d2ebf2572545d1ba60a147c9d55c309e3d70e00f876ea0ca1"
     },
     {
       "number": 42,
       "name": "الشورى",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 53,
-      "text_ayahs": 0
+      "text_ayahs": 53,
+      "text_sha256": "d3dc26cb0e31737f2066c957c488d94b953bd68d77d545785671d2fcb57be68a"
     },
     {
       "number": 43,
       "name": "الزخرف",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 89,
-      "text_ayahs": 0
+      "text_ayahs": 89,
+      "text_sha256": "f1a5b29400120637cac63081c68e1402a43c4d5dff97ed897266df6f53027082"
     },
     {
       "number": 44,
       "name": "الدخان",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 59,
-      "text_ayahs": 0
+      "text_ayahs": 59,
+      "text_sha256": "9d432d9f7c10a0733e2946d6ba3eeda9a9a39291352007bad1379c113f036331"
     },
     {
       "number": 45,
       "name": "الجاثية",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 37,
-      "text_ayahs": 0
+      "text_ayahs": 37,
+      "text_sha256": "c9bb6aa26af19d36a3d73fa58b36366e78d1ec1b55d3bfc5b900bf19a2d0c538"
     },
     {
       "number": 46,
       "name": "الأحقاف",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 35,
-      "text_ayahs": 0
+      "text_ayahs": 35,
+      "text_sha256": "9ac09fba885bdf88a77c9f14e029fa53fa9179e57fda20bf8f5fbcf12d97921b"
     },
     {
       "number": 47,
       "name": "محمد",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 38,
-      "text_ayahs": 0
+      "text_ayahs": 38,
+      "text_sha256": "d382daf2a3dd671300925b734728404b44c33a0790f5cca762100070288914e5"
     },
     {
       "number": 48,
       "name": "الفتح",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 29,
-      "text_ayahs": 0
+      "text_ayahs": 29,
+      "text_sha256": "8ba7df52c438d68ff4cd7c4208c19bdb3c75a68b9828dd8a38eb2024c34cd548"
     },
     {
       "number": 49,
       "name": "الحجرات",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 18,
-      "text_ayahs": 0
+      "text_ayahs": 18,
+      "text_sha256": "2eb80fd067b13c5e3551ead69326a3d88734fe0e6e6f30e3f829485dd12a2b7b"
     },
     {
       "number": 50,
       "name": "ق",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 45,
-      "text_ayahs": 0
+      "text_ayahs": 45,
+      "text_sha256": "270c3ba0ea59b4562474bd92f9f445620688857adbb75ad6ba9b4c19bd436e27"
     },
     {
       "number": 51,
       "name": "الذاريات",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 60,
-      "text_ayahs": 0
+      "text_ayahs": 60,
+      "text_sha256": "592c8f4a5a1ff563f7ea05182a7d28263d48e89a9137650e9f26f073ebccb49a"
     },
     {
       "number": 52,
       "name": "الطور",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 49,
-      "text_ayahs": 0
+      "text_ayahs": 49,
+      "text_sha256": "d3be21338bda741c662d35f954f2f2f9ac578a6be6269de53802cc9a2e2dc8b6"
     },
     {
       "number": 53,
       "name": "النجم",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 62,
-      "text_ayahs": 0
+      "text_ayahs": 62,
+      "text_sha256": "f9e940e64fab9210b357452d465f09de5f94a8cc3e1cc838b6278d32f8cdd3f1"
     },
     {
       "number": 54,
       "name": "القمر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 55,
-      "text_ayahs": 0
+      "text_ayahs": 55,
+      "text_sha256": "cf8b2dc561cd01759ade03d8ef111d5830b768fd729c70d6ec71e7fcebbf5b22"
     },
     {
       "number": 55,
       "name": "الرحمن",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 78,
-      "text_ayahs": 0
+      "text_ayahs": 78,
+      "text_sha256": "0135c62bf82cef6483b19a81c2947cd1155c1cbedc5df2ed4e76747b82c41b90"
     },
     {
       "number": 56,
       "name": "الواقعة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 96,
-      "text_ayahs": 0
+      "text_ayahs": 96,
+      "text_sha256": "f9c3921ed41d8b6510e9497cc3656ccaa1753a3bc3bb186553446c91f7515154"
     },
     {
       "number": 57,
       "name": "الحديد",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 29,
-      "text_ayahs": 0
+      "text_ayahs": 29,
+      "text_sha256": "4344eaec2268aacff6b15c173f0f63c3bf35c75128ed0d1694680c5258ec487d"
     },
     {
       "number": 58,
       "name": "المجادلة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 22,
-      "text_ayahs": 0
+      "text_ayahs": 22,
+      "text_sha256": "2e357a4098b1897aeac0f0cfeab8d143e5de63699be526c527385bb4a127507d"
     },
     {
       "number": 59,
       "name": "الحشر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 24,
-      "text_ayahs": 0
+      "text_ayahs": 24,
+      "text_sha256": "539d9d838790dd75887ebfcfcd92353e48d0bd41110f92cae89c445c77a397bc"
     },
     {
       "number": 60,
       "name": "الممتحنة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 13,
-      "text_ayahs": 0
+      "text_ayahs": 13,
+      "text_sha256": "e4434112e623ab7c290b119ac34126b03116e4f8698926d1003c08aec7f1a23a"
     },
     {
       "number": 61,
       "name": "الصف",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 14,
-      "text_ayahs": 0
+      "text_ayahs": 14,
+      "text_sha256": "36a1e6a9a3a149edc8033df37529e0cc2255d2bb5499f08cc6be2f38c8883fc4"
     },
     {
       "number": 62,
       "name": "الجمعة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 11,
-      "text_ayahs": 0
+      "text_ayahs": 11,
+      "text_sha256": "ce3d7caf364779a46a42350785c34fe52f785b022a592d3c5c04a107e38445b4"
     },
     {
       "number": 63,
       "name": "المنافقون",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 11,
-      "text_ayahs": 0
+      "text_ayahs": 11,
+      "text_sha256": "c577b11b48185a0bf5ad51c3c9021552029be99f98dc90c2f7324911d987dd2e"
     },
     {
       "number": 64,
       "name": "التغابن",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 18,
-      "text_ayahs": 0
+      "text_ayahs": 18,
+      "text_sha256": "95dcdd13df8e6decb868df55bfb35a7b4ba7c8faea0e79137111499177396410"
     },
     {
       "number": 65,
       "name": "الطلاق",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 12,
-      "text_ayahs": 0
+      "text_ayahs": 12,
+      "text_sha256": "61aafd557de0292cf53256b34766933479cf9fb66f7a3b590c6114eb153805d1"
     },
     {
       "number": 66,
       "name": "التحريم",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 12,
-      "text_ayahs": 0
+      "text_ayahs": 12,
+      "text_sha256": "ae5a06232964b67a03b9872bb2eeada467412b2bdff3dcad61975a6422fe7c8d"
     },
     {
       "number": 67,
       "name": "الملك",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 30,
-      "text_ayahs": 0
+      "text_ayahs": 30,
+      "text_sha256": "2ccb3e5a84630fcf14cbea4805e034461740a8e86edae8c9d98f74ff8d163aa8"
     },
     {
       "number": 68,
       "name": "القلم",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 52,
-      "text_ayahs": 0
+      "text_ayahs": 52,
+      "text_sha256": "217d5061a5de7bacd64758dcd75ff833bef48bc6412342803e5dcfeb4b23b8e6"
     },
     {
       "number": 69,
       "name": "الحاقة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 52,
-      "text_ayahs": 0
+      "text_ayahs": 52,
+      "text_sha256": "683938470a9a806d980b672dfe357e4549c4a7c4c710f566698dc994b3a05c7f"
     },
     {
       "number": 70,
       "name": "المعارج",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 44,
-      "text_ayahs": 0
+      "text_ayahs": 44,
+      "text_sha256": "65621e2b94ead027a455a5be60d6356556f019e5db8b191ea9f0a765115515d4"
     },
     {
       "number": 71,
       "name": "نوح",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 28,
-      "text_ayahs": 0
+      "text_ayahs": 28,
+      "text_sha256": "828003e1403f5bf2c8afbe085e24c95474acf4d2371a2677007f242a5e014a0c"
     },
     {
       "number": 72,
       "name": "الجن",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 28,
-      "text_ayahs": 0
+      "text_ayahs": 28,
+      "text_sha256": "6af2aee65ee9736db1cb8866fa0e160c6f39a0a860a2b7454fefa59e6cde3bc0"
     },
     {
       "number": 73,
       "name": "المزمل",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 20,
-      "text_ayahs": 0
+      "text_ayahs": 20,
+      "text_sha256": "5b1ee37ba690ddd144cdf81fe72a629c35ce23516725abf40a8a0fec0f211554"
     },
     {
       "number": 74,
       "name": "المدثر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 56,
-      "text_ayahs": 0
+      "text_ayahs": 56,
+      "text_sha256": "2ed873b9f9a188ce0522f86d43afecbbcf872c3f3156a36e80bd97a75a83082e"
     },
     {
       "number": 75,
       "name": "القيامة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 40,
-      "text_ayahs": 0
+      "text_ayahs": 40,
+      "text_sha256": "6517e1c6aeb69297006c2fba8636b6937c0bc7a0641fae0086209a2c767823c7"
     },
     {
       "number": 76,
       "name": "الإنسان",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 31,
-      "text_ayahs": 0
+      "text_ayahs": 31,
+      "text_sha256": "13740b3bfbd8563098a6579066dbfcbb828a27207e13cf8a350de167e3b28a19"
     },
     {
       "number": 77,
       "name": "المرسلات",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 50,
-      "text_ayahs": 0
+      "text_ayahs": 50,
+      "text_sha256": "8e4b4714382b9db618d1d149273b60f8cdf11a3534b96b4a0cba5059bfb8039a"
     },
     {
       "number": 78,
       "name": "النبأ",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 40,
-      "text_ayahs": 0
+      "text_ayahs": 40,
+      "text_sha256": "46763a7fdb063c1362b1507d9165ca6ab054f3b5c18d01d900540e21eb1d1532"
     },
     {
       "number": 79,
       "name": "النازعات",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 46,
-      "text_ayahs": 0
+      "text_ayahs": 46,
+      "text_sha256": "1a8ca827dde221833287c0dfb4846ccfe61dc68d70fb5ea458f6640d750b1117"
     },
     {
       "number": 80,
       "name": "عبس",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 42,
-      "text_ayahs": 0
+      "text_ayahs": 42,
+      "text_sha256": "d97ef5deb2be9ed70bf163ffff2320f76d1491aa8ad9722d3d3ec687b802b2d4"
     },
     {
       "number": 81,
       "name": "التكوير",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 29,
-      "text_ayahs": 0
+      "text_ayahs": 29,
+      "text_sha256": "519e94707fc7c2f93a5610afb518199951f05531af8fbbf5a188a9686f547103"
     },
     {
       "number": 82,
       "name": "الإنفطار",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 19,
-      "text_ayahs": 0
+      "text_ayahs": 19,
+      "text_sha256": "d64d15a156ba3b63e364d1caae3f3cfb0c1a7d274c19a0008a80306e269540ef"
     },
     {
       "number": 83,
       "name": "المطففين",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 36,
-      "text_ayahs": 0
+      "text_ayahs": 36,
+      "text_sha256": "11924cc13edf5e25d653ca6e90a476644f4f4814f95578d4ff4f87e13308e97b"
     },
     {
       "number": 84,
       "name": "الإنشقاق",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 25,
-      "text_ayahs": 0
+      "text_ayahs": 25,
+      "text_sha256": "c363766c1a6610528504aa06d4470769ce71ecdbb096678a288db8cfec286245"
     },
     {
       "number": 85,
       "name": "البروج",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 22,
-      "text_ayahs": 0
+      "text_ayahs": 22,
+      "text_sha256": "bc194fb614b07efeab25c7685a3543dec0ab7a89efa51bf8c4ac071f8ac3153b"
     },
     {
       "number": 86,
       "name": "الطارق",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 17,
-      "text_ayahs": 0
+      "text_ayahs": 17,
+      "text_sha256": "cd05eaed00723b9c96f52c6e54126952d8b3dfe9a34c6bfe717fb122d76d6c66"
     },
     {
       "number": 87,
       "name": "الأعلى",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 19,
-      "text_ayahs": 0
+      "text_ayahs": 19,
+      "text_sha256": "665656a63535550b4d5c896678575081f100181894c4d4a74a91490d5d0f4593"
     },
     {
       "number": 88,
       "name": "الغاشية",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 26,
-      "text_ayahs": 0
+      "text_ayahs": 26,
+      "text_sha256": "17000ab1e746100409c752448cd53f8fedc98b9e6b5ff71b1202708f3b3430b0"
     },
     {
       "number": 89,
       "name": "الفجر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 30,
-      "text_ayahs": 0
+      "text_ayahs": 30,
+      "text_sha256": "79c313786a0d807a612c4c533197eefe82fff3a2c5bc0e2f4941f92099f2ef94"
     },
     {
       "number": 90,
       "name": "البلد",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 20,
-      "text_ayahs": 0
+      "text_ayahs": 20,
+      "text_sha256": "867e17fc981613831a661ce8c17c1a504b57a2b7be1128c546ac1cc644d701b9"
     },
     {
       "number": 91,
       "name": "الشمس",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 15,
-      "text_ayahs": 0
+      "text_ayahs": 15,
+      "text_sha256": "cc5149c3c099de5ff0ec46f784001f35e44235365818ee117bcc61182756da16"
     },
     {
       "number": 92,
       "name": "الليل",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 21,
-      "text_ayahs": 0
+      "text_ayahs": 21,
+      "text_sha256": "0460905bbbcb0f1506593b17054d7fab6646a530faabf154b95e35dcd3dfeeec"
     },
     {
       "number": 93,
       "name": "الضحى",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 11,
-      "text_ayahs": 0
+      "text_ayahs": 11,
+      "text_sha256": "70147f498b554b530a6dbd68fbe0a66d9d1aed9649d326869da35b2b44b2243d"
     },
     {
       "number": 94,
       "name": "الشرح",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 8,
-      "text_ayahs": 0
+      "text_ayahs": 8,
+      "text_sha256": "08a9d708842724fa315d74e49cb8e9df543d0e72f833c5ce03a2386c625fb192"
     },
     {
       "number": 95,
       "name": "التين",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 8,
-      "text_ayahs": 0
+      "text_ayahs": 8,
+      "text_sha256": "1c34f7ffb1bde7e881ad00e126a88488ee1b5477218fbcbcb1028e461fb7b461"
     },
     {
       "number": 96,
       "name": "العلق",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 19,
-      "text_ayahs": 0
+      "text_ayahs": 19,
+      "text_sha256": "78a2feb0268a244fb13ddbe190abe538abe5bfd7ae77b5570dca7449aeb1dc77"
     },
     {
       "number": 97,
       "name": "القدر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 5,
-      "text_ayahs": 0
+      "text_ayahs": 5,
+      "text_sha256": "b973224651625819e4360ecaaf13dbc2d825b780d9e635a7b1d1d8ce1acffbce"
     },
     {
       "number": 98,
       "name": "البينة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 8,
-      "text_ayahs": 0
+      "text_ayahs": 8,
+      "text_sha256": "31e7bec17e8a5f33b732e80d3c7c6e693dcee0560fb52d81179e1e9c97dc1ccd"
     },
     {
       "number": 99,
       "name": "الزلزلة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 8,
-      "text_ayahs": 0
+      "text_ayahs": 8,
+      "text_sha256": "2c3e6a5468c197904ddd5630c731aa47f0c39e3038caadf85f272b7c5c6b4410"
     },
     {
       "number": 100,
       "name": "العاديات",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 11,
-      "text_ayahs": 0
+      "text_ayahs": 11,
+      "text_sha256": "d23e3ef17c881272f79255ad37500d8c643dce9d140fa81800f68a561cd5faa5"
     },
     {
       "number": 101,
       "name": "القارعة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 11,
-      "text_ayahs": 0
+      "text_ayahs": 11,
+      "text_sha256": "a21f170197a427382ca190363931721cba9775d5c5c5f19b14b3cf4eaf9718a8"
     },
     {
       "number": 102,
       "name": "التكاثر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 8,
-      "text_ayahs": 0
+      "text_ayahs": 8,
+      "text_sha256": "e6e4870487a86661357589b86f2fedf9e6fc5083a5bf2d3c67e152605b66765d"
     },
     {
       "number": 103,
       "name": "العصر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 3,
-      "text_ayahs": 0
+      "text_ayahs": 3,
+      "text_sha256": "b3d08a3193660ff8d99e79d4da27d1c3dad2a5c01244a25e6f772977dbccd4f6"
     },
     {
       "number": 104,
       "name": "الهمزة",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 9,
-      "text_ayahs": 0
+      "text_ayahs": 9,
+      "text_sha256": "86b69bb9b1fe76ee261074235ad834fc601a2499e3b52966a8efeb330d2f37c4"
     },
     {
       "number": 105,
       "name": "الفيل",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 5,
-      "text_ayahs": 0
+      "text_ayahs": 5,
+      "text_sha256": "70a5343d4b9a54652230c8e9508a2f6cfdb47862c43bcf5c3c06d25b1a6ecfac"
     },
     {
       "number": 106,
       "name": "قريش",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 4,
-      "text_ayahs": 0
+      "text_ayahs": 4,
+      "text_sha256": "5d782824ac8d3140d93dc624155daf61d796aa178d0d1b47be78bb174b60ab20"
     },
     {
       "number": 107,
       "name": "الماعون",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 7,
-      "text_ayahs": 0
+      "text_ayahs": 7,
+      "text_sha256": "a2b09dcedeb3d7d12fc597136e6efeff2cecf57f5ea64fec7dfda514061b4cdc"
     },
     {
       "number": 108,
       "name": "الكوثر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 3,
-      "text_ayahs": 0
+      "text_ayahs": 3,
+      "text_sha256": "5d11ca78691c7cdfc1ec8a74bab30a74a6c02e0d12b609e0957bf8eb66c2609f"
     },
     {
       "number": 109,
       "name": "الكافرون",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 6,
-      "text_ayahs": 0
+      "text_ayahs": 6,
+      "text_sha256": "4e4aecfc09890301076ca22fbdf7034dff9580b32c35e2205f2295aea23a0cde"
     },
     {
       "number": 110,
       "name": "النصر",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 3,
-      "text_ayahs": 0
+      "text_ayahs": 3,
+      "text_sha256": "488c6647615bcf8b01c89dd68f10a41b5f1f691b46c773fbee4d1e9919d6a056"
     },
     {
       "number": 111,
       "name": "المسد",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 5,
-      "text_ayahs": 0
+      "text_ayahs": 5,
+      "text_sha256": "7d1b8caf488cf3ddd12d454303e6aa4769b71c1a04628f202fd13f81939e591e"
     },
     {
       "number": 112,
       "name": "الإخلاص",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 4,
-      "text_ayahs": 0
+      "text_ayahs": 4,
+      "text_sha256": "854983175ce5a0c525198cb93403a5cb5527f687377ed6231dbd4063d72c65c6"
     },
     {
       "number": 113,
       "name": "الفلق",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 5,
-      "text_ayahs": 0
+      "text_ayahs": 5,
+      "text_sha256": "b05469c26afc625dbcadab871e0967edc70219817247ffa64f5fc20225ccdb20"
     },
     {
       "number": 114,
       "name": "الناس",
-      "text": false,
+      "text": true,
       "audio": false,
       "tafsir": false,
       "ayahs": 6,
-      "text_ayahs": 0
+      "text_ayahs": 6,
+      "text_sha256": "946322180aee64459a1c0afe9e11e5556d97cf37eb042d1d0b15a84f7889408e"
     }
   ]
 }

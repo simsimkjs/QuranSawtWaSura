@@ -1,0 +1,62 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 97,
+  "surah_name": "القدر",
+  "audio_file_name": "097.mp3",
+  "saved_at": "2026-10-30T07:10:23.978Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "إِنَّآ أَنزَلْنَـٰهُ فِى لَيْلَةِ ٱلْقَدْرِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱥ ﱦ ﱧ ﱨ ﱩ ﱪ",
+      "qcf_page": 598
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "وَمَآ أَدْرَىٰكَ مَا لَيْلَةُ ٱلْقَدْرِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱫ ﱬ ﱭ ﱮ ﱯ ﱰ",
+      "qcf_page": 598
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "لَيْلَةُ ٱلْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱱ ﱲ ﱳ ﱴ ﱵ ﱶ ﱷ",
+      "qcf_page": 598
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "تَنَزَّلُ ٱلْمَلَـٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم مِّن كُلِّ أَمْرٍ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱸ ﱹ ﱺ ﱻ ﱼ ﱽ ﱾ ﱿ ﲀ ﲁ",
+      "qcf_page": 598
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "سَلَـٰمٌ هِىَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲂ ﲃ ﲄ ﲅ ﲆ ﲇ",
+      "qcf_page": 598
+    }
+  ]
+}

@@ -1,0 +1,575 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 53,
+  "surah_name": "النجم",
+  "audio_file_name": "053.mp3",
+  "saved_at": "2026-10-30T07:10:06.817Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "وَٱلنَّجْمِ إِذَا هَوَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ",
+      "qcf_page": 526
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "مَا ضَلَّ صَاحِبُكُمْ وَمَا غَوَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱅ ﱆ ﱇ ﱈ ﱉ ﱊ",
+      "qcf_page": 526
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَمَا يَنطِقُ عَنِ ٱلْهَوَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱋ ﱌ ﱍ ﱎ ﱏ",
+      "qcf_page": 526
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "إِنْ هُوَ إِلَّا وَحْىٌ يُوحَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱐ ﱑ ﱒ ﱓ ﱔ ﱕ",
+      "qcf_page": 526
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "عَلَّمَهُۥ شَدِيدُ ٱلْقُوَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱖ ﱗ ﱘ ﱙ",
+      "qcf_page": 526
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "ذُو مِرَّةٍ فَٱسْتَوَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱚ ﱛ ﱜ ﱝ",
+      "qcf_page": 526
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "وَهُوَ بِٱلْأُفُقِ ٱلْأَعْلَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱞ ﱟ ﱠ ﱡ",
+      "qcf_page": 526
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "ثُمَّ دَنَا فَتَدَلَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱢ ﱣ ﱤ ﱥ",
+      "qcf_page": 526
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "فَكَانَ قَابَ قَوْسَيْنِ أَوْ أَدْنَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱦ ﱧ ﱨ ﱩ ﱪ ﱫ",
+      "qcf_page": 526
+    },
+    {
+      "index": 10,
+      "ayah_number": 10,
+      "text": "فَأَوْحَىٰٓ إِلَىٰ عَبْدِهِۦ مَآ أَوْحَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱬ ﱭ ﱮ ﱯ ﱰ ﱱ",
+      "qcf_page": 526
+    },
+    {
+      "index": 11,
+      "ayah_number": 11,
+      "text": "مَا كَذَبَ ٱلْفُؤَادُ مَا رَأَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱲ ﱳ ﱴ ﱵ ﱶ ﱷ",
+      "qcf_page": 526
+    },
+    {
+      "index": 12,
+      "ayah_number": 12,
+      "text": "أَفَتُمَـٰرُونَهُۥ عَلَىٰ مَا يَرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱸ ﱹ ﱺ ﱻ ﱼ",
+      "qcf_page": 526
+    },
+    {
+      "index": 13,
+      "ayah_number": 13,
+      "text": "وَلَقَدْ رَءَاهُ نَزْلَةً أُخْرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱽ ﱾ ﱿ ﲀ ﲁ",
+      "qcf_page": 526
+    },
+    {
+      "index": 14,
+      "ayah_number": 14,
+      "text": "عِندَ سِدْرَةِ ٱلْمُنتَهَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲂ ﲃ ﲄ ﲅ",
+      "qcf_page": 526
+    },
+    {
+      "index": 15,
+      "ayah_number": 15,
+      "text": "عِندَهَا جَنَّةُ ٱلْمَأْوَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲆ ﲇ ﲈ ﲉ",
+      "qcf_page": 526
+    },
+    {
+      "index": 16,
+      "ayah_number": 16,
+      "text": "إِذْ يَغْشَى ٱلسِّدْرَةَ مَا يَغْشَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲊ ﲋ ﲌ ﲍ ﲎ ﲏ",
+      "qcf_page": 526
+    },
+    {
+      "index": 17,
+      "ayah_number": 17,
+      "text": "مَا زَاغَ ٱلْبَصَرُ وَمَا طَغَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲐ ﲑ ﲒ ﲓ ﲔ ﲕ",
+      "qcf_page": 526
+    },
+    {
+      "index": 18,
+      "ayah_number": 18,
+      "text": "لَقَدْ رَأَىٰ مِنْ ءَايَـٰتِ رَبِّهِ ٱلْكُبْرَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲖ ﲗ ﲘ ﲙ ﲚ ﲛ ﲜ",
+      "qcf_page": 526
+    },
+    {
+      "index": 19,
+      "ayah_number": 19,
+      "text": "أَفَرَءَيْتُمُ ٱللَّـٰتَ وَٱلْعُزَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲝ ﲞ ﲟ ﲠ",
+      "qcf_page": 526
+    },
+    {
+      "index": 20,
+      "ayah_number": 20,
+      "text": "وَمَنَوٰةَ ٱلثَّالِثَةَ ٱلْأُخْرَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲡ ﲢ ﲣ ﲤ",
+      "qcf_page": 526
+    },
+    {
+      "index": 21,
+      "ayah_number": 21,
+      "text": "أَلَكُمُ ٱلذَّكَرُ وَلَهُ ٱلْأُنثَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲥ ﲦ ﲧ ﲨ ﲩ",
+      "qcf_page": 526
+    },
+    {
+      "index": 22,
+      "ayah_number": 22,
+      "text": "تِلْكَ إِذًا قِسْمَةٌ ضِيزَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲪ ﲫ ﲬ ﲭ ﲮ",
+      "qcf_page": 526
+    },
+    {
+      "index": 23,
+      "ayah_number": 23,
+      "text": "إِنْ هِىَ إِلَّآ أَسْمَآءٌ سَمَّيْتُمُوهَآ أَنتُمْ وَءَابَآؤُكُم مَّآ أَنزَلَ ٱللَّهُ بِهَا مِن سُلْطَـٰنٍ ۚ إِن يَتَّبِعُونَ إِلَّا ٱلظَّنَّ وَمَا تَهْوَى ٱلْأَنفُسُ ۖ وَلَقَدْ جَآءَهُم مِّن رَّبِّهِمُ ٱلْهُدَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲯ ﲰ ﲱ ﲲ ﲳ ﲴ ﲵ ﲶ ﲷ ﲸ ﲹ ﲺ ﲻ ﲼ ﲽ ﲾ ﲿ ﳀ ﳁ ﳂ ﳃ ﳄ ﳅ ﳆ ﳇ ﳈ ﳉ ﳊ",
+      "qcf_page": 526
+    },
+    {
+      "index": 24,
+      "ayah_number": 24,
+      "text": "أَمْ لِلْإِنسَـٰنِ مَا تَمَنَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳋ ﳌ ﳍ ﳎ ﳏ",
+      "qcf_page": 526
+    },
+    {
+      "index": 25,
+      "ayah_number": 25,
+      "text": "فَلِلَّهِ ٱلْـَٔاخِرَةُ وَٱلْأُولَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳐ ﳑ ﳒ ﳓ",
+      "qcf_page": 526
+    },
+    {
+      "index": 26,
+      "ayah_number": 26,
+      "text": "۞ وَكَم مِّن مَّلَكٍ فِى ٱلسَّمَـٰوَٰتِ لَا تُغْنِى شَفَـٰعَتُهُمْ شَيْـًٔا إِلَّا مِنۢ بَعْدِ أَن يَأْذَنَ ٱللَّهُ لِمَن يَشَآءُ وَيَرْضَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳔ ﳕ ﳖ ﳗ ﳘ ﳙ ﳚ ﳛ ﳜ ﳝ ﳞ ﳟ ﳠ ﳡ ﳢ ﳣ ﳤ ﳥ ﳦ ﳧ",
+      "qcf_page": 526
+    },
+    {
+      "index": 27,
+      "ayah_number": 27,
+      "text": "إِنَّ ٱلَّذِينَ لَا يُؤْمِنُونَ بِٱلْـَٔاخِرَةِ لَيُسَمُّونَ ٱلْمَلَـٰٓئِكَةَ تَسْمِيَةَ ٱلْأُنثَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ ﱅ ﱆ ﱇ ﱈ ﱉ ﱊ",
+      "qcf_page": 527
+    },
+    {
+      "index": 28,
+      "ayah_number": 28,
+      "text": "وَمَا لَهُم بِهِۦ مِنْ عِلْمٍ ۖ إِن يَتَّبِعُونَ إِلَّا ٱلظَّنَّ ۖ وَإِنَّ ٱلظَّنَّ لَا يُغْنِى مِنَ ٱلْحَقِّ شَيْـًٔا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱋ ﱌ ﱍ ﱎ ﱏ ﱐ ﱑ ﱒ ﱓ ﱔ ﱕ ﱖ ﱗ ﱘ ﱙ ﱚ ﱛ ﱜ ﱝ",
+      "qcf_page": 527
+    },
+    {
+      "index": 29,
+      "ayah_number": 29,
+      "text": "فَأَعْرِضْ عَن مَّن تَوَلَّىٰ عَن ذِكْرِنَا وَلَمْ يُرِدْ إِلَّا ٱلْحَيَوٰةَ ٱلدُّنْيَا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱞ ﱟ ﱠ ﱡ ﱢ ﱣ ﱤ ﱥ ﱦ ﱧ ﱨ ﱩ",
+      "qcf_page": 527
+    },
+    {
+      "index": 30,
+      "ayah_number": 30,
+      "text": "ذَٰلِكَ مَبْلَغُهُم مِّنَ ٱلْعِلْمِ ۚ إِنَّ رَبَّكَ هُوَ أَعْلَمُ بِمَن ضَلَّ عَن سَبِيلِهِۦ وَهُوَ أَعْلَمُ بِمَنِ ٱهْتَدَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱪ ﱫ ﱬ ﱭ ﱮ ﱯ ﱰ ﱱ ﱲ ﱳ ﱴ ﱵ ﱶ ﱷ ﱸ ﱹ ﱺ ﱻ",
+      "qcf_page": 527
+    },
+    {
+      "index": 31,
+      "ayah_number": 31,
+      "text": "وَلِلَّهِ مَا فِى ٱلسَّمَـٰوَٰتِ وَمَا فِى ٱلْأَرْضِ لِيَجْزِىَ ٱلَّذِينَ أَسَـٰٓـُٔوا۟ بِمَا عَمِلُوا۟ وَيَجْزِىَ ٱلَّذِينَ أَحْسَنُوا۟ بِٱلْحُسْنَى",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱼ ﱽ ﱾ ﱿ ﲀ ﲁ ﲂ ﲃ ﲄ ﲅ ﲆ ﲇ ﲈ ﲉ ﲊ ﲋ ﲌ",
+      "qcf_page": 527
+    },
+    {
+      "index": 32,
+      "ayah_number": 32,
+      "text": "ٱلَّذِينَ يَجْتَنِبُونَ كَبَـٰٓئِرَ ٱلْإِثْمِ وَٱلْفَوَٰحِشَ إِلَّا ٱللَّمَمَ ۚ إِنَّ رَبَّكَ وَٰسِعُ ٱلْمَغْفِرَةِ ۚ هُوَ أَعْلَمُ بِكُمْ إِذْ أَنشَأَكُم مِّنَ ٱلْأَرْضِ وَإِذْ أَنتُمْ أَجِنَّةٌ فِى بُطُونِ أُمَّهَـٰتِكُمْ ۖ فَلَا تُزَكُّوٓا۟ أَنفُسَكُمْ ۖ هُوَ أَعْلَمُ بِمَنِ ٱتَّقَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲍ ﲎ ﲏ ﲐ ﲑ ﲒ ﲓ ﲔ ﲕ ﲖ ﲗ ﲘ ﲙ ﲚ ﲛ ﲜ ﲝ ﲞ ﲟ ﲠ ﲡ ﲢ ﲣ ﲤ ﲥ ﲦ ﲧ ﲨ ﲩ ﲪ ﲫ ﲬ ﲭ ﲮ ﲯ ﲰ",
+      "qcf_page": 527
+    },
+    {
+      "index": 33,
+      "ayah_number": 33,
+      "text": "أَفَرَءَيْتَ ٱلَّذِى تَوَلَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲱ ﲲ ﲳ ﲴ",
+      "qcf_page": 527
+    },
+    {
+      "index": 34,
+      "ayah_number": 34,
+      "text": "وَأَعْطَىٰ قَلِيلًا وَأَكْدَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲵ ﲶ ﲷ ﲸ",
+      "qcf_page": 527
+    },
+    {
+      "index": 35,
+      "ayah_number": 35,
+      "text": "أَعِندَهُۥ عِلْمُ ٱلْغَيْبِ فَهُوَ يَرَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲹ ﲺ ﲻ ﲼ ﲽ ﲾ",
+      "qcf_page": 527
+    },
+    {
+      "index": 36,
+      "ayah_number": 36,
+      "text": "أَمْ لَمْ يُنَبَّأْ بِمَا فِى صُحُفِ مُوسَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲿ ﳀ ﳁ ﳂ ﳃ ﳄ ﳅ ﳆ",
+      "qcf_page": 527
+    },
+    {
+      "index": 37,
+      "ayah_number": 37,
+      "text": "وَإِبْرَٰهِيمَ ٱلَّذِى وَفَّىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳇ ﳈ ﳉ ﳊ",
+      "qcf_page": 527
+    },
+    {
+      "index": 38,
+      "ayah_number": 38,
+      "text": "أَلَّا تَزِرُ وَازِرَةٌ وِزْرَ أُخْرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳋ ﳌ ﳍ ﳎ ﳏ ﳐ",
+      "qcf_page": 527
+    },
+    {
+      "index": 39,
+      "ayah_number": 39,
+      "text": "وَأَن لَّيْسَ لِلْإِنسَـٰنِ إِلَّا مَا سَعَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳑ ﳒ ﳓ ﳔ ﳕ ﳖ ﳗ",
+      "qcf_page": 527
+    },
+    {
+      "index": 40,
+      "ayah_number": 40,
+      "text": "وَأَنَّ سَعْيَهُۥ سَوْفَ يُرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳘ ﳙ ﳚ ﳛ ﳜ",
+      "qcf_page": 527
+    },
+    {
+      "index": 41,
+      "ayah_number": 41,
+      "text": "ثُمَّ يُجْزَىٰهُ ٱلْجَزَآءَ ٱلْأَوْفَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳝ ﳞ ﳟ ﳠ ﳡ",
+      "qcf_page": 527
+    },
+    {
+      "index": 42,
+      "ayah_number": 42,
+      "text": "وَأَنَّ إِلَىٰ رَبِّكَ ٱلْمُنتَهَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳢ ﳣ ﳤ ﳥ ﳦ",
+      "qcf_page": 527
+    },
+    {
+      "index": 43,
+      "ayah_number": 43,
+      "text": "وَأَنَّهُۥ هُوَ أَضْحَكَ وَأَبْكَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳧ ﳨ ﳩ ﳪ ﳫ",
+      "qcf_page": 527
+    },
+    {
+      "index": 44,
+      "ayah_number": 44,
+      "text": "وَأَنَّهُۥ هُوَ أَمَاتَ وَأَحْيَا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﳬ ﳭ ﳮ ﳯ ﳰ",
+      "qcf_page": 527
+    },
+    {
+      "index": 45,
+      "ayah_number": 45,
+      "text": "وَأَنَّهُۥ خَلَقَ ٱلزَّوْجَيْنِ ٱلذَّكَرَ وَٱلْأُنثَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ ﱅ ﱆ",
+      "qcf_page": 528
+    },
+    {
+      "index": 46,
+      "ayah_number": 46,
+      "text": "مِن نُّطْفَةٍ إِذَا تُمْنَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱇ ﱈ ﱉ ﱊ ﱋ",
+      "qcf_page": 528
+    },
+    {
+      "index": 47,
+      "ayah_number": 47,
+      "text": "وَأَنَّ عَلَيْهِ ٱلنَّشْأَةَ ٱلْأُخْرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱌ ﱍ ﱎ ﱏ ﱐ",
+      "qcf_page": 528
+    },
+    {
+      "index": 48,
+      "ayah_number": 48,
+      "text": "وَأَنَّهُۥ هُوَ أَغْنَىٰ وَأَقْنَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱑ ﱒ ﱓ ﱔ ﱕ",
+      "qcf_page": 528
+    },
+    {
+      "index": 49,
+      "ayah_number": 49,
+      "text": "وَأَنَّهُۥ هُوَ رَبُّ ٱلشِّعْرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱖ ﱗ ﱘ ﱙ ﱚ",
+      "qcf_page": 528
+    },
+    {
+      "index": 50,
+      "ayah_number": 50,
+      "text": "وَأَنَّهُۥٓ أَهْلَكَ عَادًا ٱلْأُولَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱛ ﱜ ﱝ ﱞ ﱟ",
+      "qcf_page": 528
+    },
+    {
+      "index": 51,
+      "ayah_number": 51,
+      "text": "وَثَمُودَا۟ فَمَآ أَبْقَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱠ ﱡ ﱢ ﱣ",
+      "qcf_page": 528
+    },
+    {
+      "index": 52,
+      "ayah_number": 52,
+      "text": "وَقَوْمَ نُوحٍ مِّن قَبْلُ ۖ إِنَّهُمْ كَانُوا۟ هُمْ أَظْلَمَ وَأَطْغَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱤ ﱥ ﱦ ﱧ ﱨ ﱩ ﱪ ﱫ ﱬ ﱭ ﱮ",
+      "qcf_page": 528
+    },
+    {
+      "index": 53,
+      "ayah_number": 53,
+      "text": "وَٱلْمُؤْتَفِكَةَ أَهْوَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱯ ﱰ ﱱ",
+      "qcf_page": 528
+    },
+    {
+      "index": 54,
+      "ayah_number": 54,
+      "text": "فَغَشَّىٰهَا مَا غَشَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱲ ﱳ ﱴ ﱵ",
+      "qcf_page": 528
+    },
+    {
+      "index": 55,
+      "ayah_number": 55,
+      "text": "فَبِأَىِّ ءَالَآءِ رَبِّكَ تَتَمَارَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱶ ﱷ ﱸ ﱹ ﱺ",
+      "qcf_page": 528
+    },
+    {
+      "index": 56,
+      "ayah_number": 56,
+      "text": "هَـٰذَا نَذِيرٌ مِّنَ ٱلنُّذُرِ ٱلْأُولَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱻ ﱼ ﱽ ﱾ ﱿ ﲀ",
+      "qcf_page": 528
+    },
+    {
+      "index": 57,
+      "ayah_number": 57,
+      "text": "أَزِفَتِ ٱلْـَٔازِفَةُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲁ ﲂ ﲃ",
+      "qcf_page": 528
+    },
+    {
+      "index": 58,
+      "ayah_number": 58,
+      "text": "لَيْسَ لَهَا مِن دُونِ ٱللَّهِ كَاشِفَةٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲄ ﲅ ﲆ ﲇ ﲈ ﲉ ﲊ",
+      "qcf_page": 528
+    },
+    {
+      "index": 59,
+      "ayah_number": 59,
+      "text": "أَفَمِنْ هَـٰذَا ٱلْحَدِيثِ تَعْجَبُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲋ ﲌ ﲍ ﲎ ﲏ",
+      "qcf_page": 528
+    },
+    {
+      "index": 60,
+      "ayah_number": 60,
+      "text": "وَتَضْحَكُونَ وَلَا تَبْكُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲐ ﲑ ﲒ ﲓ",
+      "qcf_page": 528
+    },
+    {
+      "index": 61,
+      "ayah_number": 61,
+      "text": "وَأَنتُمْ سَـٰمِدُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲔ ﲕ ﲖ",
+      "qcf_page": 528
+    },
+    {
+      "index": 62,
+      "ayah_number": 62,
+      "text": "فَٱسْجُدُوا۟ لِلَّهِ وَٱعْبُدُوا۟ ۩",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲗﲘ ﲙﲚ ﲛ ﲜ ﲝ",
+      "qcf_page": 528
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 92,
+  "surah_name": "الليل",
+  "audio_file_name": "092.mp3",
+  "saved_at": "2026-10-30T07:10:22.052Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "وَٱلَّيْلِ إِذَا يَغْشَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲑ ﲒ ﲓ ﲔ",
+      "qcf_page": 595
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "وَٱلنَّهَارِ إِذَا تَجَلَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲕ ﲖ ﲗ ﲘ",
+      "qcf_page": 595
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَمَا خَلَقَ ٱلذَّكَرَ وَٱلْأُنثَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲙ ﲚ ﲛ ﲜ ﲝ",
+      "qcf_page": 595
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "إِنَّ سَعْيَكُمْ لَشَتَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲞ ﲟ ﲠ ﲡ",
+      "qcf_page": 595
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "فَأَمَّا مَنْ أَعْطَىٰ وَٱتَّقَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲢ ﲣ ﲤ ﲥ ﲦ",
+      "qcf_page": 595
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "وَصَدَّقَ بِٱلْحُسْنَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲧ ﲨ ﲩ",
+      "qcf_page": 595
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "فَسَنُيَسِّرُهُۥ لِلْيُسْرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲪ ﲫ ﲬ",
+      "qcf_page": 595
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "وَأَمَّا مَنۢ بَخِلَ وَٱسْتَغْنَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲭ ﲮ ﲯ ﲰ ﲱ",
+      "qcf_page": 595
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "وَكَذَّبَ بِٱلْحُسْنَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲲ ﲳ ﲴ",
+      "qcf_page": 595
+    },
+    {
+      "index": 10,
+      "ayah_number": 10,
+      "text": "فَسَنُيَسِّرُهُۥ لِلْعُسْرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ",
+      "qcf_page": 596
+    },
+    {
+      "index": 11,
+      "ayah_number": 11,
+      "text": "وَمَا يُغْنِى عَنْهُ مَالُهُۥٓ إِذَا تَرَدَّىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱄ ﱅ ﱆ ﱇ ﱈ ﱉ ﱊ",
+      "qcf_page": 596
+    },
+    {
+      "index": 12,
+      "ayah_number": 12,
+      "text": "إِنَّ عَلَيْنَا لَلْهُدَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱋ ﱌ ﱍ ﱎ",
+      "qcf_page": 596
+    },
+    {
+      "index": 13,
+      "ayah_number": 13,
+      "text": "وَإِنَّ لَنَا لَلْـَٔاخِرَةَ وَٱلْأُولَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱏ ﱐ ﱑ ﱒ ﱓ",
+      "qcf_page": 596
+    },
+    {
+      "index": 14,
+      "ayah_number": 14,
+      "text": "فَأَنذَرْتُكُمْ نَارًا تَلَظَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱔ ﱕ ﱖ ﱗ",
+      "qcf_page": 596
+    },
+    {
+      "index": 15,
+      "ayah_number": 15,
+      "text": "لَا يَصْلَىٰهَآ إِلَّا ٱلْأَشْقَى",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱘ ﱙ ﱚ ﱛ ﱜ",
+      "qcf_page": 596
+    },
+    {
+      "index": 16,
+      "ayah_number": 16,
+      "text": "ٱلَّذِى كَذَّبَ وَتَوَلَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱝ ﱞ ﱟ ﱠ",
+      "qcf_page": 596
+    },
+    {
+      "index": 17,
+      "ayah_number": 17,
+      "text": "وَسَيُجَنَّبُهَا ٱلْأَتْقَى",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱡ ﱢ ﱣ",
+      "qcf_page": 596
+    },
+    {
+      "index": 18,
+      "ayah_number": 18,
+      "text": "ٱلَّذِى يُؤْتِى مَالَهُۥ يَتَزَكَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱤ ﱥ ﱦ ﱧ ﱨ",
+      "qcf_page": 596
+    },
+    {
+      "index": 19,
+      "ayah_number": 19,
+      "text": "وَمَا لِأَحَدٍ عِندَهُۥ مِن نِّعْمَةٍ تُجْزَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱩ ﱪ ﱫ ﱬ ﱭ ﱮ ﱯ",
+      "qcf_page": 596
+    },
+    {
+      "index": 20,
+      "ayah_number": 20,
+      "text": "إِلَّا ٱبْتِغَآءَ وَجْهِ رَبِّهِ ٱلْأَعْلَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱰ ﱱ ﱲ ﱳ ﱴ ﱵ",
+      "qcf_page": 596
+    },
+    {
+      "index": 21,
+      "ayah_number": 21,
+      "text": "وَلَسَوْفَ يَرْضَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱶ ﱷ ﱸ",
+      "qcf_page": 596
+    }
+  ]
+}

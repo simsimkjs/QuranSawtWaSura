@@ -1,0 +1,71 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 109,
+  "surah_name": "الكافرون",
+  "audio_file_name": "109.mp3",
+  "saved_at": "2026-10-30T07:10:26.782Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "قُلْ يَـٰٓأَيُّهَا ٱلْكَـٰفِرُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ",
+      "qcf_page": 603
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "لَآ أَعْبُدُ مَا تَعْبُدُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱅ ﱆ ﱇ ﱈ ﱉ",
+      "qcf_page": 603
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱊ ﱋ ﱌ ﱍ ﱎ ﱏ",
+      "qcf_page": 603
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "وَلَآ أَنَا۠ عَابِدٌ مَّا عَبَدتُّمْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱐ ﱑ ﱒ ﱓ ﱔ ﱕ",
+      "qcf_page": 603
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "وَلَآ أَنتُمْ عَـٰبِدُونَ مَآ أَعْبُدُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱖ ﱗ ﱘ ﱙ ﱚ ﱛ",
+      "qcf_page": 603
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "لَكُمْ دِينُكُمْ وَلِىَ دِينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱜ ﱝ ﱞ ﱟ ﱠ",
+      "qcf_page": 603
+    }
+  ]
+}

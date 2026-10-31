@@ -38,6 +38,8 @@ jobs:
       - name: Install Chromium
         working-directory: web
         run: npx playwright install --with-deps chromium
+      - name: Check surah texts
+        run: python3 tools/build_surah_texts.py --check
       - name: Check generated data
         run: python3 tools/build_quran_data.py --check
       - name: Check QCF text and fonts

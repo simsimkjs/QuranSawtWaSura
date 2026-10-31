@@ -1,0 +1,80 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 107,
+  "surah_name": "الماعون",
+  "audio_file_name": "107.mp3",
+  "saved_at": "2026-10-30T07:10:26.027Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "أَرَءَيْتَ ٱلَّذِى يُكَذِّبُ بِٱلدِّينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱖ ﱗ ﱘ ﱙ ﱚ",
+      "qcf_page": 602
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "فَذَٰلِكَ ٱلَّذِى يَدُعُّ ٱلْيَتِيمَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱛ ﱜ ﱝ ﱞ ﱟ",
+      "qcf_page": 602
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَلَا يَحُضُّ عَلَىٰ طَعَامِ ٱلْمِسْكِينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱠ ﱡ ﱢ ﱣ ﱤ ﱥ",
+      "qcf_page": 602
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "فَوَيْلٌ لِّلْمُصَلِّينَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱦ ﱧ ﱨ",
+      "qcf_page": 602
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "ٱلَّذِينَ هُمْ عَن صَلَاتِهِمْ سَاهُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱩ ﱪ ﱫ ﱬ ﱭ ﱮ",
+      "qcf_page": 602
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "ٱلَّذِينَ هُمْ يُرَآءُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱯ ﱰ ﱱ ﱲ",
+      "qcf_page": 602
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "وَيَمْنَعُونَ ٱلْمَاعُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱳ ﱴ ﱵ",
+      "qcf_page": 602
+    }
+  ]
+}

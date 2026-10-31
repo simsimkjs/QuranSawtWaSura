@@ -1,0 +1,116 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 100,
+  "surah_name": "العاديات",
+  "audio_file_name": "100.mp3",
+  "saved_at": "2026-10-30T07:10:24.751Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "وَٱلْعَـٰدِيَـٰتِ ضَبْحًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲡ ﲢ ﲣ",
+      "qcf_page": 599
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "فَٱلْمُورِيَـٰتِ قَدْحًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲤ ﲥ ﲦ",
+      "qcf_page": 599
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "فَٱلْمُغِيرَٰتِ صُبْحًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲧ ﲨ ﲩ",
+      "qcf_page": 599
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "فَأَثَرْنَ بِهِۦ نَقْعًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲪ ﲫ ﲬ ﲭ",
+      "qcf_page": 599
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "فَوَسَطْنَ بِهِۦ جَمْعًا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲮ ﲯ ﲰ ﲱ",
+      "qcf_page": 599
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "إِنَّ ٱلْإِنسَـٰنَ لِرَبِّهِۦ لَكَنُودٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ ﱄ ﱅ",
+      "qcf_page": 600
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "وَإِنَّهُۥ عَلَىٰ ذَٰلِكَ لَشَهِيدٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱆ ﱇ ﱈ ﱉ ﱊ",
+      "qcf_page": 600
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "وَإِنَّهُۥ لِحُبِّ ٱلْخَيْرِ لَشَدِيدٌ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱋ ﱌ ﱍ ﱎ ﱏ",
+      "qcf_page": 600
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "۞ أَفَلَا يَعْلَمُ إِذَا بُعْثِرَ مَا فِى ٱلْقُبُورِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱐ ﱑ ﱒ ﱓ ﱔ ﱕ ﱖ ﱗ ﱘ",
+      "qcf_page": 600
+    },
+    {
+      "index": 10,
+      "ayah_number": 10,
+      "text": "وَحُصِّلَ مَا فِى ٱلصُّدُورِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱙ ﱚ ﱛ ﱜ ﱝ",
+      "qcf_page": 600
+    },
+    {
+      "index": 11,
+      "ayah_number": 11,
+      "text": "إِنَّ رَبَّهُم بِهِمْ يَوْمَئِذٍ لَّخَبِيرٌۢ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱞ ﱟ ﱠ ﱡ ﱢ ﱣ",
+      "qcf_page": 600
+    }
+  ]
+}

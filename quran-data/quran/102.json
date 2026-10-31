@@ -1,0 +1,89 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 102,
+  "surah_name": "التكاثر",
+  "audio_file_name": "102.mp3",
+  "saved_at": "2026-10-30T07:10:25.118Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "أَلْهَىٰكُمُ ٱلتَّكَاثُرُ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲓ ﲔ ﲕ",
+      "qcf_page": 600
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "حَتَّىٰ زُرْتُمُ ٱلْمَقَابِرَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲖ ﲗ ﲘ ﲙ",
+      "qcf_page": 600
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "كَلَّا سَوْفَ تَعْلَمُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲚ ﲛ ﲜ ﲝ",
+      "qcf_page": 600
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "ثُمَّ كَلَّا سَوْفَ تَعْلَمُونَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲞ ﲟ ﲠ ﲡ ﲢ",
+      "qcf_page": 600
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "كَلَّا لَوْ تَعْلَمُونَ عِلْمَ ٱلْيَقِينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲣ ﲤ ﲥ ﲦ ﲧ ﲨ",
+      "qcf_page": 600
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "لَتَرَوُنَّ ٱلْجَحِيمَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲩ ﲪ ﲫ",
+      "qcf_page": 600
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "ثُمَّ لَتَرَوُنَّهَا عَيْنَ ٱلْيَقِينِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲬ ﲭ ﲮ ﲯ ﲰ",
+      "qcf_page": 600
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "ثُمَّ لَتُسْـَٔلُنَّ يَوْمَئِذٍ عَنِ ٱلنَّعِيمِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲱ ﲲ ﲳ ﲴ ﲵ ﲶ",
+      "qcf_page": 600
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 114,
+  "surah_name": "الناس",
+  "audio_file_name": "114.mp3",
+  "saved_at": "2026-10-30T07:10:28.295Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱰ ﱱ ﱲ ﱳ ﱴ",
+      "qcf_page": 604
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "مَلِكِ ٱلنَّاسِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱵ ﱶ ﱷ",
+      "qcf_page": 604
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "إِلَـٰهِ ٱلنَّاسِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱸ ﱹ ﱺ",
+      "qcf_page": 604
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱻ ﱼ ﱽ ﱾ ﱿ",
+      "qcf_page": 604
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲀ ﲁ ﲂ ﲃ ﲄ ﲅ",
+      "qcf_page": 604
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲆ ﲇ ﲈ ﲉ",
+      "qcf_page": 604
+    }
+  ]
+}

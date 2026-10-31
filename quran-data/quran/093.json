@@ -1,0 +1,116 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 93,
+  "surah_name": "الضحى",
+  "audio_file_name": "093.mp3",
+  "saved_at": "2026-10-30T07:10:22.478Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "وَٱلضُّحَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱹ ﱺ",
+      "qcf_page": 596
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "وَٱلَّيْلِ إِذَا سَجَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱻ ﱼ ﱽ ﱾ",
+      "qcf_page": 596
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "مَا وَدَّعَكَ رَبُّكَ وَمَا قَلَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱿ ﲀ ﲁ ﲂ ﲃ ﲄ",
+      "qcf_page": 596
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "وَلَلْـَٔاخِرَةُ خَيْرٌ لَّكَ مِنَ ٱلْأُولَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲅ ﲆ ﲇ ﲈ ﲉ ﲊ",
+      "qcf_page": 596
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲋ ﲌ ﲍ ﲎ ﲏ",
+      "qcf_page": 596
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "أَلَمْ يَجِدْكَ يَتِيمًا فَـَٔاوَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲐ ﲑ ﲒ ﲓ ﲔ",
+      "qcf_page": 596
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "وَوَجَدَكَ ضَآلًّا فَهَدَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲕ ﲖ ﲗ ﲘ",
+      "qcf_page": 596
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "وَوَجَدَكَ عَآئِلًا فَأَغْنَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲙ ﲚ ﲛ ﲜ",
+      "qcf_page": 596
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "فَأَمَّا ٱلْيَتِيمَ فَلَا تَقْهَرْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲝ ﲞ ﲟ ﲠ ﲡ",
+      "qcf_page": 596
+    },
+    {
+      "index": 10,
+      "ayah_number": 10,
+      "text": "وَأَمَّا ٱلسَّآئِلَ فَلَا تَنْهَرْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲢ ﲣ ﲤ ﲥ ﲦ",
+      "qcf_page": 596
+    },
+    {
+      "index": 11,
+      "ayah_number": 11,
+      "text": "وَأَمَّا بِنِعْمَةِ رَبِّكَ فَحَدِّثْ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲧ ﲨ ﲩ ﲪ ﲫ",
+      "qcf_page": 596
+    }
+  ]
+}

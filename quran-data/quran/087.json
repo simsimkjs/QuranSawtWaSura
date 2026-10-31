@@ -1,0 +1,188 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 87,
+  "surah_name": "الأعلى",
+  "audio_file_name": "087.mp3",
+  "saved_at": "2026-10-30T07:10:20.558Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "سَبِّحِ ٱسْمَ رَبِّكَ ٱلْأَعْلَى",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲏ ﲐ ﲑ ﲒ ﲓ",
+      "qcf_page": 591
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "ٱلَّذِى خَلَقَ فَسَوَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲔ ﲕ ﲖ ﲗ",
+      "qcf_page": 591
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَٱلَّذِى قَدَّرَ فَهَدَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲘ ﲙ ﲚ ﲛ",
+      "qcf_page": 591
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "وَٱلَّذِىٓ أَخْرَجَ ٱلْمَرْعَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲜ ﲝ ﲞ ﲟ",
+      "qcf_page": 591
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "فَجَعَلَهُۥ غُثَآءً أَحْوَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲠ ﲡ ﲢ ﲣ",
+      "qcf_page": 591
+    },
+    {
+      "index": 6,
+      "ayah_number": 6,
+      "text": "سَنُقْرِئُكَ فَلَا تَنسَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲤ ﲥ ﲦ ﲧ",
+      "qcf_page": 591
+    },
+    {
+      "index": 7,
+      "ayah_number": 7,
+      "text": "إِلَّا مَا شَآءَ ٱللَّهُ ۚ إِنَّهُۥ يَعْلَمُ ٱلْجَهْرَ وَمَا يَخْفَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲨ ﲩ ﲪ ﲫ ﲬ ﲭ ﲮ ﲯ ﲰ ﲱ ﲲ",
+      "qcf_page": 591
+    },
+    {
+      "index": 8,
+      "ayah_number": 8,
+      "text": "وَنُيَسِّرُكَ لِلْيُسْرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲳ ﲴ ﲵ",
+      "qcf_page": 591
+    },
+    {
+      "index": 9,
+      "ayah_number": 9,
+      "text": "فَذَكِّرْ إِن نَّفَعَتِ ٱلذِّكْرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲶ ﲷ ﲸ ﲹ ﲺ",
+      "qcf_page": 591
+    },
+    {
+      "index": 10,
+      "ayah_number": 10,
+      "text": "سَيَذَّكَّرُ مَن يَخْشَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﲻ ﲼ ﲽ ﲾ",
+      "qcf_page": 591
+    },
+    {
+      "index": 11,
+      "ayah_number": 11,
+      "text": "وَيَتَجَنَّبُهَا ٱلْأَشْقَى",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱁ ﱂ ﱃ",
+      "qcf_page": 592
+    },
+    {
+      "index": 12,
+      "ayah_number": 12,
+      "text": "ٱلَّذِى يَصْلَى ٱلنَّارَ ٱلْكُبْرَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱄ ﱅ ﱆ ﱇ ﱈ",
+      "qcf_page": 592
+    },
+    {
+      "index": 13,
+      "ayah_number": 13,
+      "text": "ثُمَّ لَا يَمُوتُ فِيهَا وَلَا يَحْيَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱉ ﱊ ﱋ ﱌ ﱍ ﱎ ﱏ",
+      "qcf_page": 592
+    },
+    {
+      "index": 14,
+      "ayah_number": 14,
+      "text": "قَدْ أَفْلَحَ مَن تَزَكَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱐ ﱑ ﱒ ﱓ ﱔ",
+      "qcf_page": 592
+    },
+    {
+      "index": 15,
+      "ayah_number": 15,
+      "text": "وَذَكَرَ ٱسْمَ رَبِّهِۦ فَصَلَّىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱕ ﱖ ﱗ ﱘ ﱙ",
+      "qcf_page": 592
+    },
+    {
+      "index": 16,
+      "ayah_number": 16,
+      "text": "بَلْ تُؤْثِرُونَ ٱلْحَيَوٰةَ ٱلدُّنْيَا",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱚ ﱛ ﱜ ﱝ ﱞ",
+      "qcf_page": 592
+    },
+    {
+      "index": 17,
+      "ayah_number": 17,
+      "text": "وَٱلْـَٔاخِرَةُ خَيْرٌ وَأَبْقَىٰٓ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱟ ﱠ ﱡ ﱢ",
+      "qcf_page": 592
+    },
+    {
+      "index": 18,
+      "ayah_number": 18,
+      "text": "إِنَّ هَـٰذَا لَفِى ٱلصُّحُفِ ٱلْأُولَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱣ ﱤ ﱥ ﱦ ﱧ ﱨ",
+      "qcf_page": 592
+    },
+    {
+      "index": 19,
+      "ayah_number": 19,
+      "text": "صُحُفِ إِبْرَٰهِيمَ وَمُوسَىٰ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱩ ﱪ ﱫ ﱬ",
+      "qcf_page": 592
+    }
+  ]
+}

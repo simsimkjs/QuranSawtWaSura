@@ -1,0 +1,62 @@
+{
+  "format": "quran-ayah-splitter-project",
+  "version": 1,
+  "surah_number": 113,
+  "surah_name": "الفلق",
+  "audio_file_name": "113.mp3",
+  "saved_at": "2026-10-30T07:10:27.941Z",
+  "ayahs": [
+    {
+      "index": 0,
+      "ayah_number": 0,
+      "text": "",
+      "start_ms": 0,
+      "export": true
+    },
+    {
+      "index": 1,
+      "ayah_number": 1,
+      "text": "قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱔ ﱕ ﱖ ﱗ ﱘ",
+      "qcf_page": 604
+    },
+    {
+      "index": 2,
+      "ayah_number": 2,
+      "text": "مِن شَرِّ مَا خَلَقَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱙ ﱚ ﱛ ﱜ ﱝ",
+      "qcf_page": 604
+    },
+    {
+      "index": 3,
+      "ayah_number": 3,
+      "text": "وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱞ ﱟ ﱠ ﱡ ﱢ ﱣ",
+      "qcf_page": 604
+    },
+    {
+      "index": 4,
+      "ayah_number": 4,
+      "text": "وَمِن شَرِّ ٱلنَّفَّـٰثَـٰتِ فِى ٱلْعُقَدِ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱤ ﱥ ﱦ ﱧ ﱨ ﱩ",
+      "qcf_page": 604
+    },
+    {
+      "index": 5,
+      "ayah_number": 5,
+      "text": "وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ",
+      "start_ms": 0,
+      "export": true,
+      "qcf": "ﱪ ﱫ ﱬ ﱭ ﱮ ﱯ",
+      "qcf_page": 604
+    }
+  ]
+}
