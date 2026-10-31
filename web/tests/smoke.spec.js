@@ -200,7 +200,19 @@ test("النقر على آية يبرزها ويفتح التفسير ويقفز
     { timeout: 20_000 }
   ).toBe(true);
 
-  await page.locator('#ayahList .ayah[data-ayah="255"] .ayah-num').click();
+  const target = page.locator('#ayahList .ayah[data-ayah="255"]');
+  await target.scrollIntoViewIfNeeded();
+  // رقم الآية الصغير مخفي مع QCF، لذا ننقر أول سطر من نص الآية نفسه.
+  const point = await target.evaluate((element) => {
+    const text = element.querySelector(".ayah-text");
+    const range = document.createRange();
+    range.selectNodeContents(text);
+    const rect = [...range.getClientRects()].find((item) => item.width > 0 && item.height > 0);
+    if (!rect) return null;
+    return { x: rect.left + Math.min(12, rect.width / 2), y: rect.top + rect.height / 2 };
+  });
+  expect(point).not.toBeNull();
+  await page.mouse.click(point.x, point.y);
 
   await expect(page.locator("#ayahList .ayah.current")).toHaveAttribute("data-ayah", "255");
   await expect(page.locator("#tafsirPanel")).toHaveJSProperty("open", true);

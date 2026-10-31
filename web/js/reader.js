@@ -297,7 +297,10 @@ export class Reader {
     ensureQcfFonts([page]).then((loaded) => {
       if (token !== this.loadToken) return;
       this.qcfPendingPages.delete(page);
-      if (!loaded.get(page)) return;
+      if (!loaded.get(page)) {
+        this._markQcfFailed(page);
+        return;
+      }
 
       this.qcfLoadedPages.add(page);
       const items = this.qcfGroups.get(page);
@@ -308,8 +311,18 @@ export class Reader {
         item.node.style.fontFamily = `"${qcfFamily(page)}", var(--quran-font)`;
       }
     }).catch(() => {
-      if (token === this.loadToken) this.qcfPendingPages.delete(page);
+      if (token === this.loadToken) {
+        this.qcfPendingPages.delete(page);
+        this._markQcfFailed(page);
+      }
     });
+  }
+
+  /** يعيد رقم الآية الصغير إذا تعذّر تحميل خط QCF (وضع النص العادي). */
+  _markQcfFailed(page) {
+    const items = this.qcfGroups.get(page);
+    if (!items) return;
+    for (const item of items) item.node.parentElement?.classList.add("qcf-failed");
   }
 
   /** يطلب خطوط الصفحات عند اقتراب صفوفها من مجال الرؤية (تحميل تدريجي). */

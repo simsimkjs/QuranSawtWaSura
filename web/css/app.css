@@ -468,6 +468,11 @@ body.design-modern .mushaf-frame {
   user-select: none;
 }
 
+/* QCF يرسم رقم الآية داخل علامة النهاية المزخرفة، فلا نكرّره برقم صغير. */
+.ayah[data-qcf-page] .ayah-num { display: none; }
+/* عند فشل تحميل خط الصفحة نعود للنص العادي ونُظهر رقم الآية الصغير. */
+.ayah.qcf-failed .ayah-num { display: inline-flex; }
+
 .ayah.current {
   background: var(--current-bg);
   box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 28%, transparent);
